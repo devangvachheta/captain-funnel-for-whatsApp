@@ -1,0 +1,247 @@
+
+.capfw-funnels-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1000px;
+}
+
+// ── Header with button ────────────────────────────────────────────────────────
+.capfw-page-header--flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.capfw-btn-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+
+    svg { width: 100%; height: 100%; stroke: currentColor; }
+}
+
+// ── Table card ────────────────────────────────────────────────────────────────
+.capfw-funnels-card { padding: 0; overflow: hidden; }
+
+.capfw-funnels-table {
+    th:last-child,
+    td:last-child { width: 100px; }
+}
+
+// ── Funnel name link ──────────────────────────────────────────────────────────
+.capfw-funnel-name {
+    font-weight: 600;
+    color: $black_color;
+    cursor: pointer;
+    transition: color $transition;
+
+    &:hover { color: $primary_dark; }
+}
+
+// ── Integration badge (in table) ──────────────────────────────────────────────
+.capfw-int-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    background: #f0f4ff;
+    color: #4f6aad;
+    border: 1px solid #c7d4ff;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+// ── Trigger pill ──────────────────────────────────────────────────────────────
+.capfw-trigger-pill {
+    display: inline-block;
+    background: #f0f4ff;
+    color: #2c5282;
+    border: 1px solid #bee3f8;
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+// ── Action buttons ────────────────────────────────────────────────────────────
+.capfw-action-btns {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.capfw-action-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid $border_color;
+    background: $white_color;
+    cursor: pointer;
+    transition: background $transition, border-color $transition;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        stroke: $desc_color;
+        fill: none;
+        transition: stroke $transition;
+    }
+
+    &--edit:hover {
+        background: #eff6ff;
+        border-color: #93c5fd;
+        svg { stroke: #2563eb; }
+    }
+
+    &--delete:hover {
+        background: #fff5f5;
+        border-color: #fca5a5;
+        svg { stroke: $color_failed; }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+// ── Row deleting ──────────────────────────────────────────────────────────────
+.capfw-row-deleting { opacity: 0.5; transition: opacity $transition; }
+
+// ── Modal ─────────────────────────────────────────────────────────────────────
+.capfw-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: capfw-fade-in 0.15s ease;
+}
+
+@keyframes capfw-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.capfw-modal {
+    background: $white_color;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    animation: capfw-slide-up 0.2s ease;
+    overflow: hidden;
+}
+
+@keyframes capfw-slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.capfw-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid $border_color;
+}
+
+.capfw-modal-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: $black_color;
+    margin: 0;
+}
+
+.capfw-modal-close {
+    width: 28px;
+    height: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: background $transition;
+    color: $desc_color;
+
+    svg { width: 16px; height: 16px; stroke: currentColor; }
+    &:hover { background: $grey_bg; color: $black_color; }
+}
+
+.capfw-modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.capfw-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px 24px;
+    border-top: 1px solid $border_color;
+    background: $grey_bg;
+}
+
+// ── Radio pills ───────────────────────────────────────────────────────────────
+.capfw-radio-group {
+    display: flex;
+    gap: 8px;
+}
+
+.capfw-radio-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border: 1.5px solid $border_color;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $desc_color;
+    cursor: pointer;
+    transition: all $transition;
+
+    input { display: none; }
+
+    &--on {
+        border-color: $primary_color;
+        background: $primary_light;
+        color: $primary_dark;
+        font-weight: 600;
+    }
+
+    &:hover:not(.capfw-radio-pill--on) {
+        border-color: #d1d5db;
+        background: $grey_bg;
+    }
+}
+
+// ── Required marker ───────────────────────────────────────────────────────────
+.capfw-required { color: $color_failed; margin-left: 2px; }
+
+// ── Form error ────────────────────────────────────────────────────────────────
+.capfw-form-error {
+    color: $color_failed;
+    font-size: 12px;
+    background: $bg_failed;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+}

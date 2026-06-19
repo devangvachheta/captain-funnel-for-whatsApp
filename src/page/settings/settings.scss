@@ -1,0 +1,129 @@
+
+.capfw-settings-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.capfw-page-header { margin-bottom: 4px; }
+
+.capfw-settings-desc {
+    font-size: 13px;
+    color: $desc_color;
+    margin: 0 0 16px;
+}
+
+// ── Doc link ──────────────────────────────────────────────────────────────────
+.capfw-settings-doc-link {
+    color: #2271b1;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover { text-decoration: underline; }
+}
+
+// ── 2-col row ─────────────────────────────────────────────────────────────────
+.capfw-settings-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+// ── Input with eye button ─────────────────────────────────────────────────────
+.capfw-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .capfw-input { padding-right: 40px; }
+}
+
+.capfw-eye-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: $desc_color;
+    display: flex;
+    align-items: center;
+    transition: color $transition;
+
+    svg { width: 16px; height: 16px; }
+    &:hover { color: $black_color; }
+}
+
+// ── Test row ──────────────────────────────────────────────────────────────────
+.capfw-test-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+// ── Status checkboxes ─────────────────────────────────────────────────────────
+.capfw-status-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.capfw-status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1.5px solid $border_color;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $desc_color;
+    cursor: pointer;
+    transition: border-color $transition, background $transition, color $transition;
+    user-select: none;
+
+    input { display: none; }
+
+    &:hover {
+        border-color: $primary_color;
+        color: $primary_dark;
+        background: $primary_light;
+    }
+
+    &--on {
+        border-color: $primary_color;
+        background: $primary_light;
+        color: $primary_dark;
+        font-weight: 600;
+    }
+}
+
+.capfw-status-chip-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $border_color;
+    transition: background $transition;
+    flex-shrink: 0;
+
+    .capfw-status-chip--on & { background: $primary_color; }
+}
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+.capfw-settings-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 8px;
+}
+
+.capfw-settings-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+}

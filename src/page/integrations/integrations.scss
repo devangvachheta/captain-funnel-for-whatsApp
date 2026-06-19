@@ -1,0 +1,112 @@
+.capfw-integrations-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+// ── Section ───────────────────────────────────────────────────────────────────
+.capfw-int-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.capfw-int-section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.capfw-int-section-icon { font-size: 16px; }
+
+.capfw-int-section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: $black_color;
+    margin: 0;
+}
+
+// ── Grid ──────────────────────────────────────────────────────────────────────
+.capfw-int-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+}
+
+// ── Card ──────────────────────────────────────────────────────────────────────
+.capfw-int-card {
+    background: $white_color;
+    border: 1.5px solid $border_color;
+    border-radius: $card_radius;
+    padding: 14px 16px;
+    transition: border-color $transition, background $transition;
+
+    &--on {
+        border-color: $primary_color;
+        background: $primary_light;
+    }
+
+    &--unavailable {
+        opacity: 0.55;
+        background: #fafafa;
+    }
+}
+
+.capfw-int-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.capfw-int-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.capfw-int-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: $black_color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.capfw-int-plugin-file {
+    font-size: 10px;
+    font-family: monospace;
+    color: $desc_color;
+    margin: 8px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// ── Status pill ───────────────────────────────────────────────────────────────
+.capfw-int-status-pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+
+    &--installed {
+        background: $bg_active;
+        color: $color_active;
+    }
+
+    &--missing {
+        background: #f3f4f6;
+        color: $desc_color;
+    }
+}
+
+// ── Toggle disabled ───────────────────────────────────────────────────────────
+.capfw-toggle--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}

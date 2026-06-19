@@ -1,0 +1,16 @@
+@keyframes capfw-spin {
+    to { transform: rotate(360deg); }
+}
+
+.capfw-spinner {
+    animation: capfw-spin 0.8s linear infinite;
+    display: block;
+}
+
+.capfw-spinner-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    width: 100%;
+}

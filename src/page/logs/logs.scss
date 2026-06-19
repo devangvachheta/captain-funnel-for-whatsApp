@@ -1,0 +1,218 @@
+
+.capfw-logs-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1100px;
+}
+
+// ── Filter bar ────────────────────────────────────────────────────────────────
+.capfw-log-filters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.capfw-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: 1px solid $border_color;
+    border-radius: 8px;
+    background: $white_color;
+    font-size: 12px;
+    font-weight: 500;
+    color: $desc_color;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all $transition;
+
+    &:hover {
+        border-color: #d1d5db;
+        color: $black_color;
+        background: $grey_bg;
+    }
+
+    &--active {
+        background: $primary_light;
+        border-color: $primary_color;
+        color: $primary_dark;
+        font-weight: 600;
+    }
+}
+
+.capfw-filter-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    &--sent    { background: $color_sent;    }
+    &--failed  { background: $color_failed;  }
+    &--pending { background: $color_pending; }
+}
+
+.capfw-log-total {
+    margin-left: auto;
+    font-size: 12px;
+    color: $desc_color;
+}
+
+// ── Table card ────────────────────────────────────────────────────────────────
+.capfw-logs-card { padding: 0; overflow: hidden; }
+
+// ── Log table ─────────────────────────────────────────────────────────────────
+.capfw-log-row {
+    cursor: pointer;
+    transition: background $transition;
+    &:hover { background: #f0fdf4 !important; }
+}
+
+.capfw-log-id {
+    font-size: 11px;
+    color: $desc_color;
+    font-family: monospace;
+}
+
+.capfw-msg-cell--truncate {
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    color: $desc_color;
+}
+
+.capfw-dash { color: #d1d5db; }
+
+// ── Pagination ────────────────────────────────────────────────────────────────
+.capfw-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid $border_color;
+    background: $grey_bg;
+}
+
+.capfw-page-info {
+    font-size: 12px;
+    color: $desc_color;
+}
+
+.capfw-page-btns {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.capfw-page-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $border_color;
+    border-radius: 6px;
+    background: $white_color;
+    font-size: 12px;
+    font-weight: 500;
+    color: $desc_color;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all $transition;
+
+    svg { stroke: currentColor; }
+
+    &:hover:not(:disabled) {
+        background: $grey_bg;
+        color: $black_color;
+    }
+
+    &--active {
+        background: $primary_color;
+        border-color: $primary_color;
+        color: $white_color;
+        font-weight: 700;
+
+        &:hover { background: $primary_hover; }
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+// ── Message modal ─────────────────────────────────────────────────────────────
+// (Modal base styles are in funnels.scss — shared via global)
+.capfw-msg-modal { max-width: 520px; }
+
+.capfw-log-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $border_color;
+}
+
+.capfw-log-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+
+    strong { color: $black_color; font-weight: 600; min-width: 70px; }
+    span   { color: $desc_color; }
+}
+
+.capfw-msg-bubble {
+    background: #e8faf0;
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    border-top-left-radius: 2px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+}
+
+.capfw-msg-text {
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    color: $black_color;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+}
+
+.capfw-api-response {
+    margin-top: 8px;
+
+    summary {
+        font-size: 12px;
+        color: $desc_color;
+        cursor: pointer;
+        user-select: none;
+        padding: 4px 0;
+
+        &:hover { color: $black_color; }
+    }
+}
+
+.capfw-api-pre {
+    background: $grey_bg;
+    border: 1px solid $border_color;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 11px;
+    font-family: monospace;
+    color: $desc_color;
+    white-space: pre-wrap;
+    word-break: break-all;
+    margin: 6px 0 0;
+    max-height: 160px;
+    overflow-y: auto;
+}

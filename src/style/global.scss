@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// ── WordPress admin overrides ─────────────────────────────────────────────────
+.csp-notice,
+.pa-notice-wrap,
+.pa-new-feature-notice,
+.pa-review-notice,
+.gt-admin-notice,
+.is-dismissible,
+.notice,
+.notice-errors,
+.notice-warning,
+#wpfooter {
+    display: none !important;
+}
+
+#wpbody-content { padding-bottom: 0 !important; }
+#wpcontent      { padding-left: 0; }
+
+// ── App shell ─────────────────────────────────────────────────────────────────
+.capfw-app {
+    display: flex;
+    min-height: calc(100vh - 32px);
+    background: $grey_bg;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 13px;
+    color: $black_color;
+}
+
+.capfw-app-main-content {
+    flex: 1;
+    padding: 28px;
+    background: $grey_bg;
+    overflow-x: hidden;
+}
+
+// ── Shared card ───────────────────────────────────────────────────────────────
+.capfw-card {
+    background: $white_color;
+    border: 1px solid $border_color;
+    border-radius: $card_radius;
+    padding: 24px;
+    box-shadow: $shadow_sm;
+}
+
+.capfw-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: $black_color;
+    margin: 0 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $border_color;
+}
+
+// ── Shared buttons ────────────────────────────────────────────────────────────
+.capfw-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: $primary_color;
+    color: $white_color;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background $transition;
+    font-family: inherit;
+
+    &:hover:not(:disabled) { background: $primary_hover; }
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+}
+
+.capfw-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: $white_color;
+    color: $black_color;
+    border: 1px solid $border_color;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color $transition, background $transition;
+    font-family: inherit;
+
+    &:hover { background: $grey_bg; border-color: #d1d5db; }
+}
+
+.capfw-btn-danger {
+    @extend .capfw-btn-secondary;
+    color: $color_failed;
+    border-color: #fca5a5;
+    &:hover { background: #fff5f5; border-color: $color_failed; }
+}
+
+// ── Shared form ───────────────────────────────────────────────────────────────
+.capfw-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+
+    label {
+        font-size: 13px;
+        font-weight: 500;
+        color: $black_color;
+    }
+
+    .capfw-desc {
+        font-size: 11px;
+        color: $desc_color;
+        margin-top: 2px;
+    }
+}
+
+.capfw-input,
+.capfw-select,
+.capfw-textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid $border_color;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: inherit;
+    background: $input_bg;
+    color: $black_color;
+    transition: border-color $transition;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border-color: $primary_color;
+        background: $white_color;
+    }
+
+    &::placeholder { color: #9ca3af; }
+}
+
+.capfw-textarea { resize: vertical; min-height: 100px; }
+
+// ── Toggle ────────────────────────────────────────────────────────────────────
+.capfw-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    input { position: absolute; opacity: 0; width: 0; height: 0; }
+}
+
+.capfw-toggle-slider {
+    width: 40px;
+    height: 22px;
+    background: #d1d5db;
+    border-radius: 11px;
+    transition: background $transition;
+    flex-shrink: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 16px;
+        height: 16px;
+        background: $white_color;
+        border-radius: 50%;
+        transition: transform $transition;
+        box-shadow: $shadow_sm;
+    }
+}
+
+.capfw-toggle input:checked ~ .capfw-toggle-slider {
+    background: $primary_color;
+    &::after { transform: translateX(18px); }
+}
+
+// ── Notice banner (Templates default notice) ──────────────────────────────────
+.capfw-notice-banner {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: #92400e;
+    font-weight: 500;
+}
+
+// ── Error message ─────────────────────────────────────────────────────────────
+.capfw-error-msg {
+    color: #b91c1c;
+    font-size: 13px;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 0;
+}
+@keyframes capfw-skeleton {
+    0%   { background-color: #e5e7eb; }
+    50%  { background-color: #f3f4f6; }
+    100% { background-color: #e5e7eb; }
+}
+
+.capfw-skeleton-text {
+    animation: capfw-skeleton 1.4s ease-in-out infinite;
+    color: transparent !important;
+    border-radius: 4px;
+    pointer-events: none;
+    user-select: none;
+}
+
+// ── Inline message ────────────────────────────────────────────────────────────
+.capfw-msg {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    &.capfw-msg--success { background: $bg_sent;    color: $color_sent;    }
+    &.capfw-msg--error   { background: $bg_failed;  color: $color_failed;  }
+}

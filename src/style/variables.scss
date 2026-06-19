@@ -1,0 +1,41 @@
+// Captain Funnel for WhatsApp – SCSS Variables
+
+$font_family: 'Inter, Arial, sans-serif';
+
+// Spacing / radius
+$rs_small:  6px;
+$rs_medium: 8px;
+$rs_normal: 10px;
+$rs_large:  15px;
+
+// Brand colours — WhatsApp green palette
+$primary_color:       #25D366;
+$primary_dark:        #128C7E;
+$primary_hover:       #1ebe5a;
+$primary_light:       #e8faf0;
+
+// UI colours
+$black_color:   #1a1f2e;
+$desc_color:    #6b7280;
+$white_color:   #ffffff;
+$grey_bg:       #f5f6fa;
+$border_color:  #e5e7eb;
+$input_bg:      #f9fafb;
+
+// Status colours
+$color_sent:    #16a34a;
+$color_failed:  #dc2626;
+$color_pending: #d97706;
+$color_active:  #16a34a;
+$color_inactive:#dc2626;
+$bg_sent:       #dcfce7;
+$bg_failed:     #fee2e2;
+$bg_pending:    #fef3c7;
+$bg_active:     #dcfce7;
+$bg_inactive:   #fee2e2;
+
+// Misc
+$transition:    0.25s all ease;
+$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);
+$shadow_md:     0 4px 16px rgba(0,0,0,0.10);
+$card_radius:   12px;

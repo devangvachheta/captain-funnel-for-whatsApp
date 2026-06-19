@@ -1,0 +1,16 @@
+
+.capfw-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+
+    &--sent,
+    &--active    { background: $bg_active;   color: $color_active;   }
+    &--failed,
+    &--inactive  { background: $bg_failed;   color: $color_failed;   }
+    &--pending   { background: $bg_pending;  color: $color_pending;  }
+}

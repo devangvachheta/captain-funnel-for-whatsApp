@@ -1,0 +1,52 @@
+
+.capfw-stats-card {
+    background: $white_color;
+    border: 1px solid $border_color;
+    border-radius: $card_radius;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: $shadow_sm;
+    transition: box-shadow $transition;
+
+    &:hover { box-shadow: $shadow_md; }
+}
+
+.capfw-stats-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .capfw-stats-card--sent    & { background: $bg_active;  color: $color_sent;    }
+    .capfw-stats-card--failed  & { background: $bg_failed;  color: $color_failed;  }
+    .capfw-stats-card--pending & { background: $bg_pending; color: $color_pending; }
+}
+
+.capfw-stats-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.capfw-stats-value {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: $black_color;
+}
+
+.capfw-stats-label {
+    font-size: 12px;
+    color: $desc_color;
+    font-weight: 500;
+}
