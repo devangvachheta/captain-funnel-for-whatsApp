@@ -39,7 +39,7 @@ class CAPFW_Activator {
 			message           TEXT         NOT NULL,
 			status            VARCHAR(20)  NOT NULL DEFAULT 'pending',
 			response          TEXT,
-			integration_slug  VARCHAR(50)  NOT NULL DEFAULT 'woocommerce',
+			integration_slug  VARCHAR(50)  NOT NULL DEFAULT '',
 			trigger_key       VARCHAR(100) NOT NULL DEFAULT '',
 			created_at        DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
 			PRIMARY KEY (id),
@@ -54,7 +54,7 @@ class CAPFW_Activator {
 			id                BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 			funnel_name       VARCHAR(200) NOT NULL DEFAULT '',
 			trigger_event     VARCHAR(100) NOT NULL DEFAULT '',
-			integration_slug  VARCHAR(50)  NOT NULL DEFAULT 'woocommerce',
+			integration_slug  VARCHAR(50)  NOT NULL DEFAULT '',
 			status            VARCHAR(10)  NOT NULL DEFAULT 'active',
 			created_at        DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
 			PRIMARY KEY (id)
@@ -103,12 +103,13 @@ class CAPFW_Activator {
 	private static function maybe_upgrade_tables() {
 		global $wpdb;
 
-		// Add integration_slug to capfw_logs if missing (upgrade from v1.0).
+		// Add integration_slug + trigger_key to capfw_logs if missing (fresh installs
+		// before v0.0.1 used an older schema without these columns).
 		$col = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 			"SHOW COLUMNS FROM `{$wpdb->prefix}capfw_logs` LIKE 'integration_slug'"
 		);
 		if ( empty( $col ) ) {
-			$wpdb->query( "ALTER TABLE `{$wpdb->prefix}capfw_logs` ADD COLUMN `integration_slug` VARCHAR(50) NOT NULL DEFAULT 'woocommerce' AFTER `response`, ADD COLUMN `trigger_key` VARCHAR(100) NOT NULL DEFAULT '' AFTER `integration_slug`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.SchemaChange
+			$wpdb->query( "ALTER TABLE `{$wpdb->prefix}capfw_logs` ADD COLUMN `integration_slug` VARCHAR(50) NOT NULL DEFAULT '' AFTER `response`, ADD COLUMN `trigger_key` VARCHAR(100) NOT NULL DEFAULT '' AFTER `integration_slug`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.SchemaChange
 		}
 
 		// Add integration_slug to capfw_funnels if missing.
@@ -116,7 +117,7 @@ class CAPFW_Activator {
 			"SHOW COLUMNS FROM `{$wpdb->prefix}capfw_funnels` LIKE 'integration_slug'"
 		);
 		if ( empty( $col2 ) ) {
-			$wpdb->query( "ALTER TABLE `{$wpdb->prefix}capfw_funnels` ADD COLUMN `integration_slug` VARCHAR(50) NOT NULL DEFAULT 'woocommerce' AFTER `trigger_event`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.SchemaChange
+			$wpdb->query( "ALTER TABLE `{$wpdb->prefix}capfw_funnels` ADD COLUMN `integration_slug` VARCHAR(50) NOT NULL DEFAULT '' AFTER `trigger_event`" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.DirectDatabaseQuery.SchemaChange
 		}
 	}
 
