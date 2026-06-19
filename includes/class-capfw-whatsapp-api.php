@@ -21,7 +21,7 @@ class CAPFW_WhatsApp_API {
 	 *
 	 * @var string
 	 */
-	const API_BASE = 'https://graph.facebook.com/v19.0/';
+	const API_BASE = 'https://graph.facebook.com/v25.0/';
 
 	/**
 	 * Get plugin settings.
@@ -64,9 +64,14 @@ class CAPFW_WhatsApp_API {
 		$phone_number_id = self::get_phone_number_id();
 
 		if ( empty( $token ) || empty( $phone_number_id ) ) {
+			$missing = empty( $token ) ? 'Access Token' : 'Phone Number ID';
 			return array(
 				'success'  => false,
-				'response' => __( 'WhatsApp API credentials are not configured.', 'captain-funnel-for-whatsapp' ),
+				'response' => sprintf(
+					/* translators: %s: name of the missing credential */
+					__( 'WhatsApp API credentials are not configured. Missing: %s. Please go to WA Funnel → Settings and save your credentials.', 'captain-funnel-for-whatsapp' ),
+					$missing
+				),
 			);
 		}
 
@@ -125,7 +130,10 @@ class CAPFW_WhatsApp_API {
 	}
 
 	/**
-	 * FIX Critical #3: Test with explicitly provided credentials (live form values).
+	 * Test with explicitly provided credentials (live form values).
+	 *
+	 * Uses the Phone Number ID GET endpoint — only requires
+	 * whatsapp_business_messaging permission on the token.
 	 *
 	 * @param string $token           Access token.
 	 * @param string $phone_number_id Phone number ID.
@@ -139,7 +147,8 @@ class CAPFW_WhatsApp_API {
 			);
 		}
 
-		$endpoint = self::API_BASE . $phone_number_id . '?fields=display_phone_number,verified_name';
+		// GET /{phone-number-id} — validates both token and phone number ID in one call.
+		$endpoint = self::API_BASE . $phone_number_id . '?fields=display_phone_number,verified_name,code_verification_status';
 
 		$response = wp_remote_get(
 			$endpoint,
@@ -150,13 +159,32 @@ class CAPFW_WhatsApp_API {
 		);
 
 		if ( is_wp_error( $response ) ) {
-			return array( 'success' => false, 'message' => $response->get_error_message() );
+			return array(
+				'success' => false,
+				'message' => $response->get_error_message(),
+			);
 		}
 
-		if ( 200 === (int) wp_remote_retrieve_response_code( $response ) ) {
-			return array( 'success' => true,  'message' => __( 'Connection successful! WhatsApp API is working.', 'captain-funnel-for-whatsapp' ) );
+		$code = (int) wp_remote_retrieve_response_code( $response );
+		$body = json_decode( wp_remote_retrieve_body( $response ), true );
+
+		if ( 200 === $code ) {
+			$name  = sanitize_text_field( $body['verified_name']        ?? '' );
+			$phone = sanitize_text_field( $body['display_phone_number'] ?? '' );
+			/* translators: 1: verified business name, 2: WhatsApp phone number */
+			$msg = ! empty( $name )
+				? sprintf( __( 'Connected! Business: %1$s | Phone: %2$s', 'captain-funnel-for-whatsapp' ), $name, $phone )
+				: __( 'Connection successful! WhatsApp API is working.', 'captain-funnel-for-whatsapp' );
+
+			return array( 'success' => true, 'message' => $msg );
 		}
 
-		return array( 'success' => false, 'message' => __( 'Connection failed. Please check your credentials.', 'captain-funnel-for-whatsapp' ) );
+		// Surface the API's own error message so users know exactly what went wrong.
+		$api_error = sanitize_text_field( $body['error']['message'] ?? '' );
+		$message   = $api_error
+			? $api_error
+			: __( 'Connection failed. Please check your credentials.', 'captain-funnel-for-whatsapp' );
+
+		return array( 'success' => false, 'message' => $message );
 	}
 }

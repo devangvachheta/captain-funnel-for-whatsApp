@@ -69,8 +69,11 @@ class CAPFW_Admin {
 		wp_register_style( 'capfw-react-app-css', CAPFW_PLUGIN_URL . 'admin/css/capfw-react-app.css', array(), CAPFW_VERSION );
 		wp_enqueue_style( 'capfw-react-app-css' );
 
-		// wp-element ensures React & ReactDOM globals are available in WP 6.x+
-		wp_register_script( 'capfw-react-app-js', CAPFW_PLUGIN_URL . 'admin/js/capfw-react-app.js', array( 'wp-element', 'wp-i18n' ), CAPFW_VERSION, true );
+		// The compiled bundle (capfw-react-app.js) ships with React 18 bundled inside.
+		// DO NOT list wp-element here — that would load a second React instance from
+		// WordPress core (potentially React 19 in WP 7.x), causing the fatal
+		// "recentlyCreatedOwnerStacks" conflict. wp-i18n is safe as it has no React dep.
+		wp_register_script( 'capfw-react-app-js', CAPFW_PLUGIN_URL . 'admin/js/capfw-react-app.js', array( 'wp-i18n' ), CAPFW_VERSION, true );
 		wp_enqueue_script( 'capfw-react-app-js' );
 
 		wp_localize_script(
@@ -153,10 +156,29 @@ class CAPFW_Admin {
 
 	// ── Settings ──────────────────────────────────────────────────────────────
 
+	/**
+	 * Mask a sensitive token for display — shows only last 4 chars.
+	 *
+	 * @param string $token Raw token value.
+	 * @return string
+	 */
+	private function mask_token( string $token ): string {
+		if ( empty( $token ) ) {
+			return '';
+		}
+		$visible = substr( $token, -4 );
+		return str_repeat( '*', max( 8, strlen( $token ) - 4 ) ) . $visible;
+	}
+
 	private function ajax_get_settings() {
 		$settings = (array) get_option( 'capfw_settings', array() );
+		$token    = sanitize_text_field( $settings['access_token'] ?? '' );
+
 		wp_send_json_success( array(
-			'access_token'        => sanitize_text_field( $settings['access_token']        ?? '' ),
+			// Fix #4: Never send the raw token to the browser — send a masked version.
+			// The React UI shows this for UX confirmation; actual token stays server-side.
+			'access_token'        => $this->mask_token( $token ),
+			'access_token_is_set' => ! empty( $token ),
 			'phone_number_id'     => sanitize_text_field( $settings['phone_number_id']     ?? '' ),
 			'business_account_id' => sanitize_text_field( $settings['business_account_id'] ?? '' ),
 			'admin_phone'         => sanitize_text_field( $settings['admin_phone']         ?? '' ),
@@ -173,29 +195,49 @@ class CAPFW_Admin {
 			return;
 		}
 
-		$settings = (array) get_option( 'capfw_settings', array() );
-		$settings['access_token']        = sanitize_text_field( $incoming['access_token']        ?? '' );
-		$settings['phone_number_id']      = sanitize_text_field( $incoming['phone_number_id']      ?? '' );
-		$settings['business_account_id']  = sanitize_text_field( $incoming['business_account_id']  ?? '' );
-		$settings['admin_phone']          = sanitize_text_field( $incoming['admin_phone']          ?? '' );
-		$settings['enabled_statuses']     = array_map( 'sanitize_key', (array) ( $incoming['enabled_statuses'] ?? array() ) );
+		$settings       = (array) get_option( 'capfw_settings', array() );
+		$incoming_token = sanitize_text_field( $incoming['access_token'] ?? '' );
+
+		// Fix #4: If the React UI sends back the masked placeholder (starts with '***'),
+		// the user did not change the token — preserve the existing stored value.
+		if ( ! empty( $incoming_token ) && strpos( $incoming_token, '***' ) !== 0 ) {
+			$settings['access_token'] = $incoming_token;
+		}
+
+		$settings['phone_number_id']     = sanitize_text_field( $incoming['phone_number_id']     ?? '' );
+		$settings['business_account_id'] = sanitize_text_field( $incoming['business_account_id'] ?? '' );
+		$settings['admin_phone']         = sanitize_text_field( $incoming['admin_phone']         ?? '' );
+		$settings['enabled_statuses']    = array_map( 'sanitize_key', (array) ( $incoming['enabled_statuses'] ?? array() ) );
 
 		update_option( 'capfw_settings', $settings );
 		wp_send_json_success( array( 'message' => esc_html__( 'Settings saved successfully.', 'captain-funnel-for-whatsapp' ) ) );
 	}
 
 	/**
-	 * FIX Critical #3: Test with live form credentials if provided, else fall back to saved.
+	 * Test API connection.
+	 *
+	 * React sends back the masked token (***...XXXX) when the user hasn't typed
+	 * a new one — in that case we must use the token stored in the DB, not the
+	 * masked display value which would fail authentication.
 	 */
 	private function ajax_test_connection() {
+		$settings   = (array) get_option( 'capfw_settings', array() );
+		$saved_token = sanitize_text_field( $settings['access_token'] ?? '' );
+
 		$live_token = isset( $_POST['access_token'] )    ? sanitize_text_field( wp_unslash( $_POST['access_token'] ) )    : '';
 		$live_phone = isset( $_POST['phone_number_id'] ) ? sanitize_text_field( wp_unslash( $_POST['phone_number_id'] ) ) : '';
 
-		if ( ! empty( $live_token ) && ! empty( $live_phone ) ) {
-			$result = CAPFW_WhatsApp_API::test_connection_with( $live_token, $live_phone );
-		} else {
-			$result = CAPFW_WhatsApp_API::test_connection();
-		}
+		// If React sent back the masked placeholder, use the real saved token.
+		$token = ( ! empty( $live_token ) && strpos( $live_token, '***' ) !== 0 )
+			? $live_token
+			: $saved_token;
+
+		// Phone: prefer live form value, fall back to saved.
+		$phone = ! empty( $live_phone )
+			? $live_phone
+			: sanitize_text_field( $settings['phone_number_id'] ?? '' );
+
+		$result = CAPFW_WhatsApp_API::test_connection_with( $token, $phone );
 
 		if ( $result['success'] ) {
 			wp_send_json_success( array( 'message' => esc_html( $result['message'] ) ) );

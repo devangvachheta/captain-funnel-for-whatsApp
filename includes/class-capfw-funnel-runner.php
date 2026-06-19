@@ -16,12 +16,21 @@ class CAPFW_Funnel_Runner {
 
 	/**
 	 * Register hooks.
+	 *
+	 * Fix #2: WooCommerce-specific actions (WC_Order type-hints, wc_get_order calls)
+	 * are only registered when WooCommerce is actually active — prevents PHP Fatal
+	 * errors on sites without WooCommerce when the cron fires.
 	 */
 	public function init() {
-		add_action( 'capfw_order_completed_trigger', array( $this, 'schedule_funnel_for_order' ), 10, 2 );
-		add_action( 'capfw_order_created_trigger', array( $this, 'schedule_funnel_on_created' ), 10, 1 );
 		add_action( 'capfw_process_scheduled_messages', array( $this, 'process_scheduled_messages' ) );
-		add_action( 'capfw_send_funnel_step', array( $this, 'send_funnel_step_message' ), 10, 3 );
+
+		if ( ! function_exists( 'WC' ) ) {
+			return;
+		}
+
+		add_action( 'capfw_order_completed_trigger', array( $this, 'schedule_funnel_for_order' ), 10, 2 );
+		add_action( 'capfw_order_created_trigger',   array( $this, 'schedule_funnel_on_created' ), 10, 1 );
+		add_action( 'capfw_send_funnel_step',        array( $this, 'send_funnel_step_message' ),  10, 2 );
 	}
 
 	/**
@@ -88,10 +97,14 @@ class CAPFW_Funnel_Runner {
 			$cumulative_delay += $delay_seconds;
 			$send_at           = time() + $cumulative_delay;
 
+			// Fix #5: Pass only order_id + step_id — template is fetched fresh
+			// from DB in send_funnel_step_message(). Avoids serialising large
+			// TEXT blobs into wp_options (cron arg store) which causes duplication
+			// issues when the same template is scheduled multiple times.
 			wp_schedule_single_event(
 				$send_at,
 				'capfw_send_funnel_step',
-				array( $order_id, (int) $step->id, $step->message_template )
+				array( $order_id, (int) $step->id )
 			);
 		}
 	}
@@ -99,11 +112,29 @@ class CAPFW_Funnel_Runner {
 	/**
 	 * Send a single funnel step message (called by WP-Cron).
 	 *
-	 * @param int    $order_id         WooCommerce order ID.
-	 * @param int    $step_id          Funnel step row ID.
-	 * @param string $message_template Message template with variables.
+	 * Fix #5: Signature reduced to (order_id, step_id) — template is now fetched
+	 * fresh from the DB here instead of being passed as a cron argument, which
+	 * previously caused large TEXT blobs to be serialised into wp_options.
+	 *
+	 * @param int $order_id WooCommerce order ID.
+	 * @param int $step_id  Funnel step row ID.
 	 */
-	public function send_funnel_step_message( int $order_id, int $step_id, string $message_template ) {
+	public function send_funnel_step_message( int $order_id, int $step_id ) {
+		global $wpdb;
+
+		// Fetch the step's template fresh from DB.
+		$step = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+			$wpdb->prepare(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+				"SELECT message_template FROM {$wpdb->prefix}capfw_funnel_steps WHERE id = %d",
+				$step_id
+			)
+		);
+
+		if ( ! $step || empty( $step->message_template ) ) {
+			return;
+		}
+
 		$order = wc_get_order( $order_id );
 		if ( ! $order ) {
 			return;
@@ -115,7 +146,7 @@ class CAPFW_Funnel_Runner {
 		}
 
 		$order_hooks = new CAPFW_Order_Hooks();
-		$message     = $order_hooks->parse_template( $message_template, $order );
+		$message     = $order_hooks->parse_template( $step->message_template, $order );
 
 		$result = CAPFW_WhatsApp_API::send_message( $phone, $message );
 

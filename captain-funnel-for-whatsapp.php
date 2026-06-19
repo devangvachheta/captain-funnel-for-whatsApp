@@ -39,8 +39,13 @@ function capfw_is_woocommerce_active() {
  * Show an informational (non-blocking) admin notice if WooCommerce is not active.
  * WooCommerce-specific triggers simply won't be available; every other
  * integration (forms, LMS, booking, membership, custom, etc.) still works.
+ *
+ * Fix #3: Capability check added — only admins see this notice.
  */
 function capfw_woocommerce_missing_notice() {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
 	?>
 	<div class="notice notice-info is-dismissible">
 		<p>
@@ -60,24 +65,18 @@ function capfw_woocommerce_missing_notice() {
 
 /**
  * Main plugin init — runs after plugins loaded.
+ *
+ * Fix #1: Only the Loader is required here; it handles all other includes
+ * via load_core_classes(). Previously logger, api, funnel-runner etc. were
+ * required here AND inside the loader — redundant double-loading removed.
  */
 function capfw_init_plugin() {
-	// Load required files. These load regardless of WooCommerce — only the
-	// WooCommerce-specific hooks within them stay dormant if WooCommerce is absent.
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-activator.php';
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-deactivator.php';
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-logger.php';
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-whatsapp-api.php';
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-order-hooks.php';
-	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-funnel-runner.php';
 	require_once CAPFW_PLUGIN_DIR . 'includes/class-capfw-loader.php';
 
 	if ( ! capfw_is_woocommerce_active() ) {
 		add_action( 'admin_notices', 'capfw_woocommerce_missing_notice' );
 	}
 
-	// Boot loader — runs for everyone; the Integration Registry already
-	// gates WooCommerce-only features via is_plugin_active() internally.
 	$loader = new CAPFW_Loader();
 	$loader->run();
 }

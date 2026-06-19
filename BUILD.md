@@ -41,3 +41,14 @@ Output files after build:
 - `react` and `react-dom` are **not bundled** — they come from WordPress core (`wp-element`).
 - `@wordpress/i18n` is also external (`wp-i18n`), loaded by WordPress.
 - All other dependencies (`@reduxjs/toolkit`, `react-redux`, `react-router-dom`) are bundled.
+
+---
+
+## React bundling note
+
+React 18 is **bundled inside** `capfw-react-app.js` (not loaded from WordPress core).  
+This is intentional: WordPress 6.x ships React 18, WP 7.x ships React 19 — bundling our own copy avoids version-mismatch crashes (`recentlyCreatedOwnerStacks` error).
+
+If you are targeting WordPress 7.x+ only, you can switch to WordPress-external React:
+1. In `webpack.config.js` → add `'react': 'React', 'react-dom': 'ReactDOM'` back to `externals`
+2. In `admin/class-capfw-admin.php` → add `'wp-element'` back to the script dependencies array

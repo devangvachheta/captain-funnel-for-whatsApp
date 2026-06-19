@@ -62,12 +62,14 @@ module.exports = (env, argv) => {
         ],
 
         externals: {
-            // Use WordPress-bundled React (wp-element) — do NOT bundle separately.
-            // Declared as dependencies in PHP: array( 'wp-element', 'wp-i18n' )
-            'react':             'React',
-            'react-dom':         'ReactDOM',
-            'react-dom/client':  'ReactDOM',
-            '@wordpress/i18n':   'wp.i18n',
+            // @wordpress/i18n is provided by WordPress core (wp-i18n handle).
+            // React and ReactDOM are BUNDLED — not external.
+            // WordPress 6.x ships React 18, WP 7.x ships React 19. Bundling our
+            // own React 18 avoids version mismatch / "recentlyCreatedOwnerStacks"
+            // crashes. When targeting WP 7.x+ exclusively, switch back to:
+            //   'react': 'React', 'react-dom': 'ReactDOM'
+            // and add 'wp-element' to the PHP script dependencies.
+            '@wordpress/i18n': 'wp.i18n',
         },
 
         devtool: isProd ? false : 'source-map',
