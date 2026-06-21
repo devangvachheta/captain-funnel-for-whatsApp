@@ -133,7 +133,37 @@ class CAPFW_Logger {
 				$stats[ $row->status ] = (int) $row->cnt;
 			}
 		}
+	}
 
-		return $stats;
+	/**
+	 * Delete ALL log entries.
+	 *
+	 * @return int|false Number of rows deleted, or false on failure.
+	 */
+	public static function clear_all() {
+		global $wpdb;
+		$table = $wpdb->prefix . 'capfw_logs';
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Admin-triggered bulk delete; table name uses $wpdb->prefix only.
+		return $wpdb->query( "TRUNCATE TABLE {$table}" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name uses $wpdb->prefix only, no user data.
+	}
+
+	/**
+	 * Delete log entries older than a given number of days.
+	 *
+	 * @param int $days Entries older than this many days will be deleted.
+	 * @return int|false Number of rows deleted, or false on failure.
+	 */
+	public static function clear_older_than( int $days ) {
+		global $wpdb;
+		$table = $wpdb->prefix . 'capfw_logs';
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Admin-triggered bulk delete; table name uses $wpdb->prefix only.
+		return $wpdb->query(
+			$wpdb->prepare(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name uses $wpdb->prefix only, no user data.
+				"DELETE FROM {$table} WHERE created_at < DATE_SUB(NOW(), INTERVAL %d DAY)",
+				$days
+			)
+		);
 	}
 }

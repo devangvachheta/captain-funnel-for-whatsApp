@@ -132,8 +132,11 @@ class CAPFW_Admin {
 			case 'save_funnel':      $this->ajax_save_funnel();      break;
 			case 'delete_funnel':    $this->ajax_delete_funnel();    break;
 			case 'get_logs':              $this->ajax_get_logs();              break;
-			case 'get_integrations':      $this->ajax_get_integrations();      break;
-			case 'save_integrations':     $this->ajax_save_integrations();     break;
+			case 'clear_logs':            $this->ajax_clear_logs();            break;
+			case 'get_integrations':             $this->ajax_get_integrations();             break;
+			case 'save_integrations':            $this->ajax_save_integrations();            break;
+			case 'get_integration_msg_settings': $this->ajax_get_integration_msg_settings(); break;
+			case 'save_integration_msg_settings':$this->ajax_save_integration_msg_settings();break;
 			case 'get_available_triggers':$this->ajax_get_available_triggers(); break;
 			case 'get_integration_templates': $this->ajax_get_integration_templates(); break;
 			case 'save_integration_template': $this->ajax_save_integration_template(); break;
@@ -183,6 +186,12 @@ class CAPFW_Admin {
 			'business_account_id' => sanitize_text_field( $settings['business_account_id'] ?? '' ),
 			'admin_phone'         => sanitize_text_field( $settings['admin_phone']         ?? '' ),
 			'enabled_statuses'    => (array) ( $settings['enabled_statuses'] ?? array() ),
+			// Fix: Message Type toggle — 'text' (free-form, requires 24h customer
+			// service window) or 'template' (pre-approved, deliverable anytime).
+			'message_type'           => ( 'template' === ( $settings['message_type'] ?? 'text' ) ) ? 'template' : 'text',
+			'template_name'          => sanitize_text_field( $settings['template_name']        ?? '' ),
+			'template_language'      => sanitize_text_field( $settings['template_language']    ?? 'en_US' ),
+			'template_no_variables'  => ! empty( $settings['template_no_variables'] ),
 		) );
 	}
 
@@ -208,6 +217,13 @@ class CAPFW_Admin {
 		$settings['business_account_id'] = sanitize_text_field( $incoming['business_account_id'] ?? '' );
 		$settings['admin_phone']         = sanitize_text_field( $incoming['admin_phone']         ?? '' );
 		$settings['enabled_statuses']    = array_map( 'sanitize_key', (array) ( $incoming['enabled_statuses'] ?? array() ) );
+
+		// Fix: Message Type toggle — 'text' or 'template'.
+		$incoming_type             = sanitize_text_field( $incoming['message_type'] ?? 'text' );
+		$settings['message_type']  = ( 'template' === $incoming_type ) ? 'template' : 'text';
+		$settings['template_name']         = sanitize_text_field( $incoming['template_name']        ?? '' );
+		$settings['template_language']     = sanitize_text_field( $incoming['template_language']    ?? 'en_US' );
+		$settings['template_no_variables'] = ! empty( $incoming['template_no_variables'] );
 
 		update_option( 'capfw_settings', $settings );
 		wp_send_json_success( array( 'message' => esc_html__( 'Settings saved successfully.', 'captain-funnel-for-whatsapp' ) ) );
@@ -382,6 +398,38 @@ class CAPFW_Admin {
 		) );
 	}
 
+	/**
+	 * Clear logs — either all logs, or only logs older than N days.
+	 *
+	 * POST params:
+	 *   mode = 'all' | 'older_than'  (default 'all')
+	 *   days = int                  (used only when mode === 'older_than')
+	 */
+	private function ajax_clear_logs() {
+		$mode = sanitize_key( $_POST['mode'] ?? 'all' );
+
+		if ( 'older_than' === $mode ) {
+			$days = absint( $_POST['days'] ?? 30 );
+			if ( $days < 1 ) {
+				wp_send_json_error( array( 'message' => esc_html__( 'Please enter a valid number of days.', 'captain-funnel-for-whatsapp' ) ) );
+				return;
+			}
+			$result = CAPFW_Logger::clear_older_than( $days );
+		} else {
+			$result = CAPFW_Logger::clear_all();
+		}
+
+		if ( false === $result ) {
+			wp_send_json_error( array( 'message' => esc_html__( 'Failed to clear logs. Please try again.', 'captain-funnel-for-whatsapp' ) ) );
+			return;
+		}
+
+		wp_send_json_success( array(
+			'message' => esc_html__( 'Logs cleared successfully.', 'captain-funnel-for-whatsapp' ),
+			'deleted' => (int) $result,
+		) );
+	}
+
 	// ── Integrations ──────────────────────────────────────────────────────────
 
 	private function ajax_get_integrations() {
@@ -403,6 +451,37 @@ class CAPFW_Admin {
 		update_option( 'capfw_settings', $settings );
 
 		wp_send_json_success( array( 'message' => esc_html__( 'Integrations saved.', 'captain-funnel-for-whatsapp' ) ) );
+	}
+
+
+	private function ajax_get_integration_msg_settings() {
+		$all = (array) get_option( 'capfw_integration_settings', array() );
+		wp_send_json_success( $all );
+	}
+
+	private function ajax_save_integration_msg_settings() {
+		$raw      = isset( $_POST['integration_settings'] ) ? wp_unslash( $_POST['integration_settings'] ) : '{}'; // phpcs:ignore
+		$incoming = json_decode( $raw, true );
+
+		if ( ! is_array( $incoming ) ) {
+			wp_send_json_error( array( 'message' => 'Invalid data.' ) );
+			return;
+		}
+
+		$sanitized = array();
+		foreach ( $incoming as $slug => $cfg ) {
+			$slug = sanitize_key( $slug );
+			if ( ! $slug || ! is_array( $cfg ) ) continue;
+			$sanitized[ $slug ] = array(
+				'message_type'         => ( 'template' === ( $cfg['message_type'] ?? 'text' ) ) ? 'template' : 'text',
+				'template_name'        => sanitize_text_field( $cfg['template_name']        ?? '' ),
+				'template_language'    => sanitize_text_field( $cfg['template_language']     ?? 'en_US' ),
+				'template_no_variables'=> ! empty( $cfg['template_no_variables'] ),
+			);
+		}
+
+		update_option( 'capfw_integration_settings', $sanitized );
+		wp_send_json_success( array( 'message' => 'Integration message settings saved.' ) );
 	}
 
 	private function ajax_get_available_triggers() {

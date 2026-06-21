@@ -14,6 +14,10 @@ const initialState = {
         phone_number_id:      '',
         business_account_id:  '',
         enabled_statuses:     [],
+        message_type:         'text',
+        template_name:          '',
+        template_language:      'en_US',
+        template_no_variables:  false,
     },
 
     // Message templates (one per order status)

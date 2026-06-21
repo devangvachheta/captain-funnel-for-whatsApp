@@ -200,7 +200,8 @@ const Settings = () => {
                 </div>
             </div>
 
-            {/* Admin Notification Phone — FIX High #6 */}
+
+            {/* Admin — FIX High #6 */}
             <div className="capfw-card">
                 <h3 className="capfw-card-title">{__('Admin Notifications', 'captain-funnel-for-whatsapp')}</h3>
                 <div className="capfw-form-group">

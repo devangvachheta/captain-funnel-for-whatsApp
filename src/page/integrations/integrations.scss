@@ -66,6 +66,13 @@
     min-width: 0;
 }
 
+.capfw-int-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
 .capfw-int-name {
     font-size: 13px;
     font-weight: 600;
@@ -109,4 +116,231 @@
     opacity: 0.4;
     cursor: not-allowed;
     pointer-events: none;
+}
+
+// ── Gear button ──────────────────────────────────────────────────────────────
+.capfw-int-gear-btn {
+    display:      flex;
+    align-items:  center;
+    justify-content: center;
+    width:        30px;
+    height:       30px;
+    padding:      0;
+    background:   $white_color;
+    border:       1.5px solid $border_color;
+    border-radius: 7px;
+    cursor:       pointer;
+    color:        $desc_color;
+    transition:   all $transition;
+
+    svg { display: block; }
+
+    &:hover {
+        border-color: $primary_color;
+        color:        $primary_color;
+        background:   $primary_light;
+    }
+}
+
+// ── Modal backdrop ────────────────────────────────────────────────────────────
+.capfw-modal-backdrop {
+    position:        fixed;
+    inset:           0;
+    background:      rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    z-index:         99999;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    padding:         20px;
+}
+
+// ── Modal box ────────────────────────────────────────────────────────────────
+.capfw-modal {
+    background:     $white_color;
+    border-radius:  14px;
+    width:          100%;
+    max-width:      680px;
+    box-shadow:     0 24px 70px rgba(0, 0, 0, 0.2);
+    display:        flex;
+    flex-direction: column;
+    overflow:       hidden;
+    animation:      capfw-modal-in 0.18s ease;
+}
+
+@keyframes capfw-modal-in {
+    from { opacity: 0; transform: translateY(10px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+.capfw-modal-header {
+    display:         flex;
+    align-items:     center;
+    justify-content: space-between;
+    padding:         20px 24px;
+    border-bottom:   1px solid $border_color;
+    gap:             12px;
+}
+
+.capfw-modal-title {
+    display:     flex;
+    align-items: center;
+    gap:         8px;
+    font-size:   14px;
+    font-weight: 600;
+    color:       $black_color;
+}
+
+.capfw-modal-integration-label {
+    font-size:     12px;
+    font-weight:   500;
+    color:         $white_color;
+    background:    $primary_color;
+    padding:       2px 8px;
+    border-radius: 4px;
+}
+
+.capfw-modal-close {
+    background:  none;
+    border:      none;
+    font-size:   16px;
+    cursor:      pointer;
+    color:       $desc_color;
+    line-height: 1;
+    padding:     4px 6px;
+    border-radius: 4px;
+    transition:  background $transition;
+
+    &:hover { background: #f3f4f6; color: $black_color; }
+}
+
+.capfw-modal-body {
+    padding:        28px 24px;
+    display:        flex;
+    flex-direction: column;
+    gap:            16px;
+    max-height:     65vh;
+    overflow-y:     auto;
+}
+
+.capfw-modal-footer {
+    display:         flex;
+    align-items:     center;
+    justify-content: flex-end;
+    gap:             12px;
+    padding:         18px 24px;
+    border-top:      1px solid $border_color;
+    background:      #fafafa;
+}
+
+// ── Modal field ───────────────────────────────────────────────────────────────
+.capfw-modal-field {
+    display:        flex;
+    flex-direction: column;
+    gap:            10px;
+}
+
+.capfw-modal-field-label {
+    font-size:   13px;
+    font-weight: 600;
+    color:       $black_color;
+}
+
+.capfw-modal-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+// ── Message type pills ───────────────────────────────────────────────────────
+.capfw-msg-type-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.capfw-msg-type-pill {
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    gap:            8px;
+    padding:        20px 16px;
+    border:         2px solid $border_color;
+    border-radius:  10px;
+    cursor:         pointer;
+    text-align:     center;
+    transition:     all $transition;
+    background:     $white_color;
+
+    &--active {
+        border-color: $primary_color;
+        background:   $primary_light;
+    }
+
+    &:hover:not(.capfw-msg-type-pill--active) {
+        border-color: lighten($primary_color, 20%);
+    }
+}
+
+.capfw-msg-type-pill-icon { font-size: 28px; }
+
+.capfw-msg-type-pill-text {
+    font-size:   14px;
+    font-weight: 600;
+    color:       $black_color;
+}
+
+.capfw-msg-type-pill-desc {
+    font-size:   12px;
+    color:       $desc_color;
+    line-height: 1.4;
+}
+
+// ── Warning ───────────────────────────────────────────────────────────────────
+.capfw-modal-warn {
+    font-size:     12px;
+    line-height:   1.6;
+    color:         #92400e;
+    background:    #fef3c7;
+    border:        1px solid #fde68a;
+    border-radius: 8px;
+    padding:       13px 16px;
+    margin:        0;
+}
+
+// ── Checkbox field ────────────────────────────────────────────────────────────
+.capfw-modal-checkbox-field {
+    padding-top:  20px;
+    border-top:   1px solid $border_color;
+    margin-top:   4px;
+}
+
+.capfw-modal-checkbox-label {
+    display:     flex;
+    align-items: flex-start;
+    gap:         12px;
+    cursor:      pointer;
+}
+
+.capfw-modal-checkbox-label input[type="checkbox"].capfw-modal-checkbox {
+    width:        18px !important;
+    height:       18px !important;
+    min-width:    18px !important;
+    min-height:   18px !important;
+    margin:       3px 0 0 0 !important;
+    padding:      0 !important;
+    flex-shrink:  0;
+    cursor:       pointer;
+    accent-color: $primary_color;
+    vertical-align: top;
+    float:        none !important;
+    position:     relative !important;
+}
+
+.capfw-modal-checkbox-title {
+    font-size:    13px;
+    font-weight:  600;
+    color:        $black_color;
+    display:      block;
+    margin-bottom: 4px;
 }

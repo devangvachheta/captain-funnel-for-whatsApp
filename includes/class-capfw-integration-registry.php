@@ -131,14 +131,18 @@ class CAPFW_Integration_Registry {
 	 */
 	public function get_enabled_slugs(): array {
 		$settings = (array) get_option( 'capfw_settings', array() );
-		$enabled  = $settings['enabled_integrations'] ?? array();
 
-		// WooCommerce is enabled by default for backward compatibility.
-		if ( empty( $enabled ) ) {
-			return array( 'woocommerce' );
+		// If the key doesn't exist yet (fresh install / never saved Integrations page),
+		// treat it as "not configured" and enable all available integrations by default
+		// so hooks register correctly without requiring a manual save first.
+		if ( ! array_key_exists( 'enabled_integrations', $settings ) ) {
+			return array_keys( $this->integrations );
 		}
 
-		return (array) $enabled;
+		$enabled = (array) $settings['enabled_integrations'];
+
+		// Backward compat: empty array means user saved with nothing checked — respect that.
+		return $enabled;
 	}
 
 	/**

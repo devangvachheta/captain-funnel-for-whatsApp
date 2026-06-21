@@ -82,11 +82,24 @@ abstract class CAPFW_Integration_Base {
 			return true;
 		}
 
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		// Primary check: use is_plugin_active() if available (always works in admin).
+		if ( function_exists( 'is_plugin_active' ) ) {
+			return is_plugin_active( $plugin_file );
 		}
 
-		return is_plugin_active( $plugin_file );
+		// Front-end fallback: is_plugin_active() requires wp-admin/includes/plugin.php
+		// which isn't loaded on the front-end. Manually requiring it can fail on some
+		// hosts. Instead, check the active_plugins option directly — same data source,
+		// no file dependency.
+		$active_plugins = (array) get_option( 'active_plugins', array() );
+
+		// Also check network-activated plugins for multisite.
+		if ( is_multisite() ) {
+			$network_plugins = array_keys( (array) get_site_option( 'active_sitewide_plugins', array() ) );
+			$active_plugins  = array_merge( $active_plugins, $network_plugins );
+		}
+
+		return in_array( $plugin_file, $active_plugins, true );
 	}
 
 	/**
@@ -110,11 +123,23 @@ abstract class CAPFW_Integration_Base {
 
 		$template = $this->get_template( $trigger_key );
 		if ( empty( $template ) ) {
+			// Log the skip so admins can see it in WA Funnel → Logs and diagnose easily.
+			CAPFW_Logger::log(
+				array(
+					'order_id'         => $ref_id,
+					'customer_phone'   => $phone,
+					'message'          => '',
+					'status'           => 'skipped',
+					'response'         => 'No active template found for integration "' . $this->get_slug() . '" / trigger "' . $trigger_key . '". Go to WA Funnel → Templates to create one.',
+					'integration_slug' => $this->get_slug(),
+					'trigger_key'      => $trigger_key,
+				)
+			);
 			return;
 		}
 
 		$message = $this->parse_variables( $template, $variables );
-		$result  = CAPFW_WhatsApp_API::send_message( $phone, $message );
+		$result  = CAPFW_WhatsApp_API::send_message( $phone, $message, $this->get_slug() );
 
 		CAPFW_Logger::log(
 			array(
@@ -192,7 +217,7 @@ abstract class CAPFW_Integration_Base {
 			return;
 		}
 
-		$result = CAPFW_WhatsApp_API::send_message( $phone, $message );
+		$result = CAPFW_WhatsApp_API::send_message( $phone, $message, $this->get_slug() );
 
 		CAPFW_Logger::log(
 			array(

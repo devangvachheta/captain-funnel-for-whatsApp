@@ -79,6 +79,75 @@ const MessageModal = ({ log, onClose }) => (
     </div>
 );
 
+// ── Clear Logs Confirm Modal ──────────────────────────────────────────────────
+const ClearLogsModal = ({ onClose, onConfirm, clearing }) => {
+    const [mode, setMode] = useState('all');
+    const [days, setDays] = useState(30);
+
+    return (
+        <div className="capfw-modal-overlay" onClick={onClose}>
+            <div className="capfw-modal" onClick={e => e.stopPropagation()}>
+                <div className="capfw-modal-header">
+                    <h3 className="capfw-modal-title">{__('Clear Logs', 'captain-funnel-for-whatsapp')}</h3>
+                    <button className="capfw-modal-close" onClick={onClose} type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" width="16" height="16">
+                            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <div className="capfw-modal-body">
+                    <div className="capfw-status-checkboxes" style={{ marginBottom: '16px' }}>
+                        <label className={`capfw-status-chip ${mode === 'all' ? 'capfw-status-chip--on' : ''}`}>
+                            <input type="radio" name="capfw_clear_mode" checked={mode === 'all'} onChange={() => setMode('all')} />
+                            <span className="capfw-status-chip-dot" />
+                            {__('Clear all logs', 'captain-funnel-for-whatsapp')}
+                        </label>
+                        <label className={`capfw-status-chip ${mode === 'older_than' ? 'capfw-status-chip--on' : ''}`}>
+                            <input type="radio" name="capfw_clear_mode" checked={mode === 'older_than'} onChange={() => setMode('older_than')} />
+                            <span className="capfw-status-chip-dot" />
+                            {__('Older than…', 'captain-funnel-for-whatsapp')}
+                        </label>
+                    </div>
+
+                    {mode === 'older_than' && (
+                        <div className="capfw-form-group" style={{ marginBottom: '16px' }}>
+                            <label>{__('Days', 'captain-funnel-for-whatsapp')}</label>
+                            <input
+                                type="number" min="1" className="capfw-input" style={{ maxWidth: '120px' }}
+                                value={days}
+                                onChange={e => setDays(e.target.value)}
+                            />
+                            <span className="capfw-desc">
+                                {__('Logs older than this many days will be permanently deleted.', 'captain-funnel-for-whatsapp')}
+                            </span>
+                        </div>
+                    )}
+
+                    <p className="capfw-error-msg" style={{ marginTop: 0 }}>
+                        ⚠ {__('This action cannot be undone.', 'captain-funnel-for-whatsapp')}
+                    </p>
+                </div>
+                <div className="capfw-settings-footer" style={{ padding: '0 20px 20px' }}>
+                    <button className="capfw-btn-secondary" onClick={onClose} type="button" disabled={clearing}>
+                        {__('Cancel', 'captain-funnel-for-whatsapp')}
+                    </button>
+                    <button
+                        className="capfw-btn-primary"
+                        onClick={() => onConfirm(mode, parseInt(days, 10) || 30)}
+                        type="button"
+                        disabled={clearing}
+                    >
+                        {clearing
+                            ? <><Spinner size={14} color="#fff" /> {__('Clearing…', 'captain-funnel-for-whatsapp')}</>
+                            : __('Clear Logs', 'captain-funnel-for-whatsapp')
+                        }
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 // ── Logs Component ────────────────────────────────────────────────────────────
 const Logs = () => {
     const dispatch = useDispatch();
@@ -89,6 +158,8 @@ const Logs = () => {
     const [paged,      setPaged]      = useState(1);
     const [filterStatus, setFilterStatus] = useState('all');
     const [previewLog,   setPreviewLog]   = useState(null);
+    const [showClearModal, setShowClearModal] = useState(false);
+    const [clearing,       setClearing]       = useState(false);
 
     const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
 
@@ -133,6 +204,31 @@ const Logs = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    const handleClearLogs = async (mode, days) => {
+        setClearing(true);
+        const { ajax_url, nonce } = ajaxData();
+        const fd = new FormData();
+        fd.append('action', 'capfw_react_ajax');
+        fd.append('nonce',  nonce);
+        fd.append('type',   'clear_logs');
+        fd.append('mode',   mode);
+        if (mode === 'older_than') fd.append('days', days);
+
+        try {
+            const res    = await fetch(ajax_url, { method: 'POST', body: fd });
+            const result = await res.json();
+            if (result.success) {
+                setShowClearModal(false);
+                setPaged(1);
+                fetchLogs(1, filterStatus);
+            }
+        } catch (e) {
+            console.error('CAPFW clear logs error:', e);
+        } finally {
+            setClearing(false);
+        }
+    };
+
     const STATUS_FILTERS = [
         { key: 'all',     label: __('All', 'captain-funnel-for-whatsapp') },
         { key: 'sent',    label: __('Sent', 'captain-funnel-for-whatsapp') },
@@ -151,18 +247,33 @@ const Logs = () => {
                         {__('Full history of WhatsApp messages sent by your store.', 'captain-funnel-for-whatsapp')}
                     </p>
                 </div>
-                <button
-                    className="capfw-btn-secondary"
-                    onClick={() => fetchLogs(paged, filterStatus)}
-                    type="button"
-                    title={__('Refresh', 'captain-funnel-for-whatsapp')}
-                >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
-                        <polyline points="23 4 23 10 17 10"/>
-                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-                    </svg>
-                    {__('Refresh', 'captain-funnel-for-whatsapp')}
-                </button>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <button
+                        className="capfw-btn-secondary"
+                        onClick={() => fetchLogs(paged, filterStatus)}
+                        type="button"
+                        title={__('Refresh', 'captain-funnel-for-whatsapp')}
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                        {__('Refresh', 'captain-funnel-for-whatsapp')}
+                    </button>
+                    <button
+                        className="capfw-btn-secondary"
+                        onClick={() => setShowClearModal(true)}
+                        type="button"
+                        title={__('Clear Logs', 'captain-funnel-for-whatsapp')}
+                        disabled={total === 0}
+                    >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+                            <polyline points="3 6 5 6 21 6"/>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                        </svg>
+                        {__('Clear Logs', 'captain-funnel-for-whatsapp')}
+                    </button>
+                </div>
             </div>
 
             {/* Filter bar */}
@@ -292,6 +403,15 @@ const Logs = () => {
                 <MessageModal
                     log={previewLog}
                     onClose={() => setPreviewLog(null)}
+                />
+            )}
+
+            {/* Clear logs confirm modal */}
+            {showClearModal && (
+                <ClearLogsModal
+                    onClose={() => setShowClearModal(false)}
+                    onConfirm={handleClearLogs}
+                    clearing={clearing}
                 />
             )}
 
