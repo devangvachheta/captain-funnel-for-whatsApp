@@ -133,6 +133,8 @@ class CAPFW_Logger {
 				$stats[ $row->status ] = (int) $row->cnt;
 			}
 		}
+
+		return $stats;
 	}
 
 	/**

@@ -28,12 +28,19 @@
     transition: background 0.25s ease, color 0.25s ease;
 }
 
+// Fixed sidebar spacer — push content right by sidebar width
+.capfw-sidebar-spacer {
+    width: 220px;
+    flex-shrink: 0;
+}
+
 .capfw-app-main-content {
     flex: 1;
     padding: 28px;
     background: var(--capfw-bg);
     overflow-x: hidden;
     transition: background 0.25s ease;
+    min-width: 0;
 }
 
 // ── Shared card ───────────────────────────────────────────────────────────────
@@ -51,8 +58,6 @@
     font-weight: 600;
     color: var(--capfw-text);
     margin: 0 0 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--capfw-border);
 }
 
 // ── Shared buttons ────────────────────────────────────────────────────────────
@@ -264,4 +269,50 @@ textarea.capfw-textarea,
 
     .capfw-dm-moon { display: var(--capfw-dm-moon-display); }
     .capfw-dm-sun  { display: var(--capfw-dm-sun-display);  }
+}
+
+// ── Global: Override WP admin blue focus ring inside our plugin ───────────────
+.capfw-app {
+    a:focus,
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid $primary_color;
+        outline-offset: 2px;
+        box-shadow: none;
+    }
+
+    // Sidebar nav links — green focus, never blue
+    .capfw-sidebar-link:focus,
+    .capfw-sidebar-link:focus-visible {
+        outline: 2px solid $primary_color;
+        outline-offset: -2px;
+        box-shadow: none;
+        color: $primary_dark;
+        background: var(--capfw-primary-light);
+    }
+}
+
+// ── Page header with top-right action buttons ─────────────────────────────────
+.capfw-page-header--flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.capfw-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding-top: 4px;
 }

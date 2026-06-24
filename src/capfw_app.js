@@ -6,6 +6,8 @@ import Navigation from './page/navigation/navigation.jsx';
 const AppContent = () => (
     <div className="capfw-app">
         <Navigation />
+        {/* Spacer pushes content right by sidebar width since sidebar is fixed */}
+        <div className="capfw-sidebar-spacer" aria-hidden="true" />
         <div className="capfw-app-main-content">
             <Routes>
                 {routes.map((route, i) => (

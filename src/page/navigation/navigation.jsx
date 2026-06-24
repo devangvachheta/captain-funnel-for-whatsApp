@@ -3,6 +3,39 @@ import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { __ } from '@wordpress/i18n';
 import { toggleDarkMode } from '../../redux/slice';
+
+// ── Sync sidebar left offset with WP admin menu (expand/collapse) ─────────────
+const useWPAdminOffset = () => {
+    React.useEffect(() => {
+        const sidebar = document.querySelector('.capfw-sidebar');
+        const spacer  = document.querySelector('.capfw-sidebar-spacer');
+        if (!sidebar) return;
+
+        const update = () => {
+            // Measure actual WP admin menu width from the DOM
+            const wpMenu = document.querySelector('#adminmenuwrap') ||
+                           document.querySelector('#adminmenu');
+            const menuWidth = wpMenu ? wpMenu.offsetWidth : 160;
+            sidebar.style.left = menuWidth + 'px';
+            if (spacer) spacer.style.width = '220px'; // keep spacer fixed
+        };
+
+        // Small delay so WP menu finishes its own CSS transition first
+        const run = () => setTimeout(update, 50);
+
+        run();
+
+        // Watch body class changes (folded / auto-fold / wp-menu-open etc.)
+        const observer = new MutationObserver(run);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+        window.addEventListener('resize', run);
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('resize', run);
+        };
+    }, []);
+};
 import './navigation.scss';
 
 const NAV_ITEMS = [
@@ -117,6 +150,7 @@ const Navigation = () => {
     const location  = useLocation();
     const dispatch  = useDispatch();
     const darkMode  = useSelector((state) => state.capfw.darkMode);
+    useWPAdminOffset();
 
     const isActive = (path) => {
         if (path === '/') return location.pathname === '/';

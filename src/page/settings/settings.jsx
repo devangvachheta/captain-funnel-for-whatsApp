@@ -126,15 +126,24 @@ const Settings = () => {
 
     return (
         <div className="capfw-settings-page">
-            <div className="capfw-page-header">
-                <h2 className="capfw-page-title">{__('WhatsApp Settings', 'captain-funnel-for-whatsapp')}</h2>
-                <p className="capfw-page-subtitle">
-                    {__('Configure your WhatsApp Cloud API credentials.', 'captain-funnel-for-whatsapp')}
-                    {' '}
-                    <a href="#/docs/credentials" className="capfw-settings-doc-link">
-                        {__('📖 How to get credentials?', 'captain-funnel-for-whatsapp')}
-                    </a>
-                </p>
+            <div className="capfw-page-header capfw-page-header--flex">
+                <div>
+                    <h2 className="capfw-page-title">{__('WhatsApp Settings', 'captain-funnel-for-whatsapp')}</h2>
+                    <p className="capfw-page-subtitle">
+                        {__('Configure your WhatsApp Cloud API credentials.', 'captain-funnel-for-whatsapp')}
+                        {' '}
+                        <a href="#/docs/credentials" className="capfw-settings-doc-link">
+                            {__('📖 How to get credentials?', 'captain-funnel-for-whatsapp')}
+                        </a>
+                    </p>
+                </div>
+                <div className="capfw-header-actions">
+                    {saveStatus === 'saved' && <span className="capfw-msg capfw-msg--success">✓ {__('Saved!', 'captain-funnel-for-whatsapp')}</span>}
+                    {saveStatus === 'error'  && <span className="capfw-msg capfw-msg--error">✗ {__('Failed.', 'captain-funnel-for-whatsapp')}</span>}
+                    <button className="capfw-btn-primary" onClick={handleSave} disabled={saveStatus === 'saving'}>
+                        {saveStatus === 'saving' ? __('Saving…', 'captain-funnel-for-whatsapp') : __('Save Settings', 'captain-funnel-for-whatsapp')}
+                    </button>
+                </div>
             </div>
 
             {/* API Credentials */}

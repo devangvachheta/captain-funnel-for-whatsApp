@@ -107,8 +107,9 @@
     }
 
     &--missing {
-        background: #f3f4f6;
+        background: var(--capfw-surface-2);
         color: var(--capfw-text-muted);
+        border: 1px solid var(--capfw-border);
     }
 }
 
@@ -212,7 +213,7 @@
     border-radius: 4px;
     transition:  background $transition;
 
-    &:hover { background: #f3f4f6; color: var(--capfw-text); }
+    &:hover { background: var(--capfw-surface-2); color: var(--capfw-text); }
 }
 
 .capfw-modal-body {

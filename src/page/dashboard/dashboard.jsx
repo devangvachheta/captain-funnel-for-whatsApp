@@ -66,18 +66,32 @@ const Dashboard = () => {
     const fetchData = useCallback(async () => {
         setFetchError('');
         try {
-            const [statsRes, logsRes] = await Promise.all([
+            // Run calls independently — one failing won't block the other
+            const [statsResult, logsResult] = await Promise.allSettled([
                 ajaxCall('get_stats'),
                 ajaxCall('get_recent_logs'),
             ]);
-            if (statsRes.success && statsRes.data) dispatch(setStats(statsRes.data));
-            // FIX High #2: set local recentLogs — not shared Redux logs state
-            if (logsRes.success  && logsRes.data)  setRecentLogs(logsRes.data);
-            if (!statsRes.success && !logsRes.success) {
-                setFetchError(__('Failed to load dashboard data.', 'captain-funnel-for-whatsapp'));
+
+            if (statsResult.status === 'fulfilled') {
+                const statsRes = statsResult.value;
+                if (statsRes && statsRes.success && statsRes.data) {
+                    dispatch(setStats(statsRes.data));
+                }
+            }
+
+            if (logsResult.status === 'fulfilled') {
+                const logsRes = logsResult.value;
+                if (logsRes && logsRes.success && Array.isArray(logsRes.data)) {
+                    setRecentLogs(logsRes.data);
+                } else {
+                    // success:false means table exists but returned error — still show empty
+                    setRecentLogs([]);
+                }
+            } else {
+                // Network failure on logs call — show empty, not error
+                setRecentLogs([]);
             }
         } catch (e) {
-            // FIX Low #4: Show error instead of silently failing
             setFetchError(__('Network error. Please refresh the page.', 'captain-funnel-for-whatsapp'));
         } finally {
             setLoading(false);
@@ -142,7 +156,7 @@ const Dashboard = () => {
             <div className="capfw-dashboard-header">
                 <h2 className="capfw-page-title">{__('Dashboard', 'captain-funnel-for-whatsapp')}</h2>
                 <p className="capfw-page-subtitle">
-                    {__('WhatsApp automation overview for your WooCommerce store.', 'captain-funnel-for-whatsapp')}
+                    {__('Send automated WhatsApp messages for every order, form & funnel event.', 'captain-funnel-for-whatsapp')}
                 </p>
             </div>
 

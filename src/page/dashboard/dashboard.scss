@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    max-width: 1000px;
 }
 
 // ── Header ────────────────────────────────────────────────────────────────────
@@ -105,8 +104,6 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
-    padding-bottom: 12px;
-    border: 1px solid var(--capfw-border);
 }
 
 // ── Table ─────────────────────────────────────────────────────────────────────
