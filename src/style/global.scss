@@ -21,35 +21,38 @@
 .capfw-app {
     display: flex;
     min-height: calc(100vh - 32px);
-    background: $grey_bg;
+    background: var(--capfw-bg);
     font-family: 'Inter', Arial, sans-serif;
     font-size: 13px;
-    color: $black_color;
+    color: var(--capfw-text);
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .capfw-app-main-content {
     flex: 1;
     padding: 28px;
-    background: $grey_bg;
+    background: var(--capfw-bg);
     overflow-x: hidden;
+    transition: background 0.25s ease;
 }
 
 // ── Shared card ───────────────────────────────────────────────────────────────
 .capfw-card {
-    background: $white_color;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface);
+    border: 1px solid var(--capfw-border);
     border-radius: $card_radius;
     padding: 24px;
-    box-shadow: $shadow_sm;
+    box-shadow: var(--capfw-shadow-sm);
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .capfw-card-title {
     font-size: 14px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0 0 18px;
     padding-bottom: 12px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
 }
 
 // ── Shared buttons ────────────────────────────────────────────────────────────
@@ -58,7 +61,7 @@
     align-items: center;
     gap: 6px;
     background: $primary_color;
-    color: $white_color;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     padding: 9px 18px;
@@ -76,18 +79,21 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: $white_color;
-    color: $black_color;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface);
+    color: var(--capfw-text);
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
     padding: 9px 18px;
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
-    transition: border-color $transition, background $transition;
+    transition: border-color $transition, background $transition, color $transition;
     font-family: inherit;
 
-    &:hover { background: $grey_bg; border-color: #d1d5db; }
+    &:hover {
+        background: var(--capfw-bg);
+        border-color: var(--capfw-border-hover);
+    }
 }
 
 .capfw-btn-danger {
@@ -107,37 +113,40 @@
     label {
         font-size: 13px;
         font-weight: 500;
-        color: $black_color;
+        color: var(--capfw-text);
     }
 
     .capfw-desc {
         font-size: 11px;
-        color: $desc_color;
+        color: var(--capfw-text-muted);
         margin-top: 2px;
     }
 }
 
+input.capfw-input,
+select.capfw-select,
+textarea.capfw-textarea,
 .capfw-input,
 .capfw-select,
 .capfw-textarea {
     width: 100%;
     padding: 9px 12px;
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
     font-size: 13px;
     font-family: inherit;
-    background: $input_bg;
-    color: $black_color;
-    transition: border-color $transition;
+    background: var(--capfw-input-bg);
+    color: var(--capfw-text);
+    transition: border-color $transition, background $transition, color $transition;
     box-sizing: border-box;
 
     &:focus {
         outline: none;
         border-color: $primary_color;
-        background: $white_color;
+        background: var(--capfw-surface);
     }
 
-    &::placeholder { color: #9ca3af; }
+    &::placeholder { color: var(--capfw-text-subtle); }
 }
 
 .capfw-textarea { resize: vertical; min-height: 100px; }
@@ -155,7 +164,7 @@
 .capfw-toggle-slider {
     width: 40px;
     height: 22px;
-    background: #d1d5db;
+    background: var(--capfw-border);
     border-radius: 11px;
     transition: background $transition;
     flex-shrink: 0;
@@ -167,10 +176,10 @@
         left: 3px;
         width: 16px;
         height: 16px;
-        background: $white_color;
+        background: #ffffff;
         border-radius: 50%;
         transition: transform $transition;
-        box-shadow: $shadow_sm;
+        box-shadow: var(--capfw-shadow-sm);
     }
 }
 
@@ -179,14 +188,14 @@
     &::after { transform: translateX(18px); }
 }
 
-// ── Notice banner (Templates default notice) ──────────────────────────────────
+// ── Notice banner ─────────────────────────────────────────────────────────────
 .capfw-notice-banner {
-    background: #fffbeb;
-    border: 1px solid #fcd34d;
+    background: var(--capfw-notice-bg);
+    border: 1px solid var(--capfw-notice-border);
     border-radius: 8px;
     padding: 10px 16px;
     font-size: 12px;
-    color: #92400e;
+    color: var(--capfw-notice-text);
     font-weight: 500;
 }
 
@@ -194,16 +203,18 @@
 .capfw-error-msg {
     color: #b91c1c;
     font-size: 13px;
-    background: #fee2e2;
+    background: $bg_failed;
     border: 1px solid #fca5a5;
     border-radius: 6px;
     padding: 10px 14px;
     margin: 0;
 }
+
+// ── Skeleton ──────────────────────────────────────────────────────────────────
 @keyframes capfw-skeleton {
-    0%   { background-color: #e5e7eb; }
-    50%  { background-color: #f3f4f6; }
-    100% { background-color: #e5e7eb; }
+    0%   { background-color: var(--capfw-skeleton-from); }
+    50%  { background-color: var(--capfw-skeleton-to); }
+    100% { background-color: var(--capfw-skeleton-from); }
 }
 
 .capfw-skeleton-text {
@@ -224,6 +235,33 @@
     padding: 6px 10px;
     border-radius: 6px;
 
-    &.capfw-msg--success { background: $bg_sent;    color: $color_sent;    }
-    &.capfw-msg--error   { background: $bg_failed;  color: $color_failed;  }
+    &.capfw-msg--success { background: $bg_sent;   color: $color_sent;   }
+    &.capfw-msg--error   { background: $bg_failed;  color: $color_failed; }
+}
+
+// ── Dark mode toggle button (in sidebar) ─────────────────────────────────────
+.capfw-dm-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--capfw-border);
+    background: var(--capfw-surface);
+    cursor: pointer;
+    transition: background $transition, border-color $transition;
+    color: var(--capfw-text-muted);
+    flex-shrink: 0;
+
+    svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
+
+    &:hover {
+        background: var(--capfw-primary-light);
+        border-color: $primary_color;
+        color: $primary_dark;
+    }
+
+    .capfw-dm-moon { display: var(--capfw-dm-moon-display); }
+    .capfw-dm-sun  { display: var(--capfw-dm-sun-display);  }
 }

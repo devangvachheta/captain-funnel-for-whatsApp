@@ -19,8 +19,8 @@
 
 // ── TOC sidebar ───────────────────────────────────────────────────────────────
 .capfw-docs-toc {
-    background: $white_color;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface);
+    border: 1px solid var(--capfw-border);
     border-radius: $card_radius;
     padding: 16px;
     position: sticky;
@@ -32,7 +32,7 @@
 .capfw-docs-toc-title {
     font-size: 10px;
     font-weight: 600;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     text-transform: uppercase;
     letter-spacing: .6px;
     margin-bottom: 10px;
@@ -48,7 +48,7 @@
     padding: 5px 10px;
     font-size: 12px;
     font-weight: 400;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     cursor: pointer;
     font-family: inherit;
     transition: all $transition;
@@ -79,7 +79,7 @@
 .capfw-docs-quicklinks-title {
     font-size: 10px;
     font-weight: 600;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     text-transform: uppercase;
     letter-spacing: .6px;
     margin-bottom: 8px;
@@ -88,7 +88,7 @@
 .capfw-docs-ext-link {
     display: block;
     font-size: 11px;
-    color: #2271b1;
+    color: var(--capfw-link-color);
     text-decoration: none;
     padding: 4px 0;
     transition: color $transition;
@@ -103,8 +103,8 @@
     gap: 0;
 
     section {
-        background: $white_color;
-        border: 1px solid $border_color;
+        background: var(--capfw-surface);
+        border: 1px solid var(--capfw-border);
         border-radius: $card_radius;
         padding: 24px 28px;
         margin-bottom: 16px;
@@ -114,14 +114,14 @@
     p {
         font-size: 13px;
         line-height: 1.7;
-        color: #374151;
+        color: var(--capfw-text-muted);
         margin: 0 0 10px;
 
         &:last-child { margin-bottom: 0; }
     }
 
     a {
-        color: #2271b1;
+        color: var(--capfw-link-color);
         text-decoration: none;
         &:hover { text-decoration: underline; }
     }
@@ -131,10 +131,10 @@
 .capfw-doc-section-heading {
     font-size: 16px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0 0 16px;
     padding-bottom: 12px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -181,13 +181,13 @@
 .capfw-doc-step-title {
     font-size: 13px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0 0 6px;
 }
 
 .capfw-doc-step-content {
     font-size: 13px;
-    color: #374151;
+    color: var(--capfw-text-muted);
     line-height: 1.6;
 }
 
@@ -202,10 +202,10 @@
     margin: 12px 0;
     border: 1px solid transparent;
 
-    &--info    { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
-    &--warning { background: #fffbeb; border-color: #fcd34d; color: #92400e; }
-    &--danger  { background: #fff5f5; border-color: #fca5a5; color: #991b1b; }
-    &--success { background: #f0fdf4; border-color: #86efac; color: #166534; }
+    &--info    { background: var(--capfw-callout-info-bg, #eff6ff); border-color: var(--capfw-callout-info-border, #bfdbfe); color: var(--capfw-callout-info-text, #1e40af); }
+    &--warning { background: var(--capfw-callout-warn-bg, #fffbeb); border-color: var(--capfw-callout-warn-border, #fcd34d); color: var(--capfw-callout-warn-text, #92400e); }
+    &--danger  { background: var(--capfw-callout-danger-bg, #fff5f5); border-color: var(--capfw-callout-danger-border, #fca5a5); color: var(--capfw-callout-danger-text, #991b1b); }
+    &--success { background: var(--capfw-callout-success-bg, #f0fdf4); border-color: var(--capfw-callout-success-border, #86efac); color: var(--capfw-callout-success-text, #166534); }
 }
 
 .capfw-doc-callout-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
@@ -214,17 +214,17 @@
 .capfw-doc-code-inline {
     font-family: 'SFMono-Regular', Consolas, monospace;
     font-size: 11px;
-    background: #f1f5f9;
-    border: 1px solid #e2e8f0;
+    background: var(--capfw-surface-2);
+    border: 1px solid var(--capfw-border);
     border-radius: 4px;
     padding: 2px 6px;
-    color: #0f172a;
+    color: var(--capfw-text);
 }
 
 // ── Credentials preview box ───────────────────────────────────────────────────
 .capfw-doc-credentials-preview {
-    background: #f8fafc;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface-2);
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
     overflow: hidden;
     margin: 12px 0;
@@ -235,7 +235,7 @@
     grid-template-columns: 170px 1fr;
     gap: 12px;
     padding: 10px 14px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
     align-items: start;
 
     &:last-child { border-bottom: none; }
@@ -244,7 +244,7 @@
 .capfw-doc-field-label {
     font-size: 12px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     padding-top: 2px;
 }
 
@@ -256,7 +256,7 @@
 
 .capfw-doc-field-desc {
     font-size: 11px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     line-height: 1.4;
 }
 
@@ -273,7 +273,7 @@
     align-items: flex-start;
     gap: 10px;
     font-size: 13px;
-    color: #374151;
+    color: var(--capfw-text-muted);
 }
 
 .capfw-doc-check {
@@ -288,7 +288,7 @@
     padding-left: 18px;
     margin: 8px 0;
     font-size: 13px;
-    color: #374151;
+    color: var(--capfw-text-muted);
     line-height: 1.7;
 
     li { margin-bottom: 4px; }
@@ -334,19 +334,19 @@
     p { margin: 0; }
 
     &--success {
-        background: #f0fdf4;
-        border: 1px solid #86efac;
+        background: var(--capfw-callout-success-bg, #f0fdf4);
+        border: 1px solid var(--capfw-callout-success-border, #86efac);
         > span { color: $color_active; }
-        strong  { color: #166534; }
-        p       { color: #166534; }
+        strong  { color: var(--capfw-callout-success-text, #166534); }
+        p       { color: var(--capfw-callout-success-text, #166534); }
     }
 
     &--error {
-        background: #fff5f5;
-        border: 1px solid #fca5a5;
+        background: var(--capfw-callout-danger-bg, #fff5f5);
+        border: 1px solid var(--capfw-callout-danger-border, #fca5a5);
         > span { color: $color_failed; }
-        strong  { color: #991b1b; }
-        p       { color: #991b1b; }
+        strong  { color: var(--capfw-callout-danger-text, #991b1b); }
+        p       { color: var(--capfw-callout-danger-text, #991b1b); }
     }
 }
 
@@ -362,15 +362,15 @@
     display: flex;
     gap: 14px;
     padding: 14px 16px;
-    background: $grey_bg;
+    background: var(--capfw-bg);
     border-radius: 8px;
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
     font-size: 13px;
     line-height: 1.6;
     align-items: flex-start;
 
-    strong { display: block; margin-bottom: 4px; color: $black_color; }
-    p      { margin: 0; color: $desc_color; font-size: 12px; }
+    strong { display: block; margin-bottom: 4px; color: var(--capfw-text); }
+    p      { margin: 0; color: var(--capfw-text-muted); font-size: 12px; }
 }
 
 .capfw-doc-live-step-num {
@@ -397,15 +397,15 @@
 
 .capfw-doc-trouble-item {
     padding: 14px 16px;
-    background: $grey_bg;
+    background: var(--capfw-bg);
     border-radius: 8px;
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
 }
 
 .capfw-doc-trouble-problem {
     font-size: 13px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin-bottom: 10px;
 }
 
@@ -417,24 +417,24 @@
 }
 
 .capfw-doc-faq-item {
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
     overflow: hidden;
 }
 
 .capfw-doc-faq-q {
-    background: $grey_bg;
+    background: var(--capfw-bg);
     padding: 12px 16px;
     font-size: 13px;
     font-weight: 600;
-    color: $black_color;
-    border-bottom: 1px solid $border_color;
+    color: var(--capfw-text);
+    border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-doc-faq-a {
     padding: 12px 16px;
     font-size: 12px;
-    color: #374151;
+    color: var(--capfw-text-muted);
     line-height: 1.7;
 }
 
@@ -482,12 +482,12 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    background: #fffbeb;
-    border: 1px solid #fcd34d;
+    background: var(--capfw-callout-warn-bg, #fffbeb);
+    border: 1px solid var(--capfw-callout-warn-border, #fcd34d);
     border-radius: 8px;
     padding: 10px 16px;
     font-size: 12px;
-    color: #92400e;
+    color: var(--capfw-callout-warn-text, #92400e);
     line-height: 1.6;
 
     > span:first-child { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
@@ -606,8 +606,8 @@
 
 // ── Field box (token config steps) ────────────────────────────────────────────
 .capfw-doc-field-box {
-    background: #f8fafc;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface-2);
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
     overflow: hidden;
     margin: 10px 0;
@@ -618,7 +618,7 @@
     align-items: baseline;
     gap: 12px;
     padding: 9px 14px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
     font-size: 13px;
 
     &:last-child { border-bottom: none; }
@@ -626,13 +626,13 @@
 
 .capfw-doc-field-box-label {
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     min-width: 150px;
     flex-shrink: 0;
 }
 
 .capfw-doc-field-box-value {
-    color: #374151;
+    color: var(--capfw-text-muted);
 
     &--important {
         color: $primary_dark;
@@ -642,8 +642,8 @@
 
 // ── Token config panel ────────────────────────────────────────────────────────
 .capfw-doc-token-config {
-    background: #f8fafc;
-    border: 1px solid $border_color;
+    background: var(--capfw-surface-2);
+    border: 1px solid var(--capfw-border);
     border-radius: 10px;
     overflow: hidden;
     margin: 12px 0;
@@ -663,13 +663,13 @@
     display: flex;
     gap: 16px;
     padding: 12px 16px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
     align-items: flex-start;
 
     &:last-child { border-bottom: none; }
 
     &--highlight {
-        background: #fffbeb;
+        background: var(--capfw-callout-warn-bg);
         border-left: 3px solid #f59e0b;
     }
 }
@@ -677,7 +677,7 @@
 .capfw-doc-token-config-label {
     font-size: 12px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     min-width: 140px;
     flex-shrink: 0;
     padding-top: 2px;
@@ -685,14 +685,14 @@
 
 .capfw-doc-token-config-value {
     font-size: 12px;
-    color: #374151;
+    color: var(--capfw-text-muted);
     line-height: 1.6;
 
     strong { color: $color_active; font-size: 13px; }
 }
 
 .capfw-doc-token-config-note {
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     font-size: 11px;
 }
 
@@ -719,7 +719,7 @@
 }
 
 .capfw-doc-perm-desc {
-    color: $desc_color;
+    color: var(--capfw-text-muted);
 }
 
 // ── Token reveal box ──────────────────────────────────────────────────────────

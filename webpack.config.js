@@ -43,10 +43,13 @@ module.exports = (env, argv) => {
                         {
                             loader:  'sass-loader',
                             options: {
+                                // Modern Sass compiler API — eliminates all legacy-js-api warnings
+                                api: 'modern-compiler',
                                 sassOptions: {
                                     includePaths: [path.resolve(__dirname)],
+                                    silenceDeprecations: ['import'],
                                 },
-                                // Auto-inject SCSS variables into every file — no manual @import needed
+                                // Auto-inject variables via @use (Dart Sass 3 compatible, no @import deprecation)
                                 additionalData: `@use '${path.resolve(__dirname, 'src/style/variables.scss').replace(/\\/g, '/')}' as *;`,
                             },
                         },

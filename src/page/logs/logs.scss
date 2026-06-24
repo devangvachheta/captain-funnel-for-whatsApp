@@ -19,20 +19,20 @@
     align-items: center;
     gap: 6px;
     padding: 7px 14px;
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
     border-radius: 8px;
-    background: $white_color;
+    background: var(--capfw-surface);
     font-size: 12px;
     font-weight: 500;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     cursor: pointer;
     font-family: inherit;
     transition: all $transition;
 
     &:hover {
         border-color: #d1d5db;
-        color: $black_color;
-        background: $grey_bg;
+        color: var(--capfw-text);
+        background: var(--capfw-bg);
     }
 
     &--active {
@@ -57,7 +57,7 @@
 .capfw-log-total {
     margin-left: auto;
     font-size: 12px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
 }
 
 // ── Table card ────────────────────────────────────────────────────────────────
@@ -67,12 +67,12 @@
 .capfw-log-row {
     cursor: pointer;
     transition: background $transition;
-    &:hover { background: #f0fdf4 !important; }
+    &:hover { background: var(--capfw-log-row-hover) !important; }
 }
 
 .capfw-log-id {
     font-size: 11px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     font-family: monospace;
 }
 
@@ -82,7 +82,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 12px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
 }
 
 .capfw-dash { color: #d1d5db; }
@@ -93,13 +93,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 14px 20px;
-    border-top: 1px solid $border_color;
-    background: $grey_bg;
+    border-top: 1px solid var(--capfw-border);
+    background: var(--capfw-bg);
 }
 
 .capfw-page-info {
     font-size: 12px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
 }
 
 .capfw-page-btns {
@@ -114,12 +114,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $border_color;
+    border: 1px solid var(--capfw-border);
     border-radius: 6px;
-    background: $white_color;
+    background: var(--capfw-surface);
     font-size: 12px;
     font-weight: 500;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     cursor: pointer;
     font-family: inherit;
     transition: all $transition;
@@ -127,8 +127,8 @@
     svg { stroke: currentColor; }
 
     &:hover:not(:disabled) {
-        background: $grey_bg;
-        color: $black_color;
+        background: var(--capfw-bg);
+        color: var(--capfw-text);
     }
 
     &--active {
@@ -156,7 +156,7 @@
     gap: 8px;
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-log-meta-row {
@@ -165,13 +165,13 @@
     gap: 10px;
     font-size: 13px;
 
-    strong { color: $black_color; font-weight: 600; min-width: 70px; }
-    span   { color: $desc_color; }
+    strong { color: var(--capfw-text); font-weight: 600; min-width: 70px; }
+    span   { color: var(--capfw-text-muted); }
 }
 
 .capfw-msg-bubble {
-    background: #e8faf0;
-    border: 1px solid #a7f3d0;
+    background: var(--capfw-msg-bubble-bg);
+    border: 1px solid var(--capfw-msg-bubble-border);
     border-radius: 12px;
     border-top-left-radius: 2px;
     padding: 14px 16px;
@@ -182,7 +182,7 @@
     font-family: inherit;
     font-size: 13px;
     line-height: 1.6;
-    color: $black_color;
+    color: var(--capfw-text);
     white-space: pre-wrap;
     word-break: break-word;
     margin: 0;
@@ -193,23 +193,23 @@
 
     summary {
         font-size: 12px;
-        color: $desc_color;
+        color: var(--capfw-text-muted);
         cursor: pointer;
         user-select: none;
         padding: 4px 0;
 
-        &:hover { color: $black_color; }
+        &:hover { color: var(--capfw-text); }
     }
 }
 
 .capfw-api-pre {
-    background: $grey_bg;
-    border: 1px solid $border_color;
+    background: var(--capfw-bg);
+    border: 1px solid var(--capfw-border);
     border-radius: 6px;
     padding: 10px 12px;
     font-size: 11px;
     font-family: monospace;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     white-space: pre-wrap;
     word-break: break-all;
     margin: 6px 0 0;

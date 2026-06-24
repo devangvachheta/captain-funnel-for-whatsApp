@@ -29,13 +29,13 @@
 .capfw-empty-title {
     font-size: 15px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0;
 }
 
 .capfw-empty-desc {
     font-size: 13px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     max-width: 380px;
     line-height: 1.6;
     margin: 0;

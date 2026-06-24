@@ -22,7 +22,7 @@
 .capfw-int-section-title {
     font-size: 13px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0;
 }
 
@@ -35,7 +35,7 @@
 
 // ── Card ──────────────────────────────────────────────────────────────────────
 .capfw-int-card {
-    background: $white_color;
+    background: var(--capfw-surface);
     border: 1.5px solid $border_color;
     border-radius: $card_radius;
     padding: 14px 16px;
@@ -48,7 +48,7 @@
 
     &--unavailable {
         opacity: 0.55;
-        background: #fafafa;
+        background: var(--capfw-bg);
     }
 }
 
@@ -76,7 +76,7 @@
 .capfw-int-name {
     font-size: 13px;
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -85,7 +85,7 @@
 .capfw-int-plugin-file {
     font-size: 10px;
     font-family: monospace;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     margin: 8px 0 0;
     white-space: nowrap;
     overflow: hidden;
@@ -99,6 +99,7 @@
     font-weight: 600;
     padding: 2px 7px;
     border-radius: 4px;
+    width: fit-content;
 
     &--installed {
         background: $bg_active;
@@ -107,7 +108,7 @@
 
     &--missing {
         background: #f3f4f6;
-        color: $desc_color;
+        color: var(--capfw-text-muted);
     }
 }
 
@@ -157,7 +158,7 @@
 
 // ── Modal box ────────────────────────────────────────────────────────────────
 .capfw-modal {
-    background:     $white_color;
+    background:     var(--capfw-surface);
     border-radius:  14px;
     width:          100%;
     max-width:      680px;
@@ -188,7 +189,7 @@
     gap:         8px;
     font-size:   14px;
     font-weight: 600;
-    color:       $black_color;
+    color:       var(--capfw-text);
 }
 
 .capfw-modal-integration-label {
@@ -205,13 +206,13 @@
     border:      none;
     font-size:   16px;
     cursor:      pointer;
-    color:       $desc_color;
+    color:       var(--capfw-text-muted);
     line-height: 1;
     padding:     4px 6px;
     border-radius: 4px;
     transition:  background $transition;
 
-    &:hover { background: #f3f4f6; color: $black_color; }
+    &:hover { background: #f3f4f6; color: var(--capfw-text); }
 }
 
 .capfw-modal-body {
@@ -243,7 +244,7 @@
 .capfw-modal-field-label {
     font-size:   13px;
     font-weight: 600;
-    color:       $black_color;
+    color:       var(--capfw-text);
 }
 
 .capfw-modal-row-2 {
@@ -265,12 +266,12 @@
     align-items:    center;
     gap:            8px;
     padding:        20px 16px;
-    border:         2px solid $border_color;
+    border:         2px solid var(--capfw-border);
     border-radius:  10px;
     cursor:         pointer;
     text-align:     center;
     transition:     all $transition;
-    background:     $white_color;
+    background:     var(--capfw-surface);
 
     &--active {
         border-color: $primary_color;
@@ -278,7 +279,7 @@
     }
 
     &:hover:not(.capfw-msg-type-pill--active) {
-        border-color: lighten($primary_color, 20%);
+        border-color: var(--capfw-primary-light-border, #7de8a8);
     }
 }
 
@@ -287,12 +288,12 @@
 .capfw-msg-type-pill-text {
     font-size:   14px;
     font-weight: 600;
-    color:       $black_color;
+    color:       var(--capfw-text);
 }
 
 .capfw-msg-type-pill-desc {
     font-size:   12px;
-    color:       $desc_color;
+    color:       var(--capfw-text-muted);
     line-height: 1.4;
 }
 
@@ -340,7 +341,7 @@
 .capfw-modal-checkbox-title {
     font-size:    13px;
     font-weight:  600;
-    color:        $black_color;
+    color:        var(--capfw-text);
     display:      block;
     margin-bottom: 4px;
 }

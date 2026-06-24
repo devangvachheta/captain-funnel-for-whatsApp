@@ -9,13 +9,13 @@
 
 .capfw-settings-desc {
     font-size: 13px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     margin: 0 0 16px;
 }
 
 // ── Doc link ──────────────────────────────────────────────────────────────────
 .capfw-settings-doc-link {
-    color: #2271b1;
+    color: var(--capfw-link-color);
     font-size: 12px;
     text-decoration: none;
     font-weight: 500;
@@ -48,13 +48,13 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     display: flex;
     align-items: center;
     transition: color $transition;
 
     svg { width: 16px; height: 16px; }
-    &:hover { color: $black_color; }
+    &:hover { color: var(--capfw-text); }
 }
 
 // ── Test row ──────────────────────────────────────────────────────────────────
@@ -78,11 +78,11 @@
     align-items: center;
     gap: 8px;
     padding: 8px 14px;
-    border: 1.5px solid $border_color;
+    border: 1.5px solid var(--capfw-border);
     border-radius: 8px;
     font-size: 13px;
     font-weight: 500;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     cursor: pointer;
     transition: border-color $transition, background $transition, color $transition;
     user-select: none;

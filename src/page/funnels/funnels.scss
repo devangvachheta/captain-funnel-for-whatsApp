@@ -35,7 +35,7 @@
 // ── Funnel name link ──────────────────────────────────────────────────────────
 .capfw-funnel-name {
     font-weight: 600;
-    color: $black_color;
+    color: var(--capfw-text);
     cursor: pointer;
     transition: color $transition;
 
@@ -47,9 +47,9 @@
     display: inline-block;
     font-size: 10px;
     font-weight: 500;
-    background: #f0f4ff;
-    color: #4f6aad;
-    border: 1px solid #c7d4ff;
+    background: var(--capfw-int-badge-bg);
+    color: var(--capfw-int-badge-text);
+    border: 1px solid var(--capfw-int-badge-border);
     border-radius: 4px;
     padding: 1px 6px;
     margin-left: 5px;
@@ -59,9 +59,9 @@
 // ── Trigger pill ──────────────────────────────────────────────────────────────
 .capfw-trigger-pill {
     display: inline-block;
-    background: #f0f4ff;
-    color: #2c5282;
-    border: 1px solid #bee3f8;
+    background: var(--capfw-int-badge-bg);
+    color: var(--capfw-trigger-text);
+    border: 1px solid var(--capfw-trigger-border);
     border-radius: 6px;
     padding: 3px 10px;
     font-size: 11px;
@@ -83,8 +83,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
-    border: 1px solid $border_color;
-    background: $white_color;
+    border: 1px solid var(--capfw-border);
+    background: var(--capfw-surface);
     cursor: pointer;
     transition: background $transition, border-color $transition;
 
@@ -136,11 +136,11 @@
 }
 
 .capfw-modal {
-    background: $white_color;
+    background: var(--capfw-surface);
     border-radius: 14px;
     width: 100%;
     max-width: 480px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: var(--capfw-shadow-modal);
     animation: capfw-slide-up 0.2s ease;
     overflow: hidden;
 }
@@ -155,13 +155,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 24px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-modal-title {
     font-size: 15px;
     font-weight: 700;
-    color: $black_color;
+    color: var(--capfw-text);
     margin: 0;
 }
 
@@ -176,10 +176,10 @@
     justify-content: center;
     border-radius: 6px;
     transition: background $transition;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
 
     svg { width: 16px; height: 16px; stroke: currentColor; }
-    &:hover { background: $grey_bg; color: $black_color; }
+    &:hover { background: var(--capfw-bg); color: var(--capfw-text); }
 }
 
 .capfw-modal-body {
@@ -196,7 +196,7 @@
     gap: 10px;
     padding: 16px 24px;
     border-top: 1px solid $border_color;
-    background: $grey_bg;
+    background: var(--capfw-bg);
 }
 
 // ── Radio pills ───────────────────────────────────────────────────────────────
@@ -214,7 +214,7 @@
     border-radius: 8px;
     font-size: 13px;
     font-weight: 500;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     cursor: pointer;
     transition: all $transition;
 
@@ -229,7 +229,7 @@
 
     &:hover:not(.capfw-radio-pill--on) {
         border-color: #d1d5db;
-        background: $grey_bg;
+        background: var(--capfw-bg);
     }
 }
 

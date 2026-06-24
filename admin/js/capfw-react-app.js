@@ -8557,41 +8557,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _navigation_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navigation.scss */ "./src/page/navigation/navigation.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _redux_slice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../redux/slice */ "./src/redux/slice.js");
+/* harmony import */ var _navigation_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./navigation.scss */ "./src/page/navigation/navigation.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
 
 
 const NAV_ITEMS = [{
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Dashboard', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Dashboard', 'captain-funnel-for-whatsapp'),
   path: '/',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("rect", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("rect", {
       x: "3",
       y: "3",
       width: "7",
       height: "7"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("rect", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("rect", {
       x: "14",
       y: "3",
       width: "7",
       height: "7"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("rect", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("rect", {
       x: "14",
       y: "14",
       width: "7",
       height: "7"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("rect", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("rect", {
       x: "3",
       y: "14",
       width: "7",
@@ -8599,179 +8603,301 @@ const NAV_ITEMS = [{
     })]
   })
 }, {
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Settings', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Settings', 'captain-funnel-for-whatsapp'),
   path: '/settings',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("circle", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("circle", {
       cx: "12",
       cy: "12",
       r: "3"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
       d: "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
     })]
   })
 }, {
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Integrations', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Integrations', 'captain-funnel-for-whatsapp'),
   path: '/integrations',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
       d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
       d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
     })]
   })
 }, {
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Templates', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Templates', 'captain-funnel-for-whatsapp'),
   path: '/templates',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
       d: "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
     })
   })
 }, {
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Funnels', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Funnels', 'captain-funnel-for-whatsapp'),
   path: '/funnels',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("polygon", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("polygon", {
       points: "22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
     })
   })
 }, {
-  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Logs', 'captain-funnel-for-whatsapp'),
+  name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Logs', 'captain-funnel-for-whatsapp'),
   path: '/logs',
-  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
     strokeWidth: "2",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
       d: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("polyline", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("polyline", {
       points: "14 2 14 8 20 8"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("line", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
       x1: "16",
       y1: "13",
       x2: "8",
       y2: "13"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("line", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
       x1: "16",
       y1: "17",
       x2: "8",
       y2: "17"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("polyline", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("polyline", {
       points: "10 9 9 9 8 9"
     })]
   })
 }];
+
+// ── Captain Funnel brand logo SVG (inline, currentColor = theme-aware)
+const CapfwLogoSVG = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
+  viewBox: "0 0 106 102",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("mask", {
+    id: "mask0_66_5704",
+    style: {
+      maskType: "luminance"
+    },
+    maskUnits: "userSpaceOnUse",
+    x: "0",
+    y: "2",
+    width: "86",
+    height: "97",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+      d: "M85.9305 26.1733C80.779 17.314 73.0031 10.4176 63.7626 6.51231C54.522 2.60698 44.3113 1.90181 34.6526 4.50194C24.9938 7.10209 16.4044 12.8682 10.1646 20.9409C3.92491 29.0135 0.369071 38.9603 0.0271856 49.2983C-0.3147 59.6366 2.57569 69.8124 8.26745 78.309C13.9593 86.8055 22.1476 93.1682 31.6119 96.4477C41.0761 99.7272 51.3093 99.7483 60.7866 96.5083C70.2635 93.268 78.4763 86.94 84.2009 78.4671L71.5547 69.2859C67.7395 74.9327 62.266 79.1499 55.9501 81.3094C49.6343 83.4685 42.8143 83.4543 36.5071 81.2689C30.1997 79.083 24.7427 74.843 20.9495 69.1804C17.1562 63.5179 15.23 56.7365 15.4578 49.8469C15.6856 42.957 18.0554 36.3282 22.2138 30.9482C26.3722 25.5683 32.0966 21.7255 38.5337 19.9926C44.9702 18.2598 51.7752 18.7297 57.9338 21.3324C64.0918 23.9351 69.2738 28.5311 72.707 34.4353L85.9305 26.1733Z",
+      fill: "currentColor"
+    })
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("g", {
+    mask: "url(#mask0_66_5704)",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+      d: "M85.9305 26.1733C80.779 17.314 73.0031 10.4176 63.7626 6.51231C54.522 2.60698 44.3113 1.90181 34.6526 4.50194C24.9938 7.10209 16.4044 12.8682 10.1646 20.9409C3.92491 29.0135 0.369071 38.9603 0.0271856 49.2983C-0.3147 59.6366 2.57569 69.8124 8.26745 78.309C13.9593 86.8055 22.1476 93.1682 31.6119 96.4477C41.0761 99.7272 51.3093 99.7483 60.7866 96.5083C70.2635 93.268 78.4763 86.94 84.2009 78.4671L71.5547 69.2859C67.7395 74.9327 62.266 79.1499 55.9501 81.3094C49.6343 83.4685 42.8143 83.4543 36.5071 81.2689C30.1997 79.083 24.7427 74.843 20.9495 69.1804C17.1562 63.5179 15.23 56.7365 15.4578 49.8469C15.6856 42.957 18.0554 36.3282 22.2138 30.9482C26.3722 25.5683 32.0966 21.7255 38.5337 19.9926C44.9702 18.2598 51.7752 18.7297 57.9338 21.3324C64.0918 23.9351 69.2738 28.5311 72.707 34.4353L85.9305 26.1733Z",
+      fill: "currentColor"
+    })
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+    d: "M63.1178 39H42.8081C40.7049 39 39 40.0231 39 41.2852V62.7148C39 63.9769 40.7049 65 42.8081 65C44.9112 65 46.6162 63.9769 46.6162 62.7148V54.2852H59.0559C61.1591 54.2852 62.864 53.2621 62.864 52C62.864 50.7379 61.1591 49.7148 59.0559 49.7148H46.6162V43.5703H63.1178C65.221 43.5703 66.9259 42.5472 66.9259 41.2852C66.9259 40.0231 65.221 39 63.1178 39Z",
+    fill: "currentColor"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+    d: "M83.839 45.4L85.6074 39.8335L88.7231 49.7887C88.8726 49.8549 89.0126 49.8872 89.144 49.8872C90.0608 49.8872 90.8183 48.0313 91.4178 44.3207C92.0161 40.6102 92.513 38.6445 92.905 38.4264C93.2983 38.2083 93.8218 38.0985 94.4768 38.0985C94.9448 38.0985 95.572 38.1365 96.3573 38.2125C97.1437 38.2899 97.5731 38.3264 97.6491 38.3264C99.3897 38.3264 100.55 38.3701 101.13 38.4573C101.711 38.5446 102 38.7514 102 39.0778C101.532 40.0347 101.116 41.0576 100.75 42.1453C100.385 43.233 100.203 44.3967 100.203 45.6364C100.109 46.7241 99.9784 47.2672 99.8095 47.2672C99.7154 47.2672 99.5851 47.0435 99.4163 46.596C99.2474 46.1486 99.1075 45.7503 98.9953 45.4014L94.139 66H88.6362L85.605 56.6343L82.5737 66H77.0745L72.0204 44.6472C71.6091 45.6955 71.3232 46.399 71.164 46.7592C71.0048 47.1195 70.8407 47.2996 70.6731 47.2996C70.4487 47.2996 70.2702 46.7423 70.1399 45.6293C70.1399 44.9525 70.1158 44.1561 70.07 43.2387C70.0229 42.3212 70 41.8301 70 41.7654C70 40.848 70.1592 40.1444 70.4777 39.6533C70.7961 39.1623 71.4981 38.7641 72.5837 38.4587C73.6693 38.1534 74.6609 38 75.5595 38C76.083 38 76.5788 38.0549 77.0468 38.1632C77.5148 38.273 78.0576 38.4686 78.6752 38.7528C79.2735 39.1243 79.7041 40.2598 79.9671 42.158C80.0973 43.8395 80.2385 45.5196 80.388 47.2011C80.5376 48.8826 80.7897 49.7226 81.1455 49.7226C81.3699 49.7226 81.6835 49.3849 82.0864 48.7081C82.4881 48.0313 82.9706 46.9731 83.5327 45.5322C83.5881 45.445 83.6497 45.4014 83.7148 45.4014C83.7787 45.4 83.821 45.4 83.839 45.4Z",
+    fill: "currentColor"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("g", {
+    "clip-path": "url(#clip0_66_5704)",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+      d: "M101.92 5.03305C100.605 3.72279 98.855 3.00075 96.993 3C95.1351 3 93.3827 3.72141 92.0589 5.03134C90.7327 6.34352 90.0017 8.08733 90 9.93517V9.9373V9.93858C90.0002 11.057 90.2941 12.1853 90.8518 13.2151L90.0191 17L93.8476 16.1292C94.8172 16.6178 95.8991 16.8755 96.9903 16.8759H96.9931C98.8506 16.8759 100.603 16.1544 101.927 14.8443C103.254 13.5311 103.986 11.7895 103.987 9.94051C103.987 8.10452 103.253 6.36168 101.92 5.03305ZM96.993 15.7832H96.9905C96.0107 15.7828 95.0399 15.5368 94.1832 15.0716L94.0021 14.9734L91.4564 15.5524L92.0093 13.0393L91.9027 12.8555C91.3727 11.9415 91.0927 10.9326 91.0927 9.93741C91.0947 6.71629 93.7413 4.09268 96.9927 4.09268C98.5635 4.09332 100.039 4.70226 101.149 5.80711C102.274 6.92906 102.894 8.39687 102.894 9.94019C102.892 13.162 100.245 15.7832 96.993 15.7832Z",
+      fill: "currentColor"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+      d: "M95.0908 6.87891H94.7843C94.6776 6.87891 94.5043 6.91885 94.3578 7.07832C94.2111 7.2379 93.7979 7.6236 93.7979 8.40802C93.7979 9.19244 94.3711 9.95038 94.451 10.0569C94.531 10.1633 95.5576 11.8244 97.1835 12.4634C98.5347 12.9945 98.8098 12.8889 99.103 12.8623C99.3963 12.8358 100.049 12.4767 100.183 12.1044C100.316 11.7322 100.316 11.4131 100.276 11.3464C100.236 11.28 100.129 11.2401 99.9694 11.1604C99.8094 11.0807 99.0254 10.6884 98.8788 10.6351C98.7321 10.5821 98.6255 10.5555 98.5188 10.7151C98.4121 10.8745 98.098 11.2432 98.0046 11.3496C97.9114 11.4561 97.818 11.4695 97.658 11.3897C97.498 11.3097 96.9881 11.1383 96.377 10.5953C95.9014 10.1727 95.5714 9.63368 95.478 9.47411C95.3848 9.31464 95.4681 9.22833 95.5483 9.14876C95.6202 9.07741 95.7173 8.97978 95.7973 8.88675C95.8772 8.79361 95.8999 8.72717 95.9533 8.62079C96.0066 8.5144 95.9799 8.42126 95.94 8.34158C95.8999 8.2618 95.5929 7.47342 95.4507 7.15811H95.4508C95.3309 6.89258 95.2048 6.88361 95.0908 6.87891Z",
+      fill: "currentColor"
+    })]
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("defs", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("clipPath", {
+      id: "clip0_66_5704",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("rect", {
+        width: "14",
+        height: "14",
+        fill: "currentColor",
+        transform: "translate(90 3)"
+      })
+    })
+  })]
+});
+
+// Moon icon (shown in light mode)
+const MoonIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("svg", {
+  className: "capfw-dm-moon",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("path", {
+    d: "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+  })
+});
+
+// Sun icon (shown in dark mode)
+const SunIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
+  className: "capfw-dm-sun",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("circle", {
+    cx: "12",
+    cy: "12",
+    r: "5"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "12",
+    y1: "1",
+    x2: "12",
+    y2: "3"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "12",
+    y1: "21",
+    x2: "12",
+    y2: "23"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "4.22",
+    y1: "4.22",
+    x2: "5.64",
+    y2: "5.64"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "18.36",
+    y1: "18.36",
+    x2: "19.78",
+    y2: "19.78"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "1",
+    y1: "12",
+    x2: "3",
+    y2: "12"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "21",
+    y1: "12",
+    x2: "23",
+    y2: "12"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "4.22",
+    y1: "19.78",
+    x2: "5.64",
+    y2: "18.36"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
+    x1: "18.36",
+    y1: "5.64",
+    x2: "19.78",
+    y2: "4.22"
+  })]
+});
 const Navigation = () => {
   const location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
+  const dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
+  const darkMode = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(state => state.capfw.darkMode);
   const isActive = path => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("aside", {
+  const handleToggleDark = () => dispatch((0,_redux_slice__WEBPACK_IMPORTED_MODULE_5__.toggleDarkMode)());
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("aside", {
     className: "capfw-sidebar",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "capfw-sidebar-logo",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-        className: "capfw-sidebar-logo-icon",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("svg", {
-          viewBox: "0 0 24 24",
-          fill: "currentColor",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("path", {
-            d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-          })
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(CapfwLogoSVG, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
         className: "capfw-sidebar-logo-text",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-logo-name",
-          children: "WA Funnel"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+          children: "Captain Funnel"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-logo-sub",
-          children: "WhatsApp Automation"
+          children: "for WhatsApp"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("nav", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("nav", {
       className: "capfw-sidebar-menu",
-      children: [NAV_ITEMS.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      children: [NAV_ITEMS.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: item.path,
         className: `capfw-sidebar-link${isActive(item.path) ? ' capfw-sidebar-link--active' : ''}`,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-icon",
           children: item.icon
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-label",
           children: item.name
         })]
-      }, item.path)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      }, item.path)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
         className: "capfw-sidebar-divider",
-        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Docs', 'captain-funnel-for-whatsapp')
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+        children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Docs', 'captain-funnel-for-whatsapp')
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/docs/credentials",
         className: `capfw-sidebar-link${isActive('/docs/credentials') ? ' capfw-sidebar-link--active' : ''}`,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-icon",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("svg", {
             viewBox: "0 0 24 24",
             fill: "none",
             stroke: "currentColor",
             strokeWidth: "2",
             strokeLinecap: "round",
             strokeLinejoin: "round",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("circle", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("circle", {
               cx: "12",
               cy: "12",
               r: "10"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("line", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
               x1: "12",
               y1: "8",
               x2: "12",
               y2: "12"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("line", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("line", {
               x1: "12",
               y1: "16",
               x2: "12.01",
               y2: "16"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
           className: "capfw-sidebar-label",
-          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('API Credentials', 'captain-funnel-for-whatsapp')
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('API Credentials', 'captain-funnel-for-whatsapp')
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "capfw-sidebar-footer",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
         className: "capfw-sidebar-version",
         children: ["v", typeof capfw_data !== 'undefined' ? capfw_data.version : '1.0.0']
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("button", {
+        className: "capfw-dm-toggle",
+        onClick: handleToggleDark,
+        title: darkMode ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Switch to Light Mode', 'captain-funnel-for-whatsapp') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Switch to Dark Mode', 'captain-funnel-for-whatsapp'),
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(MoonIcon, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(SunIcon, {})]
+      })]
     })]
   });
 };
@@ -9552,6 +9678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   removeFunnel: () => (/* binding */ removeFunnel),
 /* harmony export */   setAvailableTriggers: () => (/* binding */ setAvailableTriggers),
+/* harmony export */   setDarkMode: () => (/* binding */ setDarkMode),
 /* harmony export */   setFunnels: () => (/* binding */ setFunnels),
 /* harmony export */   setLoading: () => (/* binding */ setLoading),
 /* harmony export */   setLogs: () => (/* binding */ setLogs),
@@ -9559,12 +9686,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setSettings: () => (/* binding */ setSettings),
 /* harmony export */   setStats: () => (/* binding */ setStats),
 /* harmony export */   setTemplates: () => (/* binding */ setTemplates),
+/* harmony export */   toggleDarkMode: () => (/* binding */ toggleDarkMode),
 /* harmony export */   updateFunnel: () => (/* binding */ updateFunnel),
 /* harmony export */   updateSetting: () => (/* binding */ updateSetting),
 /* harmony export */   updateTemplate: () => (/* binding */ updateTemplate)
 /* harmony export */ });
 /* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs");
 
+
+// ── Persist dark-mode preference in localStorage ──────────────────────────────
+const DARK_KEY = 'capfw_dark_mode';
+const getSavedDarkMode = () => {
+  try {
+    return localStorage.getItem(DARK_KEY) === 'true';
+  } catch {
+    return false;
+  }
+};
+const applyThemeToDOM = isDark => {
+  const el = document.documentElement;
+  if (isDark) {
+    el.setAttribute('data-capfw-theme', 'dark');
+  } else {
+    el.removeAttribute('data-capfw-theme');
+  }
+  try {
+    localStorage.setItem(DARK_KEY, String(isDark));
+  } catch {/* ignore */}
+};
+
+// Apply on first load (before React renders)
+applyThemeToDOM(getSavedDarkMode());
+
+// ─────────────────────────────────────────────────────────────────────────────
 const initialState = {
   // Dashboard stats
   stats: {
@@ -9587,13 +9741,15 @@ const initialState = {
   templates: {},
   // Funnels list
   funnels: [],
-  // Logs list
+  // Logs
   logs: [],
   logs_total: 0,
-  // Triggers from registry (set once on funnels/templates page load)
+  // Triggers from registry
   available_triggers: [],
   // Global UI
-  loading: false
+  loading: false,
+  // ── Dark Mode ────────────────────────────────────────────────────────────
+  darkMode: getSavedDarkMode()
 };
 const capfwSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)({
   name: 'capfw',
@@ -9646,6 +9802,15 @@ const capfwSlice = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_0__.createSlice)
     },
     setAvailableTriggers(state, action) {
       state.available_triggers = action.payload;
+    },
+    // ── Dark Mode Toggle ─────────────────────────────────────────────────
+    toggleDarkMode(state) {
+      state.darkMode = !state.darkMode;
+      applyThemeToDOM(state.darkMode);
+    },
+    setDarkMode(state, action) {
+      state.darkMode = action.payload;
+      applyThemeToDOM(state.darkMode);
     }
   }
 });
@@ -9662,7 +9827,9 @@ const {
   setLogs,
   setLogsTotal,
   setLoading,
-  setAvailableTriggers
+  setAvailableTriggers,
+  toggleDarkMode,
+  setDarkMode
 } = capfwSlice.actions;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (capfwSlice.reducer);
 
@@ -9764,7 +9931,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-empty-state {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-empty-state {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9777,7 +10043,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-empty-state {
 .capfw-empty-icon {
   width: 64px;
   height: 64px;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -9793,17 +10059,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-empty-state {
 .capfw-empty-title {
   font-size: 15px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0;
 }
 
 .capfw-empty-desc {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   max-width: 380px;
   line-height: 1.6;
   margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/EmptyState/EmptyState.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,kBAAA;EACA,SAAA;AADJ;;AAIA;EACI,WAAA;EACA,YAAA;EACA,mBCDkB;EDElB,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;AADJ;AAGI;EACI,WAAA;EACA,YAAA;EACA,eCbc;ADYtB;;AAKA;EACI,eAAA;EACA,gBAAA;EACA,cCfY;EDgBZ,SAAA;AAFJ;;AAKA;EACI,eAAA;EACA,cCpBY;EDqBZ,gBAAA;EACA,gBAAA;EACA,SAAA;AAFJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-empty-state {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    padding: 64px 24px;\n    text-align: center;\n    gap: 12px;\n}\n\n.capfw-empty-icon {\n    width: 64px;\n    height: 64px;\n    background: $primary_light;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 6px;\n\n    svg {\n        width: 28px;\n        height: 28px;\n        stroke: $primary_dark;\n    }\n}\n\n.capfw-empty-title {\n    font-size: 15px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0;\n}\n\n.capfw-empty-desc {\n    font-size: 13px;\n    color: $desc_color;\n    max-width: 380px;\n    line-height: 1.6;\n    margin: 0;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/components/EmptyState/EmptyState.scss"],"names":[],"mappings":"AAuCA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,wBAAA;EACA,6BAAA;EACA,8BAAA;EACA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;AC7DF;;ADiEA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,6BAAA;EACA,6BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;ACrFF;;AA/FA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;EACA,kBAAA;EACA,SAAA;AAkGJ;;AA/FA;EACI,WAAA;EACA,YAAA;EACA,sCD8LY;EC7LZ,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;AAkGJ;AAhGI;EACI,WAAA;EACA,YAAA;EACA,eDVU;AC4GlB;;AA9FA;EACI,eAAA;EACA,gBAAA;EACA,wBAAA;EACA,SAAA;AAiGJ;;AA9FA;EACI,eAAA;EACA,8BAAA;EACA,gBAAA;EACA,gBAAA;EACA,SAAA;AAiGJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9829,7 +10095,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `@keyframes capfw-spin {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+@keyframes capfw-spin {
   to {
     transform: rotate(360deg);
   }
@@ -9845,7 +10210,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@keyframes capfw-spin {
   align-items: center;
   padding: 48px;
   width: 100%;
-}`, "",{"version":3,"sources":["webpack://./src/components/Spinner/Spinner.scss"],"names":[],"mappings":"AACA;EACI;IAAK,yBAAA;EACP;AACF;AACA;EACI,0CAAA;EACA,cAAA;AACJ;;AAEA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,WAAA;AACJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n@keyframes capfw-spin {\n    to { transform: rotate(360deg); }\n}\n\n.capfw-spinner {\n    animation: capfw-spin 0.8s linear infinite;\n    display: block;\n}\n\n.capfw-spinner-center {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 48px;\n    width: 100%;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/components/Spinner/Spinner.scss"],"names":[],"mappings":"AAuCA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,wBAAA;EACA,6BAAA;EACA,8BAAA;EACA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;AC7DF;;ADiEA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,6BAAA;EACA,6BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;ACrFF;;AAhGA;EACI;IAAK,yBAAA;EAoGP;AACF;AAlGA;EACI,0CAAA;EACA,cAAA;AAoGJ;;AAjGA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,WAAA;AAoGJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9871,9 +10236,108 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-stats-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-stats-card {
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   padding: 20px 22px;
   display: flex;
@@ -9922,14 +10386,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-stats-card {
   font-size: 28px;
   font-weight: 700;
   line-height: 1;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-stats-label {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-weight: 500;
-}`, "",{"version":3,"sources":["webpack://./src/components/StatsCard/StatsCard.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,mBCgBY;EDfZ,yBAAA;EACA,mBCmCY;EDlCZ,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;EACA,yCC4BY;ED3BZ,qCAAA;AADJ;AAGI;EAAU,yCC0BE;AD1BhB;;AAGA;EACI,WAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,cAAA;AAAJ;AAEI;EACI,WAAA;EACA,YAAA;AAAR;AAGI;EAA+B,mBCGnB;EDH4C,cCL5C;ADMhB;AAAI;EAA+B,mBAAA;EAAyB,cCL5C;ADShB;AAHI;EAA+B,mBAAA;EAAyB,cCL5C;ADYhB;;AAJA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;AAOJ;;AAJA;EACI,eAAA;EACA,gBAAA;EACA,cAAA;EACA,cC5BY;ADmChB;;AAJA;EACI,eAAA;EACA,cChCY;EDiCZ,gBAAA;AAOJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-stats-card {\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: $card_radius;\n    padding: 20px 22px;\n    display: flex;\n    align-items: center;\n    gap: 16px;\n    box-shadow: $shadow_sm;\n    transition: box-shadow $transition;\n\n    &:hover { box-shadow: $shadow_md; }\n}\n\n.capfw-stats-icon {\n    width: 48px;\n    height: 48px;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n\n    svg {\n        width: 22px;\n        height: 22px;\n    }\n\n    .capfw-stats-card--sent    & { background: $bg_active;  color: $color_sent;    }\n    .capfw-stats-card--failed  & { background: $bg_failed;  color: $color_failed;  }\n    .capfw-stats-card--pending & { background: $bg_pending; color: $color_pending; }\n}\n\n.capfw-stats-info {\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.capfw-stats-value {\n    font-size: 28px;\n    font-weight: 700;\n    line-height: 1;\n    color: $black_color;\n}\n\n.capfw-stats-label {\n    font-size: 12px;\n    color: $desc_color;\n    font-weight: 500;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/components/StatsCard/StatsCard.scss"],"names":[],"mappings":"AAuCA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,wBAAA;EACA,6BAAA;EACA,8BAAA;EACA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;AC7DF;;ADiEA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,6BAAA;EACA,6BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;ACrFF;;AA/FA;EACI,gCAAA;EACA,qCAAA;EACA,mBD6Bc;EC5Bd,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;EACA,yCDsBc;ECrBd,qCAAA;AAkGJ;AAhGI;EAAU,yCDoBI;AC+ElB;;AAhGA;EACI,WAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,cAAA;AAmGJ;AAjGI;EACI,WAAA;EACA,YAAA;AAmGR;AAhGI;EAA+B,mBDHjB;ECG0C,cDX1C;AC+GlB;AAnGI;EAA+B,mBDNjB;ECM0C,cDX1C;ACkHlB;AAtGI;EAA+B,mBDNjB;ECM0C,cDX1C;ACqHlB;;AAvGA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;AA0GJ;;AAvGA;EACI,eAAA;EACA,gBAAA;EACA,cAAA;EACA,wBAAA;AA0GJ;;AAvGA;EACI,eAAA;EACA,8BAAA;EACA,gBAAA;AA0GJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -9955,7 +10419,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-badge {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-badge {
   display: inline-block;
   padding: 3px 10px;
   border-radius: 20px;
@@ -9975,7 +10538,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-badge {
 .capfw-badge--pending {
   background: #fef3c7;
   color: #d97706;
-}`, "",{"version":3,"sources":["webpack://./src/components/StatusBadge/StatusBadge.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,qBAAA;EACA,iBAAA;EACA,mBAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;AADJ;AAGI;EACe,mBCqBH;EDrB6B,cCgB7B;ADhBhB;AACI;EACe,mBCiBH;EDjB6B,cCY7B;ADVhB;AADI;EAAe,mBCiBH;EDjB6B,cCY7B;ADPhB","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-badge {\n    display: inline-block;\n    padding: 3px 10px;\n    border-radius: 20px;\n    font-size: 11px;\n    font-weight: 700;\n    letter-spacing: 0.4px;\n    white-space: nowrap;\n\n    &--sent,\n    &--active    { background: $bg_active;   color: $color_active;   }\n    &--failed,\n    &--inactive  { background: $bg_failed;   color: $color_failed;   }\n    &--pending   { background: $bg_pending;  color: $color_pending;  }\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/components/StatusBadge/StatusBadge.scss"],"names":[],"mappings":"AAuCA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,wBAAA;EACA,6BAAA;EACA,8BAAA;EACA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;AC7DF;;ADiEA;EAEE,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,2BAAA;EAGA,qBAAA;EACA,2BAAA;EACA,4BAAA;EAGA,uBAAA;EACA,6BAAA;EAGA,8BAAA;EAGA,yBAAA;EAGA,0BAAA;EACA,8BAAA;EAGA,0BAAA;EACA,8BAAA;EACA,4BAAA;EAGA,8BAAA;EACA,4BAAA;EAGA,6CAAA;EACA,8CAAA;EACA,kDAAA;EAGA,8BAAA;EACA,kCAAA;EACA,6BAAA;EACA,+BAAA;EACA,iCAAA;EACA,2BAAA;EACA,6BAAA;EACA,+BAAA;EACA,+BAAA;EACA,2BAAA;EAGA,6BAAA;EACA,6BAAA;EAGA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,gCAAA;EACA,oCAAA;EACA,kCAAA;EACA,kCAAA;EACA,sCAAA;EACA,oCAAA;EACA,mCAAA;EACA,uCAAA;EACA,qCAAA;ACrFF;;AA/FA;EACI,qBAAA;EACA,iBAAA;EACA,mBAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;AAkGJ;AAhGI;EACe,mBDeD;ECf2B,cDU3B;ACyFlB;AAlGI;EACe,mBDWD;ECX2B,cDM3B;AC+FlB;AApGI;EAAe,mBDWD;ECX2B,cDM3B;ACkGlB","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10001,7 +10564,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-dashboard {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -10015,13 +10677,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
 .capfw-page-title {
   font-size: 20px;
   font-weight: 700;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0 0 4px;
 }
 
 .capfw-page-subtitle {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin: 0;
 }
 
@@ -10062,9 +10724,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
   align-items: flex-start;
   gap: 6px;
   padding: 16px 18px;
-  border: 1.5px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--capfw-surface);
   cursor: pointer;
   transition: border-color 0.25s all ease, box-shadow 0.25s all ease, background 0.25s all ease;
   text-align: left;
@@ -10086,7 +10748,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10095,20 +10757,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
 .capfw-quick-icon svg {
   width: 16px;
   height: 16px;
-  stroke: #6b7280;
+  stroke: var(--capfw-text-muted);
   transition: stroke 0.25s all ease;
 }
 
 .capfw-quick-label {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   transition: color 0.25s all ease;
 }
 
 .capfw-quick-desc {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-section-head {
@@ -10117,7 +10779,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
   justify-content: space-between;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
 }
 
 .capfw-table {
@@ -10128,19 +10790,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
   padding: 10px 12px;
   text-align: left;
   font-size: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   vertical-align: middle;
 }
 .capfw-table th {
   font-weight: 600;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
 }
 .capfw-table tbody tr:hover {
-  background: #fafafa;
+  background: var(--capfw-row-hover);
 }
 .capfw-table tbody tr:last-child td {
   border-bottom: none;
@@ -10148,7 +10810,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
 
 .capfw-order-link {
   font-weight: 600;
-  color: #2271b1;
+  color: var(--capfw-link-color);
 }
 
 .capfw-phone-cell {
@@ -10157,18 +10819,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
 }
 
 .capfw-msg-cell {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   max-width: 240px;
 }
 
 .capfw-date-cell {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   white-space: nowrap;
   font-size: 11px;
 }
 
 .capfw-no-data {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-size: 13px;
   padding: 24px 0;
   text-align: center;
@@ -10184,7 +10846,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-dashboard {
 .capfw-btn-sm {
   padding: 6px 12px !important;
   font-size: 12px !important;
-}`, "",{"version":3,"sources":["webpack://./src/page/dashboard/dashboard.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;EACA,iBAAA;AADJ;;AAKA;EAA0B,kBAAA;AAD1B;;AAGA;EACI,eAAA;EACA,gBAAA;EACA,cCEY;EDDZ,eAAA;AAAJ;;AAGA;EACI,eAAA;EACA,cCHY;EDIZ,SAAA;AAAJ;;AAIA;EACI,aAAA;EACA,qCAAA;EACA,SAAA;AADJ;AAGI;EALJ;IAKgC,qCAAA;EAC9B;AACF;AADI;EANJ;IAMgC,0BAAA;EAK9B;AACF;;AADI;EAAoB,mBAAA;AAKxB;;AAFA;EACI,aAAA;EACA,qCAAA;EACA,SAAA;AAKJ;AAHI;EALJ;IAKgC,0BAAA;EAO9B;AACF;;AALA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,QAAA;EACA,kBAAA;EACA,2BAAA;EACA,mBAAA;EACA,mBCrCY;EDsCZ,eAAA;EACA,6FAAA;EACA,gBAAA;EACA,oBAAA;AAQJ;AANI;EACI,oCAAA;EACA,mBAAA;EACA,6CAAA;AAQR;AANQ;EAAwB,8BAAA;AAShC;AARQ;EAAwB,6BAAA;AAWhC;;AAPA;EACI,WAAA;EACA,YAAA;EACA,kBAAA;EACA,mBCxDY;EDyDZ,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;AAUJ;AARI;EACI,WAAA;EACA,YAAA;EACA,eCnEQ;EDoER,iCAAA;AAUR;;AANA;EACI,eAAA;EACA,gBAAA;EACA,cC5EY;ED6EZ,gCAAA;AASJ;;AANA;EACI,eAAA;EACA,cCjFY;AD0FhB;;AALA;EACI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,mBAAA;EACA,oBAAA;EACA,gCAAA;AAQJ;;AAJA;EACI,WAAA;EACA,yBAAA;AAOJ;AALI;EACI,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,gCAAA;EACA,sBAAA;AAOR;AAJI;EACI,gBAAA;EACA,cC7GQ;ED8GR,eAAA;EACA,yBAAA;EACA,qBAAA;EACA,mBC/GQ;ADqHhB;AAHI;EAAiB,mBAAA;AAMrB;AALI;EAAyB,mBAAA;AAQ7B;;AALA;EAAqB,gBAAA;EAAkB,cAAA;AAUvC;;AATA;EAAqB,sBAAA;EAAwB,eAAA;AAc7C;;AAbA;EAAqB,cC1HL;ED0HyB,gBAAA;AAkBzC;;AAjBA;EAAqB,cC3HL;ED2HyB,mBAAA;EAAqB,eAAA;AAuB9D;;AArBA;EACI,cC9HY;ED+HZ,eAAA;EACA,eAAA;EACA,kBAAA;EACA,SAAA;AAwBJ;;AApBA;EACI,aAAA;EACA,uBAAA;EACA,aAAA;AAuBJ;;AAnBA;EACI,4BAAA;EACA,0BAAA;AAsBJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-dashboard {\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n    max-width: 1000px;\n}\n\n// ── Header ────────────────────────────────────────────────────────────────────\n.capfw-dashboard-header { margin-bottom: 4px; }\n\n.capfw-page-title {\n    font-size: 20px;\n    font-weight: 700;\n    color: $black_color;\n    margin: 0 0 4px;\n}\n\n.capfw-page-subtitle {\n    font-size: 13px;\n    color: $desc_color;\n    margin: 0;\n}\n\n// ── Stats Grid ────────────────────────────────────────────────────────────────\n.capfw-stats-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 16px;\n\n    @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }\n    @media (max-width: 560px) { grid-template-columns: 1fr; }\n}\n\n// ── Quick Actions ─────────────────────────────────────────────────────────────\n.capfw-quick-section {\n    .capfw-card-title { margin-bottom: 16px; }\n}\n\n.capfw-quick-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 12px;\n\n    @media (max-width: 700px) { grid-template-columns: 1fr; }\n}\n\n.capfw-quick-card {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 6px;\n    padding: 16px 18px;\n    border: 1.5px solid $border_color;\n    border-radius: 10px;\n    background: $white_color;\n    cursor: pointer;\n    transition: border-color $transition, box-shadow $transition, background $transition;\n    text-align: left;\n    font-family: inherit;\n\n    &:hover {\n        border-color: var(--accent, $primary_color);\n        background: #fafffe;\n        box-shadow: 0 2px 8px rgba(37,211,102,0.10);\n\n        .capfw-quick-icon svg { stroke: var(--accent, $primary_color); }\n        .capfw-quick-label    { color: var(--accent, $primary_color); }\n    }\n}\n\n.capfw-quick-icon {\n    width: 32px;\n    height: 32px;\n    border-radius: 8px;\n    background: $grey_bg;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 4px;\n\n    svg {\n        width: 16px;\n        height: 16px;\n        stroke: $desc_color;\n        transition: stroke $transition;\n    }\n}\n\n.capfw-quick-label {\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    transition: color $transition;\n}\n\n.capfw-quick-desc {\n    font-size: 11px;\n    color: $desc_color;\n}\n\n// ── Section head ──────────────────────────────────────────────────────────────\n.capfw-section-head {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    margin-bottom: 16px;\n    padding-bottom: 12px;\n    border-bottom: 1px solid $border_color;\n}\n\n// ── Table ─────────────────────────────────────────────────────────────────────\n.capfw-table {\n    width: 100%;\n    border-collapse: collapse;\n\n    th, td {\n        padding: 10px 12px;\n        text-align: left;\n        font-size: 12px;\n        border-bottom: 1px solid $border_color;\n        vertical-align: middle;\n    }\n\n    th {\n        font-weight: 600;\n        color: $desc_color;\n        font-size: 11px;\n        text-transform: uppercase;\n        letter-spacing: 0.5px;\n        background: $grey_bg;\n    }\n\n    tbody tr:hover { background: #fafafa; }\n    tbody tr:last-child td { border-bottom: none; }\n}\n\n.capfw-order-link  { font-weight: 600; color: #2271b1; }\n.capfw-phone-cell  { font-family: monospace; font-size: 12px; }\n.capfw-msg-cell    { color: $desc_color; max-width: 240px; }\n.capfw-date-cell   { color: $desc_color; white-space: nowrap; font-size: 11px; }\n\n.capfw-no-data {\n    color: $desc_color;\n    font-size: 13px;\n    padding: 24px 0;\n    text-align: center;\n    margin: 0;\n}\n\n// ── Spinner ───────────────────────────────────────────────────────────────────\n.capfw-dashboard-spinner {\n    display: flex;\n    justify-content: center;\n    padding: 16px;\n}\n\n// ── Small button ──────────────────────────────────────────────────────────────\n.capfw-btn-sm {\n    padding: 6px 12px !important;\n    font-size: 12px !important;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/dashboard/dashboard.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10210,7 +10872,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-docs-page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -10230,8 +10991,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-docs-toc {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   padding: 16px;
   position: sticky;
@@ -10243,7 +11004,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-docs-toc-title {
   font-size: 10px;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.6px;
   margin-bottom: 10px;
@@ -10259,7 +11020,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   padding: 5px 10px;
   font-size: 12px;
   font-weight: 400;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   font-family: inherit;
   transition: all 0.25s all ease;
@@ -10268,26 +11029,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 .capfw-docs-toc-link:hover {
   color: #128C7E;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-left-color: #25D366;
 }
 .capfw-docs-toc-link--active {
   color: #128C7E;
   font-weight: 600;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-left-color: #25D366;
 }
 
 .capfw-docs-quicklinks {
   margin-top: 20px;
   padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--capfw-border);
 }
 
 .capfw-docs-quicklinks-title {
   font-size: 10px;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.6px;
   margin-bottom: 8px;
@@ -10296,7 +11057,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-docs-ext-link {
   display: block;
   font-size: 11px;
-  color: #2271b1;
+  color: var(--capfw-link-color);
   text-decoration: none;
   padding: 4px 0;
   transition: color 0.25s all ease;
@@ -10312,8 +11073,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   gap: 0;
 }
 .capfw-docs-content section {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   padding: 24px 28px;
   margin-bottom: 16px;
@@ -10322,14 +11083,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-docs-content p {
   font-size: 13px;
   line-height: 1.7;
-  color: #374151;
+  color: var(--capfw-text-muted);
   margin: 0 0 10px;
 }
 .capfw-docs-content p:last-child {
   margin-bottom: 0;
 }
 .capfw-docs-content a {
-  color: #2271b1;
+  color: var(--capfw-link-color);
   text-decoration: none;
 }
 .capfw-docs-content a:hover {
@@ -10339,10 +11100,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-doc-section-heading {
   font-size: 16px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0 0 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -10362,7 +11123,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   gap: 14px;
   margin-bottom: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px dashed #e5e7eb;
+  border-bottom: 1px dashed var(--capfw-border);
 }
 .capfw-doc-step:last-child {
   border-bottom: none;
@@ -10375,7 +11136,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   height: 28px;
   border-radius: 50%;
   background: #25D366;
-  color: #ffffff;
+  color: var(--capfw-surface);
   font-size: 13px;
   font-weight: 700;
   display: flex;
@@ -10393,13 +11154,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-doc-step-title {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0 0 6px;
 }
 
 .capfw-doc-step-content {
   font-size: 13px;
-  color: #374151;
+  color: var(--capfw-text-muted);
   line-height: 1.6;
 }
 
@@ -10414,24 +11175,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   border: 1px solid transparent;
 }
 .capfw-doc-callout--info {
-  background: #eff6ff;
-  border-color: #bfdbfe;
-  color: #1e40af;
+  background: var(--capfw-callout-info-bg, #eff6ff);
+  border-color: var(--capfw-callout-info-border, #bfdbfe);
+  color: var(--capfw-callout-info-text, #1e40af);
 }
 .capfw-doc-callout--warning {
-  background: #fffbeb;
-  border-color: #fcd34d;
-  color: #92400e;
+  background: var(--capfw-callout-warn-bg, #fffbeb);
+  border-color: var(--capfw-callout-warn-border, #fcd34d);
+  color: var(--capfw-callout-warn-text, #92400e);
 }
 .capfw-doc-callout--danger {
-  background: #fff5f5;
-  border-color: #fca5a5;
-  color: #991b1b;
+  background: var(--capfw-callout-danger-bg, #fff5f5);
+  border-color: var(--capfw-callout-danger-border, #fca5a5);
+  color: var(--capfw-callout-danger-text, #991b1b);
 }
 .capfw-doc-callout--success {
-  background: #f0fdf4;
-  border-color: #86efac;
-  color: #166534;
+  background: var(--capfw-callout-success-bg, #f0fdf4);
+  border-color: var(--capfw-callout-success-border, #86efac);
+  color: var(--capfw-callout-success-text, #166534);
 }
 
 .capfw-doc-callout-icon {
@@ -10443,16 +11204,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-doc-code-inline {
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 11px;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background: var(--capfw-surface-2);
+  border: 1px solid var(--capfw-border);
   border-radius: 4px;
   padding: 2px 6px;
-  color: #0f172a;
+  color: var(--capfw-text);
 }
 
 .capfw-doc-credentials-preview {
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface-2);
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   overflow: hidden;
   margin: 12px 0;
@@ -10463,7 +11224,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   grid-template-columns: 170px 1fr;
   gap: 12px;
   padding: 10px 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
   align-items: start;
 }
 .capfw-doc-field-row:last-child {
@@ -10473,7 +11234,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-doc-field-label {
   font-size: 12px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   padding-top: 2px;
 }
 
@@ -10485,7 +11246,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 
 .capfw-doc-field-desc {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   line-height: 1.4;
 }
 
@@ -10501,7 +11262,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   align-items: flex-start;
   gap: 10px;
   font-size: 13px;
-  color: #374151;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-doc-check {
@@ -10515,7 +11276,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   padding-left: 18px;
   margin: 8px 0;
   font-size: 13px;
-  color: #374151;
+  color: var(--capfw-text-muted);
   line-height: 1.7;
 }
 .capfw-doc-list li {
@@ -10564,30 +11325,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   margin: 0;
 }
 .capfw-doc-test-result--success {
-  background: #f0fdf4;
-  border: 1px solid #86efac;
+  background: var(--capfw-callout-success-bg, #f0fdf4);
+  border: 1px solid var(--capfw-callout-success-border, #86efac);
 }
 .capfw-doc-test-result--success > span {
   color: #16a34a;
 }
 .capfw-doc-test-result--success strong {
-  color: #166534;
+  color: var(--capfw-callout-success-text, #166534);
 }
 .capfw-doc-test-result--success p {
-  color: #166534;
+  color: var(--capfw-callout-success-text, #166534);
 }
 .capfw-doc-test-result--error {
-  background: #fff5f5;
-  border: 1px solid #fca5a5;
+  background: var(--capfw-callout-danger-bg, #fff5f5);
+  border: 1px solid var(--capfw-callout-danger-border, #fca5a5);
 }
 .capfw-doc-test-result--error > span {
   color: #dc2626;
 }
 .capfw-doc-test-result--error strong {
-  color: #991b1b;
+  color: var(--capfw-callout-danger-text, #991b1b);
 }
 .capfw-doc-test-result--error p {
-  color: #991b1b;
+  color: var(--capfw-callout-danger-text, #991b1b);
 }
 
 .capfw-doc-live-steps {
@@ -10601,9 +11362,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   display: flex;
   gap: 14px;
   padding: 14px 16px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   font-size: 13px;
   line-height: 1.6;
   align-items: flex-start;
@@ -10611,11 +11372,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 .capfw-doc-live-step strong {
   display: block;
   margin-bottom: 4px;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 .capfw-doc-live-step p {
   margin: 0;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-size: 12px;
 }
 
@@ -10624,7 +11385,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   height: 26px;
   border-radius: 50%;
   background: #128C7E;
-  color: #ffffff;
+  color: var(--capfw-surface);
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -10642,15 +11403,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 
 .capfw-doc-trouble-item {
   padding: 14px 16px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
 }
 
 .capfw-doc-trouble-problem {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin-bottom: 10px;
 }
 
@@ -10661,24 +11422,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-doc-faq-item {
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .capfw-doc-faq-q {
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   padding: 12px 16px;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
-  border-bottom: 1px solid #e5e7eb;
+  color: var(--capfw-text);
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-doc-faq-a {
   padding: 12px 16px;
   font-size: 12px;
-  color: #374151;
+  color: var(--capfw-text-muted);
   line-height: 1.7;
 }
 
@@ -10695,7 +11456,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   align-items: center;
   gap: 8px;
   background: #25D366;
-  color: #ffffff;
+  color: var(--capfw-surface);
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -10724,12 +11485,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  background: #fffbeb;
-  border: 1px solid #fcd34d;
+  background: var(--capfw-callout-warn-bg, #fffbeb);
+  border: 1px solid var(--capfw-callout-warn-border, #fcd34d);
   border-radius: 8px;
   padding: 10px 16px;
   font-size: 12px;
-  color: #92400e;
+  color: var(--capfw-callout-warn-text, #92400e);
   line-height: 1.6;
 }
 .capfw-docs-download-tip > span:first-child {
@@ -10746,7 +11507,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   align-items: center;
   gap: 7px;
   width: 100%;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   color: #128C7E;
   border: 1px solid #25D366;
   border-radius: 6px;
@@ -10850,8 +11611,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-doc-field-box {
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface-2);
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   overflow: hidden;
   margin: 10px 0;
@@ -10862,7 +11623,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   align-items: baseline;
   gap: 12px;
   padding: 9px 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
   font-size: 13px;
 }
 .capfw-doc-field-box-row:last-child {
@@ -10871,13 +11632,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 
 .capfw-doc-field-box-label {
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   min-width: 150px;
   flex-shrink: 0;
 }
 
 .capfw-doc-field-box-value {
-  color: #374151;
+  color: var(--capfw-text-muted);
 }
 .capfw-doc-field-box-value--important {
   color: #128C7E;
@@ -10885,8 +11646,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-doc-token-config {
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface-2);
+  border: 1px solid var(--capfw-border);
   border-radius: 10px;
   overflow: hidden;
   margin: 12px 0;
@@ -10906,21 +11667,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
   display: flex;
   gap: 16px;
   padding: 12px 16px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
   align-items: flex-start;
 }
 .capfw-doc-token-config-row:last-child {
   border-bottom: none;
 }
 .capfw-doc-token-config-row--highlight {
-  background: #fffbeb;
+  background: var(--capfw-callout-warn-bg);
   border-left: 3px solid #f59e0b;
 }
 
 .capfw-doc-token-config-label {
   font-size: 12px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   min-width: 140px;
   flex-shrink: 0;
   padding-top: 2px;
@@ -10928,7 +11689,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 
 .capfw-doc-token-config-value {
   font-size: 12px;
-  color: #374151;
+  color: var(--capfw-text-muted);
   line-height: 1.6;
 }
 .capfw-doc-token-config-value strong {
@@ -10937,7 +11698,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-doc-token-config-note {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-size: 11px;
 }
 
@@ -10963,7 +11724,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 }
 
 .capfw-doc-perm-desc {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-doc-token-reveal {
@@ -11006,7 +11767,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-docs-page {
 
 .capfw-doc-token-reveal .capfw-doc-list {
   color: #94a3b8;
-}`, "",{"version":3,"sources":["webpack://./src/page/docs/docs.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"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","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n.capfw-docs-page {\n    display: flex;\n    flex-direction: column;\n    gap: 20px;\n    max-width: 1100px;\n}\n\n// ── Two-column layout ─────────────────────────────────────────────────────────\n.capfw-docs-layout {\n    display: grid;\n    grid-template-columns: 210px 1fr;\n    gap: 20px;\n    align-items: start;\n\n    @media (max-width: 820px) {\n        grid-template-columns: 1fr;\n    }\n}\n\n// ── TOC sidebar ───────────────────────────────────────────────────────────────\n.capfw-docs-toc {\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: $card_radius;\n    padding: 16px;\n    position: sticky;\n    top: 36px;\n    max-height: calc(100vh - 80px);\n    overflow-y: auto;\n}\n\n.capfw-docs-toc-title {\n    font-size: 10px;\n    font-weight: 600;\n    color: $desc_color;\n    text-transform: uppercase;\n    letter-spacing: .6px;\n    margin-bottom: 10px;\n}\n\n.capfw-docs-toc-link {\n    display: block;\n    width: 100%;\n    text-align: left;\n    background: none;\n    border: none;\n    border-left: 2px solid transparent;\n    padding: 5px 10px;\n    font-size: 12px;\n    font-weight: 400;\n    color: $desc_color;\n    cursor: pointer;\n    font-family: inherit;\n    transition: all $transition;\n    border-radius: 0 4px 4px 0;\n    line-height: 1.4;\n\n    &:hover {\n        color: $primary_dark;\n        background: $primary_light;\n        border-left-color: $primary_color;\n    }\n\n    &--active {\n        color: $primary_dark;\n        font-weight: 600;\n        background: $primary_light;\n        border-left-color: $primary_color;\n    }\n}\n\n// ── Quick links ───────────────────────────────────────────────────────────────\n.capfw-docs-quicklinks {\n    margin-top: 20px;\n    padding-top: 16px;\n    border-top: 1px solid $border_color;\n}\n\n.capfw-docs-quicklinks-title {\n    font-size: 10px;\n    font-weight: 600;\n    color: $desc_color;\n    text-transform: uppercase;\n    letter-spacing: .6px;\n    margin-bottom: 8px;\n}\n\n.capfw-docs-ext-link {\n    display: block;\n    font-size: 11px;\n    color: #2271b1;\n    text-decoration: none;\n    padding: 4px 0;\n    transition: color $transition;\n\n    &:hover { color: $primary_dark; text-decoration: underline; }\n}\n\n// ── Main content ──────────────────────────────────────────────────────────────\n.capfw-docs-content {\n    display: flex;\n    flex-direction: column;\n    gap: 0;\n\n    section {\n        background: $white_color;\n        border: 1px solid $border_color;\n        border-radius: $card_radius;\n        padding: 24px 28px;\n        margin-bottom: 16px;\n        scroll-margin-top: 20px;\n    }\n\n    p {\n        font-size: 13px;\n        line-height: 1.7;\n        color: #374151;\n        margin: 0 0 10px;\n\n        &:last-child { margin-bottom: 0; }\n    }\n\n    a {\n        color: #2271b1;\n        text-decoration: none;\n        &:hover { text-decoration: underline; }\n    }\n}\n\n// ── Section heading ───────────────────────────────────────────────────────────\n.capfw-doc-section-heading {\n    font-size: 16px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0 0 16px;\n    padding-bottom: 12px;\n    border-bottom: 1px solid $border_color;\n    display: flex;\n    align-items: center;\n    gap: 8px;\n\n    &::before {\n        content: '';\n        display: inline-block;\n        width: 4px;\n        height: 18px;\n        background: $primary_color;\n        border-radius: 2px;\n        flex-shrink: 0;\n    }\n}\n\n// ── Steps ─────────────────────────────────────────────────────────────────────\n.capfw-doc-step {\n    display: flex;\n    gap: 14px;\n    margin-bottom: 16px;\n    padding-bottom: 16px;\n    border-bottom: 1px dashed $border_color;\n\n    &:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }\n}\n\n.capfw-doc-step-number {\n    width: 28px;\n    height: 28px;\n    border-radius: 50%;\n    background: $primary_color;\n    color: $white_color;\n    font-size: 13px;\n    font-weight: 700;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n    margin-top: 1px;\n}\n\n.capfw-doc-step-body { flex: 1; min-width: 0; }\n\n.capfw-doc-step-title {\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0 0 6px;\n}\n\n.capfw-doc-step-content {\n    font-size: 13px;\n    color: #374151;\n    line-height: 1.6;\n}\n\n// ── Callout ───────────────────────────────────────────────────────────────────\n.capfw-doc-callout {\n    display: flex;\n    gap: 10px;\n    padding: 12px 14px;\n    border-radius: 8px;\n    font-size: 12px;\n    line-height: 1.6;\n    margin: 12px 0;\n    border: 1px solid transparent;\n\n    &--info    { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }\n    &--warning { background: #fffbeb; border-color: #fcd34d; color: #92400e; }\n    &--danger  { background: #fff5f5; border-color: #fca5a5; color: #991b1b; }\n    &--success { background: #f0fdf4; border-color: #86efac; color: #166534; }\n}\n\n.capfw-doc-callout-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }\n\n// ── Code inline ───────────────────────────────────────────────────────────────\n.capfw-doc-code-inline {\n    font-family: 'SFMono-Regular', Consolas, monospace;\n    font-size: 11px;\n    background: #f1f5f9;\n    border: 1px solid #e2e8f0;\n    border-radius: 4px;\n    padding: 2px 6px;\n    color: #0f172a;\n}\n\n// ── Credentials preview box ───────────────────────────────────────────────────\n.capfw-doc-credentials-preview {\n    background: #f8fafc;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    overflow: hidden;\n    margin: 12px 0;\n}\n\n.capfw-doc-field-row {\n    display: grid;\n    grid-template-columns: 170px 1fr;\n    gap: 12px;\n    padding: 10px 14px;\n    border-bottom: 1px solid $border_color;\n    align-items: start;\n\n    &:last-child { border-bottom: none; }\n}\n\n.capfw-doc-field-label {\n    font-size: 12px;\n    font-weight: 600;\n    color: $black_color;\n    padding-top: 2px;\n}\n\n.capfw-doc-field-value {\n    display: flex;\n    flex-direction: column;\n    gap: 4px;\n}\n\n.capfw-doc-field-desc {\n    font-size: 11px;\n    color: $desc_color;\n    line-height: 1.4;\n}\n\n// ── Checklist ─────────────────────────────────────────────────────────────────\n.capfw-doc-checklist {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n    margin: 12px 0;\n}\n\n.capfw-doc-checklist-item {\n    display: flex;\n    align-items: flex-start;\n    gap: 10px;\n    font-size: 13px;\n    color: #374151;\n}\n\n.capfw-doc-check {\n    color: $color_active;\n    font-weight: 700;\n    flex-shrink: 0;\n    margin-top: 1px;\n}\n\n// ── List ──────────────────────────────────────────────────────────────────────\n.capfw-doc-list {\n    padding-left: 18px;\n    margin: 8px 0;\n    font-size: 13px;\n    color: #374151;\n    line-height: 1.7;\n\n    li { margin-bottom: 4px; }\n}\n\n// ── Path breadcrumb ───────────────────────────────────────────────────────────\n.capfw-doc-path {\n    background: #1e293b;\n    color: #94a3b8;\n    font-family: 'SFMono-Regular', Consolas, monospace;\n    font-size: 12px;\n    padding: 10px 14px;\n    border-radius: 6px;\n    margin: 8px 0;\n\n    strong { color: #e2e8f0; }\n}\n\n// ── Test results ──────────────────────────────────────────────────────────────\n.capfw-doc-test-results {\n    display: flex;\n    flex-direction: column;\n    gap: 10px;\n    margin-top: 14px;\n}\n\n.capfw-doc-test-result {\n    display: flex;\n    gap: 12px;\n    padding: 12px 14px;\n    border-radius: 8px;\n    font-size: 12px;\n    line-height: 1.5;\n\n    > span {\n        font-size: 16px;\n        font-weight: 700;\n        flex-shrink: 0;\n    }\n\n    strong { display: block; font-size: 13px; margin-bottom: 3px; }\n\n    p { margin: 0; }\n\n    &--success {\n        background: #f0fdf4;\n        border: 1px solid #86efac;\n        > span { color: $color_active; }\n        strong  { color: #166534; }\n        p       { color: #166534; }\n    }\n\n    &--error {\n        background: #fff5f5;\n        border: 1px solid #fca5a5;\n        > span { color: $color_failed; }\n        strong  { color: #991b1b; }\n        p       { color: #991b1b; }\n    }\n}\n\n// ── Go live steps ─────────────────────────────────────────────────────────────\n.capfw-doc-live-steps {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n    margin: 16px 0;\n}\n\n.capfw-doc-live-step {\n    display: flex;\n    gap: 14px;\n    padding: 14px 16px;\n    background: $grey_bg;\n    border-radius: 8px;\n    border: 1px solid $border_color;\n    font-size: 13px;\n    line-height: 1.6;\n    align-items: flex-start;\n\n    strong { display: block; margin-bottom: 4px; color: $black_color; }\n    p      { margin: 0; color: $desc_color; font-size: 12px; }\n}\n\n.capfw-doc-live-step-num {\n    width: 26px;\n    height: 26px;\n    border-radius: 50%;\n    background: $primary_dark;\n    color: $white_color;\n    font-size: 12px;\n    font-weight: 700;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n    margin-top: 1px;\n}\n\n// ── Troubleshooting ───────────────────────────────────────────────────────────\n.capfw-doc-trouble-list {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n}\n\n.capfw-doc-trouble-item {\n    padding: 14px 16px;\n    background: $grey_bg;\n    border-radius: 8px;\n    border: 1px solid $border_color;\n}\n\n.capfw-doc-trouble-problem {\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    margin-bottom: 10px;\n}\n\n// ── FAQ ───────────────────────────────────────────────────────────────────────\n.capfw-doc-faq-list {\n    display: flex;\n    flex-direction: column;\n    gap: 14px;\n}\n\n.capfw-doc-faq-item {\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    overflow: hidden;\n}\n\n.capfw-doc-faq-q {\n    background: $grey_bg;\n    padding: 12px 16px;\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    border-bottom: 1px solid $border_color;\n}\n\n.capfw-doc-faq-a {\n    padding: 12px 16px;\n    font-size: 12px;\n    color: #374151;\n    line-height: 1.7;\n}\n\n// ── Page header with download button ─────────────────────────────────────────\n.capfw-docs-page-header {\n    display: flex;\n    align-items: flex-start;\n    justify-content: space-between;\n    gap: 16px;\n    flex-wrap: wrap;\n}\n\n// ── Download button (top header) ──────────────────────────────────────────────\n.capfw-docs-download-btn {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    background: $primary_color;\n    color: $white_color;\n    border: none;\n    border-radius: 8px;\n    padding: 10px 20px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    font-family: inherit;\n    transition: background $transition, transform $transition;\n    white-space: nowrap;\n    flex-shrink: 0;\n\n    svg { width: 16px; height: 16px; stroke: currentColor; }\n\n    &:hover:not(:disabled) {\n        background: $primary_hover;\n        transform: translateY(-1px);\n    }\n\n    &--done {\n        background: $color_active;\n    }\n}\n\n// ── Download tip bar ──────────────────────────────────────────────────────────\n.capfw-docs-download-tip {\n    display: flex;\n    align-items: flex-start;\n    gap: 10px;\n    background: #fffbeb;\n    border: 1px solid #fcd34d;\n    border-radius: 8px;\n    padding: 10px 16px;\n    font-size: 12px;\n    color: #92400e;\n    line-height: 1.6;\n\n    > span:first-child { font-size: 16px; flex-shrink: 0; margin-top: 1px; }\n\n    strong { color: #78350f; }\n}\n\n// ── TOC download button ───────────────────────────────────────────────────────\n.capfw-docs-toc-download {\n    display: flex;\n    align-items: center;\n    gap: 7px;\n    width: 100%;\n    background: $primary_light;\n    color: $primary_dark;\n    border: 1px solid $primary_color;\n    border-radius: 6px;\n    padding: 8px 12px;\n    font-size: 12px;\n    font-weight: 600;\n    cursor: pointer;\n    font-family: inherit;\n    transition: background $transition;\n    margin-top: 14px;\n    margin-bottom: 4px;\n\n    &:hover { background: #d1fae5; }\n}\n\n// ── Token creation flow diagram ───────────────────────────────────────────────\n.capfw-token-flow {\n    background: #0f172a;\n    border-radius: 10px;\n    padding: 20px 18px;\n    margin: 16px 0;\n    overflow-x: auto;\n}\n\n.capfw-token-flow-title {\n    font-size: 11px;\n    font-weight: 600;\n    color: #64748b;\n    text-transform: uppercase;\n    letter-spacing: .6px;\n    margin-bottom: 16px;\n    text-align: center;\n}\n\n.capfw-token-flow-row {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 0;\n    flex-wrap: nowrap;\n    min-width: max-content;\n    margin: 0 auto;\n}\n\n.capfw-token-flow-step {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 4px;\n    text-align: center;\n    padding: 12px 14px;\n    border-radius: 8px;\n    border: 1px solid #1e293b;\n    background: #1e293b;\n    min-width: 110px;\n    transition: border-color $transition;\n\n    &--active {\n        border-color: $primary_color;\n        background: rgba(37, 211, 102, 0.1);\n\n        .capfw-token-flow-label { color: $primary_color; }\n    }\n}\n\n.capfw-token-flow-icon {\n    font-size: 20px;\n    line-height: 1;\n}\n\n.capfw-token-flow-num {\n    font-size: 10px;\n    font-weight: 700;\n    color: #475569;\n    background: #0f172a;\n    border-radius: 10px;\n    padding: 1px 6px;\n    margin-top: 2px;\n}\n\n.capfw-token-flow-label {\n    font-size: 11px;\n    font-weight: 600;\n    color: #e2e8f0;\n    line-height: 1.3;\n}\n\n.capfw-token-flow-sublabel {\n    font-size: 9px;\n    color: #64748b;\n    font-family: monospace;\n    line-height: 1.3;\n    max-width: 100px;\n}\n\n.capfw-token-flow-arrow {\n    font-size: 18px;\n    color: #334155;\n    padding: 0 4px;\n    flex-shrink: 0;\n}\n\n// ── Field box (token config steps) ────────────────────────────────────────────\n.capfw-doc-field-box {\n    background: #f8fafc;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    overflow: hidden;\n    margin: 10px 0;\n}\n\n.capfw-doc-field-box-row {\n    display: flex;\n    align-items: baseline;\n    gap: 12px;\n    padding: 9px 14px;\n    border-bottom: 1px solid $border_color;\n    font-size: 13px;\n\n    &:last-child { border-bottom: none; }\n}\n\n.capfw-doc-field-box-label {\n    font-weight: 600;\n    color: $black_color;\n    min-width: 150px;\n    flex-shrink: 0;\n}\n\n.capfw-doc-field-box-value {\n    color: #374151;\n\n    &--important {\n        color: $primary_dark;\n        font-weight: 600;\n    }\n}\n\n// ── Token config panel ────────────────────────────────────────────────────────\n.capfw-doc-token-config {\n    background: #f8fafc;\n    border: 1px solid $border_color;\n    border-radius: 10px;\n    overflow: hidden;\n    margin: 12px 0;\n}\n\n.capfw-doc-token-config-title {\n    background: #1e293b;\n    color: #e2e8f0;\n    font-size: 11px;\n    font-weight: 600;\n    text-transform: uppercase;\n    letter-spacing: .6px;\n    padding: 8px 16px;\n}\n\n.capfw-doc-token-config-row {\n    display: flex;\n    gap: 16px;\n    padding: 12px 16px;\n    border-bottom: 1px solid $border_color;\n    align-items: flex-start;\n\n    &:last-child { border-bottom: none; }\n\n    &--highlight {\n        background: #fffbeb;\n        border-left: 3px solid #f59e0b;\n    }\n}\n\n.capfw-doc-token-config-label {\n    font-size: 12px;\n    font-weight: 600;\n    color: $black_color;\n    min-width: 140px;\n    flex-shrink: 0;\n    padding-top: 2px;\n}\n\n.capfw-doc-token-config-value {\n    font-size: 12px;\n    color: #374151;\n    line-height: 1.6;\n\n    strong { color: $color_active; font-size: 13px; }\n}\n\n.capfw-doc-token-config-note {\n    color: $desc_color;\n    font-size: 11px;\n}\n\n// ── Permission list ───────────────────────────────────────────────────────────\n.capfw-doc-perm-list {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n}\n\n.capfw-doc-perm-item {\n    display: flex;\n    align-items: flex-start;\n    gap: 8px;\n    font-size: 12px;\n    line-height: 1.5;\n}\n\n.capfw-doc-perm-check {\n    color: $color_active;\n    font-weight: 700;\n    flex-shrink: 0;\n    margin-top: 2px;\n}\n\n.capfw-doc-perm-desc {\n    color: $desc_color;\n}\n\n// ── Token reveal box ──────────────────────────────────────────────────────────\n.capfw-doc-token-reveal {\n    display: flex;\n    gap: 14px;\n    background: #0f172a;\n    border-radius: 10px;\n    padding: 16px 18px;\n    margin: 12px 0;\n    align-items: flex-start;\n}\n\n.capfw-doc-token-reveal-icon {\n    font-size: 24px;\n    flex-shrink: 0;\n    margin-top: 2px;\n}\n\n.capfw-doc-token-reveal-content { flex: 1; }\n\n.capfw-doc-token-reveal-title {\n    font-size: 12px;\n    color: #94a3b8;\n    margin-bottom: 8px;\n}\n\n.capfw-doc-token-example {\n    font-family: 'SFMono-Regular', Consolas, monospace;\n    font-size: 11px;\n    color: $primary_color;\n    background: rgba(37, 211, 102, 0.08);\n    border: 1px solid rgba(37, 211, 102, 0.2);\n    border-radius: 6px;\n    padding: 8px 12px;\n    word-break: break-all;\n    letter-spacing: .3px;\n}\n\n.capfw-doc-token-reveal .capfw-doc-list {\n    color: #94a3b8;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/docs/docs.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11032,7 +11793,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-funnels-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -11071,7 +11931,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
 
 .capfw-funnel-name {
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   cursor: pointer;
   transition: color 0.25s all ease;
 }
@@ -11083,9 +11943,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   display: inline-block;
   font-size: 10px;
   font-weight: 500;
-  background: #f0f4ff;
-  color: #4f6aad;
-  border: 1px solid #c7d4ff;
+  background: var(--capfw-int-badge-bg);
+  color: var(--capfw-int-badge-text);
+  border: 1px solid var(--capfw-int-badge-border);
   border-radius: 4px;
   padding: 1px 6px;
   margin-left: 5px;
@@ -11094,9 +11954,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
 
 .capfw-trigger-pill {
   display: inline-block;
-  background: #f0f4ff;
-  color: #2c5282;
-  border: 1px solid #bee3f8;
+  background: var(--capfw-int-badge-bg);
+  color: var(--capfw-trigger-text);
+  border: 1px solid var(--capfw-trigger-border);
   border-radius: 6px;
   padding: 3px 10px;
   font-size: 11px;
@@ -11117,15 +11977,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
+  border: 1px solid var(--capfw-border);
+  background: var(--capfw-surface);
   cursor: pointer;
   transition: background 0.25s all ease, border-color 0.25s all ease;
 }
 .capfw-action-btn svg {
   width: 15px;
   height: 15px;
-  stroke: #6b7280;
+  stroke: var(--capfw-text-muted);
   fill: none;
   transition: stroke 0.25s all ease;
 }
@@ -11174,11 +12034,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   }
 }
 .capfw-modal {
-  background: #ffffff;
+  background: var(--capfw-surface);
   border-radius: 14px;
   width: 100%;
   max-width: 480px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--capfw-shadow-modal);
   animation: capfw-slide-up 0.2s ease;
   overflow: hidden;
 }
@@ -11198,13 +12058,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   align-items: center;
   justify-content: space-between;
   padding: 20px 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-modal-title {
   font-size: 15px;
   font-weight: 700;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0;
 }
 
@@ -11219,7 +12079,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   justify-content: center;
   border-radius: 6px;
   transition: background 0.25s all ease;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 .capfw-modal-close svg {
   width: 16px;
@@ -11227,8 +12087,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   stroke: currentColor;
 }
 .capfw-modal-close:hover {
-  background: #f5f6fa;
-  color: #1a1f2e;
+  background: var(--capfw-bg);
+  color: var(--capfw-text);
 }
 
 .capfw-modal-body {
@@ -11244,8 +12104,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   justify-content: flex-end;
   gap: 10px;
   padding: 16px 24px;
-  border-top: 1px solid #e5e7eb;
-  background: #f5f6fa;
+  border-top: 1px solid var(--capfw-border);
+  background: var(--capfw-bg);
 }
 
 .capfw-radio-group {
@@ -11258,11 +12118,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   align-items: center;
   gap: 6px;
   padding: 7px 16px;
-  border: 1.5px solid #e5e7eb;
+  border: 1.5px solid var(--capfw-border);
   border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   transition: all 0.25s all ease;
 }
@@ -11271,13 +12131,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
 }
 .capfw-radio-pill--on {
   border-color: #25D366;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   color: #128C7E;
   font-weight: 600;
 }
 .capfw-radio-pill:hover:not(.capfw-radio-pill--on) {
   border-color: #d1d5db;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
 }
 
 .capfw-required {
@@ -11292,7 +12152,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-funnels-page {
   border-radius: 6px;
   padding: 8px 12px;
   margin: 8px 0 0;
-}`, "",{"version":3,"sources":["webpack://./src/page/funnels/funnels.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"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","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-funnels-page {\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n    max-width: 1000px;\n}\n\n// ── Header with button ────────────────────────────────────────────────────────\n.capfw-page-header--flex {\n    display: flex;\n    align-items: flex-start;\n    justify-content: space-between;\n    gap: 16px;\n    flex-wrap: wrap;\n}\n\n.capfw-btn-icon {\n    width: 16px;\n    height: 16px;\n    display: flex;\n    align-items: center;\n\n    svg { width: 100%; height: 100%; stroke: currentColor; }\n}\n\n// ── Table card ────────────────────────────────────────────────────────────────\n.capfw-funnels-card { padding: 0; overflow: hidden; }\n\n.capfw-funnels-table {\n    th:last-child,\n    td:last-child { width: 100px; }\n}\n\n// ── Funnel name link ──────────────────────────────────────────────────────────\n.capfw-funnel-name {\n    font-weight: 600;\n    color: $black_color;\n    cursor: pointer;\n    transition: color $transition;\n\n    &:hover { color: $primary_dark; }\n}\n\n// ── Integration badge (in table) ──────────────────────────────────────────────\n.capfw-int-badge {\n    display: inline-block;\n    font-size: 10px;\n    font-weight: 500;\n    background: #f0f4ff;\n    color: #4f6aad;\n    border: 1px solid #c7d4ff;\n    border-radius: 4px;\n    padding: 1px 6px;\n    margin-left: 5px;\n    vertical-align: middle;\n}\n\n// ── Trigger pill ──────────────────────────────────────────────────────────────\n.capfw-trigger-pill {\n    display: inline-block;\n    background: #f0f4ff;\n    color: #2c5282;\n    border: 1px solid #bee3f8;\n    border-radius: 6px;\n    padding: 3px 10px;\n    font-size: 11px;\n    font-weight: 600;\n    white-space: nowrap;\n}\n\n// ── Action buttons ────────────────────────────────────────────────────────────\n.capfw-action-btns {\n    display: flex;\n    align-items: center;\n    gap: 6px;\n}\n\n.capfw-action-btn {\n    width: 32px;\n    height: 32px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n    border: 1px solid $border_color;\n    background: $white_color;\n    cursor: pointer;\n    transition: background $transition, border-color $transition;\n\n    svg {\n        width: 15px;\n        height: 15px;\n        stroke: $desc_color;\n        fill: none;\n        transition: stroke $transition;\n    }\n\n    &--edit:hover {\n        background: #eff6ff;\n        border-color: #93c5fd;\n        svg { stroke: #2563eb; }\n    }\n\n    &--delete:hover {\n        background: #fff5f5;\n        border-color: #fca5a5;\n        svg { stroke: $color_failed; }\n    }\n\n    &:disabled {\n        opacity: 0.5;\n        cursor: not-allowed;\n    }\n}\n\n// ── Row deleting ──────────────────────────────────────────────────────────────\n.capfw-row-deleting { opacity: 0.5; transition: opacity $transition; }\n\n// ── Modal ─────────────────────────────────────────────────────────────────────\n.capfw-modal-overlay {\n    position: fixed;\n    inset: 0;\n    background: rgba(0, 0, 0, 0.45);\n    z-index: 99999;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 20px;\n    animation: capfw-fade-in 0.15s ease;\n}\n\n@keyframes capfw-fade-in {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n.capfw-modal {\n    background: $white_color;\n    border-radius: 14px;\n    width: 100%;\n    max-width: 480px;\n    box-shadow: 0 20px 60px rgba(0,0,0,0.2);\n    animation: capfw-slide-up 0.2s ease;\n    overflow: hidden;\n}\n\n@keyframes capfw-slide-up {\n    from { transform: translateY(20px); opacity: 0; }\n    to   { transform: translateY(0);    opacity: 1; }\n}\n\n.capfw-modal-header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 20px 24px;\n    border-bottom: 1px solid $border_color;\n}\n\n.capfw-modal-title {\n    font-size: 15px;\n    font-weight: 700;\n    color: $black_color;\n    margin: 0;\n}\n\n.capfw-modal-close {\n    width: 28px;\n    height: 28px;\n    background: none;\n    border: none;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n    transition: background $transition;\n    color: $desc_color;\n\n    svg { width: 16px; height: 16px; stroke: currentColor; }\n    &:hover { background: $grey_bg; color: $black_color; }\n}\n\n.capfw-modal-body {\n    padding: 24px;\n    display: flex;\n    flex-direction: column;\n    gap: 0;\n}\n\n.capfw-modal-footer {\n    display: flex;\n    align-items: center;\n    justify-content: flex-end;\n    gap: 10px;\n    padding: 16px 24px;\n    border-top: 1px solid $border_color;\n    background: $grey_bg;\n}\n\n// ── Radio pills ───────────────────────────────────────────────────────────────\n.capfw-radio-group {\n    display: flex;\n    gap: 8px;\n}\n\n.capfw-radio-pill {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    padding: 7px 16px;\n    border: 1.5px solid $border_color;\n    border-radius: 8px;\n    font-size: 13px;\n    font-weight: 500;\n    color: $desc_color;\n    cursor: pointer;\n    transition: all $transition;\n\n    input { display: none; }\n\n    &--on {\n        border-color: $primary_color;\n        background: $primary_light;\n        color: $primary_dark;\n        font-weight: 600;\n    }\n\n    &:hover:not(.capfw-radio-pill--on) {\n        border-color: #d1d5db;\n        background: $grey_bg;\n    }\n}\n\n// ── Required marker ───────────────────────────────────────────────────────────\n.capfw-required { color: $color_failed; margin-left: 2px; }\n\n// ── Form error ────────────────────────────────────────────────────────────────\n.capfw-form-error {\n    color: $color_failed;\n    font-size: 12px;\n    background: $bg_failed;\n    border-radius: 6px;\n    padding: 8px 12px;\n    margin: 8px 0 0;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/funnels/funnels.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11318,7 +12178,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-integrations-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -11343,7 +12302,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-int-section-title {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0;
 }
 
@@ -11354,19 +12313,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 }
 
 .capfw-int-card {
-  background: #ffffff;
-  border: 1.5px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1.5px solid var(--capfw-border);
   border-radius: 12px;
   padding: 14px 16px;
   transition: border-color 0.25s all ease, background 0.25s all ease;
 }
 .capfw-int-card--on {
   border-color: #25D366;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
 }
 .capfw-int-card--unavailable {
   opacity: 0.55;
-  background: #fafafa;
+  background: var(--capfw-bg);
 }
 
 .capfw-int-card-top {
@@ -11393,7 +12352,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-int-name {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -11402,7 +12361,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-int-plugin-file {
   font-size: 10px;
   font-family: monospace;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin: 8px 0 0;
   white-space: nowrap;
   overflow: hidden;
@@ -11415,6 +12374,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   font-weight: 600;
   padding: 2px 7px;
   border-radius: 4px;
+  width: fit-content;
 }
 .capfw-int-status-pill--installed {
   background: #dcfce7;
@@ -11422,7 +12382,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 }
 .capfw-int-status-pill--missing {
   background: #f3f4f6;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-toggle--disabled {
@@ -11438,11 +12398,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   width: 30px;
   height: 30px;
   padding: 0;
-  background: #ffffff;
-  border: 1.5px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1.5px solid var(--capfw-border);
   border-radius: 7px;
   cursor: pointer;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   transition: all 0.25s all ease;
 }
 .capfw-int-gear-btn svg {
@@ -11451,7 +12411,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-int-gear-btn:hover {
   border-color: #25D366;
   color: #25D366;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
 }
 
 .capfw-modal-backdrop {
@@ -11467,7 +12427,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 }
 
 .capfw-modal {
-  background: #ffffff;
+  background: var(--capfw-surface);
   border-radius: 14px;
   width: 100%;
   max-width: 680px;
@@ -11493,7 +12453,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   align-items: center;
   justify-content: space-between;
   padding: 20px 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
   gap: 12px;
 }
 
@@ -11503,13 +12463,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   gap: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-modal-integration-label {
   font-size: 12px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--capfw-surface);
   background: #25D366;
   padding: 2px 8px;
   border-radius: 4px;
@@ -11520,7 +12480,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   border: none;
   font-size: 16px;
   cursor: pointer;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   line-height: 1;
   padding: 4px 6px;
   border-radius: 4px;
@@ -11528,7 +12488,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 }
 .capfw-modal-close:hover {
   background: #f3f4f6;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-modal-body {
@@ -11546,7 +12506,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   justify-content: flex-end;
   gap: 12px;
   padding: 18px 24px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--capfw-border);
   background: #fafafa;
 }
 
@@ -11559,7 +12519,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-modal-field-label {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-modal-row-2 {
@@ -11580,19 +12540,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
   align-items: center;
   gap: 8px;
   padding: 20px 16px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid var(--capfw-border);
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
   transition: all 0.25s all ease;
-  background: #ffffff;
+  background: var(--capfw-surface);
 }
 .capfw-msg-type-pill--active {
   border-color: #25D366;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
 }
 .capfw-msg-type-pill:hover:not(.capfw-msg-type-pill--active) {
-  border-color: rgb(118.8709677419, 231.1290322581, 160.8064516129);
+  border-color: var(--capfw-primary-light-border, #7de8a8);
 }
 
 .capfw-msg-type-pill-icon {
@@ -11602,12 +12562,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-msg-type-pill-text {
   font-size: 14px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-msg-type-pill-desc {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   line-height: 1.4;
 }
 
@@ -11624,7 +12584,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 
 .capfw-modal-checkbox-field {
   padding-top: 20px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--capfw-border);
   margin-top: 4px;
 }
 
@@ -11653,10 +12613,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-integrations-page {
 .capfw-modal-checkbox-title {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   display: block;
   margin-bottom: 4px;
-}`, "",{"version":3,"sources":["webpack://./src/page/integrations/integrations.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"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","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n.capfw-integrations-page {\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n}\n\n// ── Section ───────────────────────────────────────────────────────────────────\n.capfw-int-section {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n}\n\n.capfw-int-section-header {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n}\n\n.capfw-int-section-icon { font-size: 16px; }\n\n.capfw-int-section-title {\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0;\n}\n\n// ── Grid ──────────────────────────────────────────────────────────────────────\n.capfw-int-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));\n    gap: 10px;\n}\n\n// ── Card ──────────────────────────────────────────────────────────────────────\n.capfw-int-card {\n    background: $white_color;\n    border: 1.5px solid $border_color;\n    border-radius: $card_radius;\n    padding: 14px 16px;\n    transition: border-color $transition, background $transition;\n\n    &--on {\n        border-color: $primary_color;\n        background: $primary_light;\n    }\n\n    &--unavailable {\n        opacity: 0.55;\n        background: #fafafa;\n    }\n}\n\n.capfw-int-card-top {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    gap: 10px;\n}\n\n.capfw-int-card-info {\n    display: flex;\n    flex-direction: column;\n    gap: 4px;\n    min-width: 0;\n}\n\n.capfw-int-card-actions {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    flex-shrink: 0;\n}\n\n.capfw-int-name {\n    font-size: 13px;\n    font-weight: 600;\n    color: $black_color;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.capfw-int-plugin-file {\n    font-size: 10px;\n    font-family: monospace;\n    color: $desc_color;\n    margin: 8px 0 0;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n// ── Status pill ───────────────────────────────────────────────────────────────\n.capfw-int-status-pill {\n    display: inline-block;\n    font-size: 10px;\n    font-weight: 600;\n    padding: 2px 7px;\n    border-radius: 4px;\n\n    &--installed {\n        background: $bg_active;\n        color: $color_active;\n    }\n\n    &--missing {\n        background: #f3f4f6;\n        color: $desc_color;\n    }\n}\n\n// ── Toggle disabled ───────────────────────────────────────────────────────────\n.capfw-toggle--disabled {\n    opacity: 0.4;\n    cursor: not-allowed;\n    pointer-events: none;\n}\n\n// ── Gear button ──────────────────────────────────────────────────────────────\n.capfw-int-gear-btn {\n    display:      flex;\n    align-items:  center;\n    justify-content: center;\n    width:        30px;\n    height:       30px;\n    padding:      0;\n    background:   $white_color;\n    border:       1.5px solid $border_color;\n    border-radius: 7px;\n    cursor:       pointer;\n    color:        $desc_color;\n    transition:   all $transition;\n\n    svg { display: block; }\n\n    &:hover {\n        border-color: $primary_color;\n        color:        $primary_color;\n        background:   $primary_light;\n    }\n}\n\n// ── Modal backdrop ────────────────────────────────────────────────────────────\n.capfw-modal-backdrop {\n    position:        fixed;\n    inset:           0;\n    background:      rgba(0, 0, 0, 0.45);\n    backdrop-filter: blur(2px);\n    z-index:         99999;\n    display:         flex;\n    align-items:     center;\n    justify-content: center;\n    padding:         20px;\n}\n\n// ── Modal box ────────────────────────────────────────────────────────────────\n.capfw-modal {\n    background:     $white_color;\n    border-radius:  14px;\n    width:          100%;\n    max-width:      680px;\n    box-shadow:     0 24px 70px rgba(0, 0, 0, 0.2);\n    display:        flex;\n    flex-direction: column;\n    overflow:       hidden;\n    animation:      capfw-modal-in 0.18s ease;\n}\n\n@keyframes capfw-modal-in {\n    from { opacity: 0; transform: translateY(10px) scale(0.97); }\n    to   { opacity: 1; transform: translateY(0)    scale(1); }\n}\n\n.capfw-modal-header {\n    display:         flex;\n    align-items:     center;\n    justify-content: space-between;\n    padding:         20px 24px;\n    border-bottom:   1px solid $border_color;\n    gap:             12px;\n}\n\n.capfw-modal-title {\n    display:     flex;\n    align-items: center;\n    gap:         8px;\n    font-size:   14px;\n    font-weight: 600;\n    color:       $black_color;\n}\n\n.capfw-modal-integration-label {\n    font-size:     12px;\n    font-weight:   500;\n    color:         $white_color;\n    background:    $primary_color;\n    padding:       2px 8px;\n    border-radius: 4px;\n}\n\n.capfw-modal-close {\n    background:  none;\n    border:      none;\n    font-size:   16px;\n    cursor:      pointer;\n    color:       $desc_color;\n    line-height: 1;\n    padding:     4px 6px;\n    border-radius: 4px;\n    transition:  background $transition;\n\n    &:hover { background: #f3f4f6; color: $black_color; }\n}\n\n.capfw-modal-body {\n    padding:        28px 24px;\n    display:        flex;\n    flex-direction: column;\n    gap:            16px;\n    max-height:     65vh;\n    overflow-y:     auto;\n}\n\n.capfw-modal-footer {\n    display:         flex;\n    align-items:     center;\n    justify-content: flex-end;\n    gap:             12px;\n    padding:         18px 24px;\n    border-top:      1px solid $border_color;\n    background:      #fafafa;\n}\n\n// ── Modal field ───────────────────────────────────────────────────────────────\n.capfw-modal-field {\n    display:        flex;\n    flex-direction: column;\n    gap:            10px;\n}\n\n.capfw-modal-field-label {\n    font-size:   13px;\n    font-weight: 600;\n    color:       $black_color;\n}\n\n.capfw-modal-row-2 {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 18px;\n}\n\n// ── Message type pills ───────────────────────────────────────────────────────\n.capfw-msg-type-pills {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 12px;\n}\n\n.capfw-msg-type-pill {\n    display:        flex;\n    flex-direction: column;\n    align-items:    center;\n    gap:            8px;\n    padding:        20px 16px;\n    border:         2px solid $border_color;\n    border-radius:  10px;\n    cursor:         pointer;\n    text-align:     center;\n    transition:     all $transition;\n    background:     $white_color;\n\n    &--active {\n        border-color: $primary_color;\n        background:   $primary_light;\n    }\n\n    &:hover:not(.capfw-msg-type-pill--active) {\n        border-color: lighten($primary_color, 20%);\n    }\n}\n\n.capfw-msg-type-pill-icon { font-size: 28px; }\n\n.capfw-msg-type-pill-text {\n    font-size:   14px;\n    font-weight: 600;\n    color:       $black_color;\n}\n\n.capfw-msg-type-pill-desc {\n    font-size:   12px;\n    color:       $desc_color;\n    line-height: 1.4;\n}\n\n// ── Warning ───────────────────────────────────────────────────────────────────\n.capfw-modal-warn {\n    font-size:     12px;\n    line-height:   1.6;\n    color:         #92400e;\n    background:    #fef3c7;\n    border:        1px solid #fde68a;\n    border-radius: 8px;\n    padding:       13px 16px;\n    margin:        0;\n}\n\n// ── Checkbox field ────────────────────────────────────────────────────────────\n.capfw-modal-checkbox-field {\n    padding-top:  20px;\n    border-top:   1px solid $border_color;\n    margin-top:   4px;\n}\n\n.capfw-modal-checkbox-label {\n    display:     flex;\n    align-items: flex-start;\n    gap:         12px;\n    cursor:      pointer;\n}\n\n.capfw-modal-checkbox-label input[type=\"checkbox\"].capfw-modal-checkbox {\n    width:        18px !important;\n    height:       18px !important;\n    min-width:    18px !important;\n    min-height:   18px !important;\n    margin:       3px 0 0 0 !important;\n    padding:      0 !important;\n    flex-shrink:  0;\n    cursor:       pointer;\n    accent-color: $primary_color;\n    vertical-align: top;\n    float:        none !important;\n    position:     relative !important;\n}\n\n.capfw-modal-checkbox-title {\n    font-size:    13px;\n    font-weight:  600;\n    color:        $black_color;\n    display:      block;\n    margin-bottom: 4px;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/integrations/integrations.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11682,7 +12642,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-logs-page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -11701,23 +12760,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   align-items: center;
   gap: 6px;
   padding: 7px 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
-  background: #ffffff;
+  background: var(--capfw-surface);
   font-size: 12px;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   font-family: inherit;
   transition: all 0.25s all ease;
 }
 .capfw-filter-btn:hover {
   border-color: #d1d5db;
-  color: #1a1f2e;
-  background: #f5f6fa;
+  color: var(--capfw-text);
+  background: var(--capfw-bg);
 }
 .capfw-filter-btn--active {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-color: #25D366;
   color: #128C7E;
   font-weight: 600;
@@ -11742,7 +12801,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
 .capfw-log-total {
   margin-left: auto;
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-logs-card {
@@ -11755,12 +12814,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   transition: background 0.25s all ease;
 }
 .capfw-log-row:hover {
-  background: #f0fdf4 !important;
+  background: var(--capfw-log-row-hover) !important;
 }
 
 .capfw-log-id {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-family: monospace;
 }
 
@@ -11770,7 +12829,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-dash {
@@ -11782,13 +12841,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   align-items: center;
   justify-content: space-between;
   padding: 14px 20px;
-  border-top: 1px solid #e5e7eb;
-  background: #f5f6fa;
+  border-top: 1px solid var(--capfw-border);
+  background: var(--capfw-bg);
 }
 
 .capfw-page-info {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-page-btns {
@@ -11803,12 +12862,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   border-radius: 6px;
-  background: #ffffff;
+  background: var(--capfw-surface);
   font-size: 12px;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   font-family: inherit;
   transition: all 0.25s all ease;
@@ -11817,13 +12876,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   stroke: currentColor;
 }
 .capfw-page-btn:hover:not(:disabled) {
-  background: #f5f6fa;
-  color: #1a1f2e;
+  background: var(--capfw-bg);
+  color: var(--capfw-text);
 }
 .capfw-page-btn--active {
   background: #25D366;
   border-color: #25D366;
-  color: #ffffff;
+  color: var(--capfw-surface);
   font-weight: 700;
 }
 .capfw-page-btn--active:hover {
@@ -11844,7 +12903,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   gap: 8px;
   margin-bottom: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-log-meta-row {
@@ -11854,17 +12913,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   font-size: 13px;
 }
 .capfw-log-meta-row strong {
-  color: #1a1f2e;
+  color: var(--capfw-text);
   font-weight: 600;
   min-width: 70px;
 }
 .capfw-log-meta-row span {
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-msg-bubble {
-  background: #e8faf0;
-  border: 1px solid #a7f3d0;
+  background: var(--capfw-msg-bubble-bg);
+  border: 1px solid var(--capfw-msg-bubble-border);
   border-radius: 12px;
   border-top-left-radius: 2px;
   padding: 14px 16px;
@@ -11875,7 +12934,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
   font-family: inherit;
   font-size: 13px;
   line-height: 1.6;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   white-space: pre-wrap;
   word-break: break-word;
   margin: 0;
@@ -11886,29 +12945,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-logs-page {
 }
 .capfw-api-response summary {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   user-select: none;
   padding: 4px 0;
 }
 .capfw-api-response summary:hover {
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-api-pre {
-  background: #f5f6fa;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-bg);
+  border: 1px solid var(--capfw-border);
   border-radius: 6px;
   padding: 10px 12px;
   font-size: 11px;
   font-family: monospace;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   white-space: pre-wrap;
   word-break: break-all;
   margin: 6px 0 0;
   max-height: 160px;
   overflow-y: auto;
-}`, "",{"version":3,"sources":["webpack://./src/page/logs/logs.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;EACA,iBAAA;AADJ;;AAKA;EACI,aAAA;EACA,mBAAA;EACA,QAAA;EACA,eAAA;AAFJ;;AAKA;EACI,oBAAA;EACA,mBAAA;EACA,QAAA;EACA,iBAAA;EACA,yBAAA;EACA,kBAAA;EACA,mBCLY;EDMZ,eAAA;EACA,gBAAA;EACA,cCTY;EDUZ,eAAA;EACA,oBAAA;EACA,8BAAA;AAFJ;AAII;EACI,qBAAA;EACA,cCjBQ;EDkBR,mBCfQ;ADahB;AAKI;EACI,mBCzBc;ED0Bd,qBC7Bc;ED8Bd,cC7Bc;ED8Bd,gBAAA;AAHR;;AAOA;EACI,UAAA;EACA,WAAA;EACA,kBAAA;EACA,cAAA;AAJJ;AAMI;EAAa,mBC3BD;ADwBhB;AAII;EAAa,mBC3BD;AD0BhB;AAEI;EAAa,mBC3BD;AD4BhB;;AAEA;EACI,iBAAA;EACA,eAAA;EACA,cC1CY;AD2ChB;;AAGA;EAAmB,UAAA;EAAY,gBAAA;AAE/B;;AACA;EACI,eAAA;EACA,qCAAA;AAEJ;AADI;EAAU,8BAAA;AAId;;AADA;EACI,eAAA;EACA,cCzDY;ED0DZ,sBAAA;AAIJ;;AADA;EACI,gBAAA;EACA,mBAAA;EACA,gBAAA;EACA,uBAAA;EACA,eAAA;EACA,cCnEY;ADuEhB;;AADA;EAAc,cAAA;AAKd;;AAFA;EACI,aAAA;EACA,mBAAA;EACA,8BAAA;EACA,kBAAA;EACA,6BAAA;EACA,mBC7EY;ADkFhB;;AAFA;EACI,eAAA;EACA,cCpFY;ADyFhB;;AAFA;EACI,aAAA;EACA,mBAAA;EACA,QAAA;AAKJ;;AAFA;EACI,WAAA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,yBAAA;EACA,kBAAA;EACA,mBCpGY;EDqGZ,eAAA;EACA,gBAAA;EACA,cCxGY;EDyGZ,eAAA;EACA,oBAAA;EACA,8BAAA;AAKJ;AAHI;EAAM,oBAAA;AAMV;AAJI;EACI,mBC9GQ;ED+GR,cClHQ;ADwHhB;AAHI;EACI,mBC5Hc;ED6Hd,qBC7Hc;ED8Hd,cCtHQ;EDuHR,gBAAA;AAKR;AAHQ;EAAU,mBC/HI;ADqItB;AAHI;EACI,YAAA;EACA,mBAAA;AAKR;;AACA;EAAmB,gBAAA;AAGnB;;AADA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;EACA,mBAAA;EACA,oBAAA;EACA,gCAAA;AAIJ;;AADA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,eAAA;AAIJ;AAFI;EAAS,cCvJG;EDuJkB,gBAAA;EAAkB,eAAA;AAOpD;AANI;EAAS,cCvJG;ADgKhB;;AANA;EACI,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,2BAAA;EACA,kBAAA;EACA,mBAAA;AASJ;;AANA;EACI,oBAAA;EACA,eAAA;EACA,gBAAA;EACA,cCxKY;EDyKZ,qBAAA;EACA,sBAAA;EACA,SAAA;AASJ;;AANA;EACI,eAAA;AASJ;AAPI;EACI,eAAA;EACA,cClLQ;EDmLR,eAAA;EACA,iBAAA;EACA,cAAA;AASR;AAPQ;EAAU,cCxLF;ADkMhB;;AANA;EACI,mBC1LY;ED2LZ,yBAAA;EACA,kBAAA;EACA,kBAAA;EACA,eAAA;EACA,sBAAA;EACA,cClMY;EDmMZ,qBAAA;EACA,qBAAA;EACA,eAAA;EACA,iBAAA;EACA,gBAAA;AASJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-logs-page {\n    display: flex;\n    flex-direction: column;\n    gap: 20px;\n    max-width: 1100px;\n}\n\n// ── Filter bar ────────────────────────────────────────────────────────────────\n.capfw-log-filters {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    flex-wrap: wrap;\n}\n\n.capfw-filter-btn {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    padding: 7px 14px;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    background: $white_color;\n    font-size: 12px;\n    font-weight: 500;\n    color: $desc_color;\n    cursor: pointer;\n    font-family: inherit;\n    transition: all $transition;\n\n    &:hover {\n        border-color: #d1d5db;\n        color: $black_color;\n        background: $grey_bg;\n    }\n\n    &--active {\n        background: $primary_light;\n        border-color: $primary_color;\n        color: $primary_dark;\n        font-weight: 600;\n    }\n}\n\n.capfw-filter-dot {\n    width: 7px;\n    height: 7px;\n    border-radius: 50%;\n    flex-shrink: 0;\n\n    &--sent    { background: $color_sent;    }\n    &--failed  { background: $color_failed;  }\n    &--pending { background: $color_pending; }\n}\n\n.capfw-log-total {\n    margin-left: auto;\n    font-size: 12px;\n    color: $desc_color;\n}\n\n// ── Table card ────────────────────────────────────────────────────────────────\n.capfw-logs-card { padding: 0; overflow: hidden; }\n\n// ── Log table ─────────────────────────────────────────────────────────────────\n.capfw-log-row {\n    cursor: pointer;\n    transition: background $transition;\n    &:hover { background: #f0fdf4 !important; }\n}\n\n.capfw-log-id {\n    font-size: 11px;\n    color: $desc_color;\n    font-family: monospace;\n}\n\n.capfw-msg-cell--truncate {\n    max-width: 280px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    font-size: 12px;\n    color: $desc_color;\n}\n\n.capfw-dash { color: #d1d5db; }\n\n// ── Pagination ────────────────────────────────────────────────────────────────\n.capfw-pagination {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    padding: 14px 20px;\n    border-top: 1px solid $border_color;\n    background: $grey_bg;\n}\n\n.capfw-page-info {\n    font-size: 12px;\n    color: $desc_color;\n}\n\n.capfw-page-btns {\n    display: flex;\n    align-items: center;\n    gap: 4px;\n}\n\n.capfw-page-btn {\n    width: 32px;\n    height: 32px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border: 1px solid $border_color;\n    border-radius: 6px;\n    background: $white_color;\n    font-size: 12px;\n    font-weight: 500;\n    color: $desc_color;\n    cursor: pointer;\n    font-family: inherit;\n    transition: all $transition;\n\n    svg { stroke: currentColor; }\n\n    &:hover:not(:disabled) {\n        background: $grey_bg;\n        color: $black_color;\n    }\n\n    &--active {\n        background: $primary_color;\n        border-color: $primary_color;\n        color: $white_color;\n        font-weight: 700;\n\n        &:hover { background: $primary_hover; }\n    }\n\n    &:disabled {\n        opacity: 0.4;\n        cursor: not-allowed;\n    }\n}\n\n// ── Message modal ─────────────────────────────────────────────────────────────\n// (Modal base styles are in funnels.scss — shared via global)\n.capfw-msg-modal { max-width: 520px; }\n\n.capfw-log-meta {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n    margin-bottom: 16px;\n    padding-bottom: 16px;\n    border-bottom: 1px solid $border_color;\n}\n\n.capfw-log-meta-row {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    font-size: 13px;\n\n    strong { color: $black_color; font-weight: 600; min-width: 70px; }\n    span   { color: $desc_color; }\n}\n\n.capfw-msg-bubble {\n    background: #e8faf0;\n    border: 1px solid #a7f3d0;\n    border-radius: 12px;\n    border-top-left-radius: 2px;\n    padding: 14px 16px;\n    margin-bottom: 14px;\n}\n\n.capfw-msg-text {\n    font-family: inherit;\n    font-size: 13px;\n    line-height: 1.6;\n    color: $black_color;\n    white-space: pre-wrap;\n    word-break: break-word;\n    margin: 0;\n}\n\n.capfw-api-response {\n    margin-top: 8px;\n\n    summary {\n        font-size: 12px;\n        color: $desc_color;\n        cursor: pointer;\n        user-select: none;\n        padding: 4px 0;\n\n        &:hover { color: $black_color; }\n    }\n}\n\n.capfw-api-pre {\n    background: $grey_bg;\n    border: 1px solid $border_color;\n    border-radius: 6px;\n    padding: 10px 12px;\n    font-size: 11px;\n    font-family: monospace;\n    color: $desc_color;\n    white-space: pre-wrap;\n    word-break: break-all;\n    margin: 6px 0 0;\n    max-height: 160px;\n    overflow-y: auto;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/logs/logs.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -11934,11 +12993,110 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-sidebar {
   width: 220px;
   min-height: calc(100vh - 32px);
-  background: #ffffff;
-  border-right: 1px solid #e5e7eb;
+  background: var(--capfw-sidebar-bg);
+  border-right: 1px solid var(--capfw-border);
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -11947,6 +13105,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
   overflow-y: auto;
   z-index: 10;
   flex-shrink: 0;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .capfw-sidebar-logo {
@@ -11954,40 +13113,37 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
   align-items: center;
   gap: 10px;
   padding: 18px 16px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
-.capfw-sidebar-logo-icon {
-  width: 34px;
-  height: 34px;
-  background: #25D366;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.capfw-sidebar-logo > svg {
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
+  color: #25D366;
+  transition: color 0.25s all ease;
 }
-.capfw-sidebar-logo-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: #ffffff;
+
+[data-capfw-theme=dark] .capfw-sidebar-logo > svg {
+  color: #ffffff;
 }
 
 .capfw-sidebar-logo-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  flex: 1;
 }
 
 .capfw-sidebar-logo-name {
   font-size: 13px;
   font-weight: 700;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-sidebar-logo-sub {
   font-size: 10px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-weight: 400;
 }
 
@@ -12006,18 +13162,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
   padding: 9px 12px;
   border-radius: 8px;
   text-decoration: none;
-  color: #4b5563;
+  color: var(--capfw-text-muted);
   font-size: 13px;
   font-weight: 500;
   transition: background 0.25s all ease, color 0.25s all ease;
 }
 .capfw-sidebar-link:hover {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   color: #128C7E;
   text-decoration: none;
 }
 .capfw-sidebar-link--active {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   color: #128C7E;
   font-weight: 700;
 }
@@ -12047,7 +13203,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
 .capfw-sidebar-divider {
   font-size: 9px;
   font-weight: 700;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   padding: 12px 12px 4px;
@@ -12055,14 +13211,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-sidebar {
 }
 
 .capfw-sidebar-footer {
-  padding: 14px 18px;
-  border-top: 1px solid #e5e7eb;
+  padding: 14px 16px;
+  border-top: 1px solid var(--capfw-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .capfw-sidebar-version {
   font-size: 11px;
-  color: #9ca3af;
-}`, "",{"version":3,"sources":["webpack://./src/page/navigation/navigation.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,YAAA;EACA,8BAAA;EACA,mBCcY;EDbZ,+BAAA;EACA,aAAA;EACA,sBAAA;EACA,gBAAA;EACA,SAAA;EACA,0BAAA;EACA,gBAAA;EACA,WAAA;EACA,cAAA;AADJ;;AAKA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,kBAAA;EACA,gCAAA;AAFJ;;AAKA;EACI,WAAA;EACA,YAAA;EACA,mBClBkB;EDmBlB,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,cAAA;AAFJ;AAII;EACI,WAAA;EACA,YAAA;EACA,aCpBQ;ADkBhB;;AAMA;EACI,aAAA;EACA,sBAAA;EACA,gBAAA;AAHJ;;AAMA;EACI,eAAA;EACA,gBAAA;EACA,cCnCY;ADgChB;;AAMA;EACI,eAAA;EACA,cCvCY;EDwCZ,gBAAA;AAHJ;;AAOA;EACI,OAAA;EACA,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,QAAA;AAJJ;;AAOA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,iBAAA;EACA,kBAAA;EACA,qBAAA;EACA,cAAA;EACA,eAAA;EACA,gBAAA;EACA,2DAAA;AAJJ;AAMI;EACI,mBCrEc;EDsEd,cCxEc;EDyEd,qBAAA;AAJR;AAOI;EACI,mBC3Ec;ED4Ed,cC9Ec;ED+Ed,gBAAA;AALR;AAOQ;EAA0B,eCjFZ;AD6EtB;;AAQA;EACI,WAAA;EACA,YAAA;EACA,cAAA;EACA,aAAA;EACA,mBAAA;AALJ;AAOI;EACI,WAAA;EACA,YAAA;EACA,oBAAA;AALR;;AASA;EACI,mBAAA;EACA,gBAAA;EACA,uBAAA;AANJ;;AAUA;EACI,cAAA;EACA,gBAAA;EACA,cCvGY;EDwGZ,yBAAA;EACA,qBAAA;EACA,sBAAA;EACA,YAAA;AAPJ;;AAWA;EACI,kBAAA;EACA,6BAAA;AARJ;;AAWA;EACI,eAAA;EACA,cAAA;AARJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-sidebar {\n    width: 220px;\n    min-height: calc(100vh - 32px);\n    background: $white_color;\n    border-right: 1px solid $border_color;\n    display: flex;\n    flex-direction: column;\n    position: sticky;\n    top: 32px;\n    height: calc(100vh - 32px);\n    overflow-y: auto;\n    z-index: 10;\n    flex-shrink: 0;\n}\n\n// ── Logo ──────────────────────────────────────────────────────────────────────\n.capfw-sidebar-logo {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 18px 16px;\n    border-bottom: 1px solid $border_color;\n}\n\n.capfw-sidebar-logo-icon {\n    width: 34px;\n    height: 34px;\n    background: $primary_color;\n    border-radius: 8px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-shrink: 0;\n\n    svg {\n        width: 20px;\n        height: 20px;\n        fill: $white_color;\n    }\n}\n\n.capfw-sidebar-logo-text {\n    display: flex;\n    flex-direction: column;\n    line-height: 1.2;\n}\n\n.capfw-sidebar-logo-name {\n    font-size: 13px;\n    font-weight: 700;\n    color: $black_color;\n}\n\n.capfw-sidebar-logo-sub {\n    font-size: 10px;\n    color: $desc_color;\n    font-weight: 400;\n}\n\n// ── Menu ──────────────────────────────────────────────────────────────────────\n.capfw-sidebar-menu {\n    flex: 1;\n    padding: 12px 10px;\n    display: flex;\n    flex-direction: column;\n    gap: 3px;\n}\n\n.capfw-sidebar-link {\n    display: flex;\n    align-items: center;\n    gap: 10px;\n    padding: 9px 12px;\n    border-radius: 8px;\n    text-decoration: none;\n    color: #4b5563;\n    font-size: 13px;\n    font-weight: 500;\n    transition: background $transition, color $transition;\n\n    &:hover {\n        background: $primary_light;\n        color: $primary_dark;\n        text-decoration: none;\n    }\n\n    &--active {\n        background: $primary_light;\n        color: $primary_dark;\n        font-weight: 700;\n\n        .capfw-sidebar-icon svg { stroke: $primary_dark; }\n    }\n}\n\n.capfw-sidebar-icon {\n    width: 18px;\n    height: 18px;\n    flex-shrink: 0;\n    display: flex;\n    align-items: center;\n\n    svg {\n        width: 100%;\n        height: 100%;\n        stroke: currentColor;\n    }\n}\n\n.capfw-sidebar-label {\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n// ── Divider label ─────────────────────────────────────────────────────────────\n.capfw-sidebar-divider {\n    font-size: 9px;\n    font-weight: 700;\n    color: $desc_color;\n    text-transform: uppercase;\n    letter-spacing: .8px;\n    padding: 12px 12px 4px;\n    opacity: .7;\n}\n\n// ── Footer ────────────────────────────────────────────────────────────────────\n.capfw-sidebar-footer {\n    padding: 14px 18px;\n    border-top: 1px solid $border_color;\n}\n\n.capfw-sidebar-version {\n    font-size: 11px;\n    color: #9ca3af;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+  color: var(--capfw-text-subtle);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/navigation/navigation.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12088,7 +13248,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-settings-page {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -12100,12 +13359,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
 
 .capfw-settings-desc {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin: 0 0 16px;
 }
 
 .capfw-settings-doc-link {
-  color: #2271b1;
+  color: var(--capfw-link-color);
   font-size: 12px;
   text-decoration: none;
   font-weight: 500;
@@ -12141,7 +13400,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
   border: none;
   cursor: pointer;
   padding: 0;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   display: flex;
   align-items: center;
   transition: color 0.25s all ease;
@@ -12151,7 +13410,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
   height: 16px;
 }
 .capfw-eye-btn:hover {
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 
 .capfw-test-row {
@@ -12173,11 +13432,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  border: 1.5px solid #e5e7eb;
+  border: 1.5px solid var(--capfw-border);
   border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   cursor: pointer;
   transition: border-color 0.25s all ease, background 0.25s all ease, color 0.25s all ease;
   user-select: none;
@@ -12188,11 +13447,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
 .capfw-status-chip:hover {
   border-color: #25D366;
   color: #128C7E;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
 }
 .capfw-status-chip--on {
   border-color: #25D366;
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   color: #128C7E;
   font-weight: 600;
 }
@@ -12201,7 +13460,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #e5e7eb;
+  background: var(--capfw-border);
   transition: background 0.25s all ease;
   flex-shrink: 0;
 }
@@ -12220,7 +13479,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-settings-page {
   display: flex;
   justify-content: center;
   padding: 48px;
-}`, "",{"version":3,"sources":["webpack://./src/page/settings/settings.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AAEA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;AADJ;;AAIA;EAAqB,kBAAA;AAArB;;AAEA;EACI,eAAA;EACA,cCMY;EDLZ,gBAAA;AACJ;;AAGA;EACI,cAAA;EACA,eAAA;EACA,qBAAA;EACA,gBAAA;AAAJ;AAEI;EAAU,0BAAA;AACd;;AAGA;EACI,aAAA;EACA,8BAAA;EACA,SAAA;AAAJ;AAEI;EALJ;IAKgC,0BAAA;EAE9B;AACF;;AACA;EACI,kBAAA;EACA,aAAA;EACA,mBAAA;AAEJ;AAAI;EAAe,mBAAA;AAGnB;;AAAA;EACI,kBAAA;EACA,WAAA;EACA,gBAAA;EACA,YAAA;EACA,eAAA;EACA,UAAA;EACA,cCjCY;EDkCZ,aAAA;EACA,mBAAA;EACA,gCAAA;AAGJ;AADI;EAAM,WAAA;EAAa,YAAA;AAKvB;AAJI;EAAU,cCxCE;AD+ChB;;AAHA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,eAAA;EACA,eAAA;AAMJ;;AAFA;EACI,aAAA;EACA,eAAA;EACA,SAAA;AAKJ;;AAFA;EACI,oBAAA;EACA,mBAAA;EACA,QAAA;EACA,iBAAA;EACA,2BAAA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;EACA,cCnEY;EDoEZ,eAAA;EACA,wFAAA;EACA,iBAAA;AAKJ;AAHI;EAAQ,aAAA;AAMZ;AAJI;EACI,qBClFc;EDmFd,cClFc;EDmFd,mBCjFc;ADuFtB;AAHI;EACI,qBCxFc;EDyFd,mBCtFc;EDuFd,cCzFc;ED0Fd,gBAAA;AAKR;;AADA;EACI,UAAA;EACA,WAAA;EACA,kBAAA;EACA,mBCzFY;ED0FZ,qCAAA;EACA,cAAA;AAIJ;AAFI;EAA2B,mBCvGT;AD4GtB;;AADA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,gBAAA;AAIJ;;AADA;EACI,aAAA;EACA,uBAAA;EACA,aAAA;AAIJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n\n.capfw-settings-page {\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n}\n\n.capfw-page-header { margin-bottom: 4px; }\n\n.capfw-settings-desc {\n    font-size: 13px;\n    color: $desc_color;\n    margin: 0 0 16px;\n}\n\n// ── Doc link ──────────────────────────────────────────────────────────────────\n.capfw-settings-doc-link {\n    color: #2271b1;\n    font-size: 12px;\n    text-decoration: none;\n    font-weight: 500;\n\n    &:hover { text-decoration: underline; }\n}\n\n// ── 2-col row ─────────────────────────────────────────────────────────────────\n.capfw-settings-row-2 {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 16px;\n\n    @media (max-width: 600px) { grid-template-columns: 1fr; }\n}\n\n// ── Input with eye button ─────────────────────────────────────────────────────\n.capfw-input-wrap {\n    position: relative;\n    display: flex;\n    align-items: center;\n\n    .capfw-input { padding-right: 40px; }\n}\n\n.capfw-eye-btn {\n    position: absolute;\n    right: 10px;\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0;\n    color: $desc_color;\n    display: flex;\n    align-items: center;\n    transition: color $transition;\n\n    svg { width: 16px; height: 16px; }\n    &:hover { color: $black_color; }\n}\n\n// ── Test row ──────────────────────────────────────────────────────────────────\n.capfw-test-row {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-top: 8px;\n    flex-wrap: wrap;\n}\n\n// ── Status checkboxes ─────────────────────────────────────────────────────────\n.capfw-status-checkboxes {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 10px;\n}\n\n.capfw-status-chip {\n    display: inline-flex;\n    align-items: center;\n    gap: 8px;\n    padding: 8px 14px;\n    border: 1.5px solid $border_color;\n    border-radius: 8px;\n    font-size: 13px;\n    font-weight: 500;\n    color: $desc_color;\n    cursor: pointer;\n    transition: border-color $transition, background $transition, color $transition;\n    user-select: none;\n\n    input { display: none; }\n\n    &:hover {\n        border-color: $primary_color;\n        color: $primary_dark;\n        background: $primary_light;\n    }\n\n    &--on {\n        border-color: $primary_color;\n        background: $primary_light;\n        color: $primary_dark;\n        font-weight: 600;\n    }\n}\n\n.capfw-status-chip-dot {\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n    background: $border_color;\n    transition: background $transition;\n    flex-shrink: 0;\n\n    .capfw-status-chip--on & { background: $primary_color; }\n}\n\n// ── Footer ────────────────────────────────────────────────────────────────────\n.capfw-settings-footer {\n    display: flex;\n    align-items: center;\n    gap: 16px;\n    padding-top: 8px;\n}\n\n.capfw-settings-spinner {\n    display: flex;\n    justify-content: center;\n    padding: 48px;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/settings/settings.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12246,7 +13505,106 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.capfw-templates-page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -12266,8 +13624,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 }
 
 .capfw-tmpl-sidebar {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   overflow: hidden;
   position: sticky;
@@ -12277,7 +13635,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 }
 
 .capfw-tmpl-group {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-tmpl-group:last-child {
@@ -12287,11 +13645,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 .capfw-tmpl-group-title {
   font-size: 10px;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 10px 14px 6px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
 }
 
 .capfw-tmpl-trigger-btn {
@@ -12311,10 +13669,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
   position: relative;
 }
 .capfw-tmpl-trigger-btn:hover {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
 }
 .capfw-tmpl-trigger-btn--active {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-left-color: #25D366;
 }
 .capfw-tmpl-trigger-btn--active .capfw-tmpl-trigger-name {
@@ -12325,13 +13683,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 .capfw-tmpl-trigger-name {
   font-size: 12px;
   font-weight: 500;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   line-height: 1.3;
 }
 
 .capfw-tmpl-trigger-int {
   font-size: 10px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
 }
 
 .capfw-tmpl-saved-dot {
@@ -12346,8 +13704,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 }
 
 .capfw-tmpl-editor-panel {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   padding: 22px 24px;
   display: flex;
@@ -12361,33 +13719,33 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
   justify-content: space-between;
   gap: 12px;
   padding-bottom: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-tmpl-editor-title {
   font-size: 15px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0 0 3px;
 }
 
 .capfw-tmpl-editor-desc {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin: 0;
   font-style: italic;
 }
 
 .capfw-vars-section {
-  background: #f5f6fa;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-bg);
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   padding: 12px 14px;
 }
 
 .capfw-vars-label {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -12401,23 +13759,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 .capfw-var-chip {
   display: inline-flex;
   align-items: center;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 5px;
   padding: 4px 8px;
   font-size: 11px;
   font-family: "SFMono-Regular", Consolas, monospace;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   cursor: pointer;
   transition: all 0.25s all ease;
 }
 .capfw-var-chip:hover {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-color: #25D366;
   color: #128C7E;
 }
 .capfw-var-chip--active {
-  background: #e8faf0;
+  background: var(--capfw-primary-light);
   border-color: #25D366;
   color: #128C7E;
   font-weight: 600;
@@ -12433,7 +13791,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
 
 .capfw-char-count {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   text-align: right;
   display: flex;
   justify-content: flex-end;
@@ -12451,7 +13809,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
   align-items: center;
   gap: 12px;
   padding-top: 8px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--capfw-border);
 }
 
 .capfw-tmpl-empty-editor {
@@ -12459,9 +13817,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.capfw-templates-page {
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   font-size: 13px;
-}`, "",{"version":3,"sources":["webpack://./src/page/templates/templates.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;EACA,iBAAA;AAAJ;;AAIA;EACI,aAAA;EACA,gCAAA;EACA,SAAA;EACA,kBAAA;AADJ;AAGI;EANJ;IAOQ,0BAAA;EAAN;AACF;;AAIA;EACI,mBCHY;EDIZ,yBAAA;EACA,mBCgBY;EDfZ,gBAAA;EACA,gBAAA;EACA,SAAA;EACA,8BAAA;EACA,gBAAA;AADJ;;AAIA;EAAoB,gCAAA;AAApB;;AACA;EAA+B,mBAAA;AAG/B;;AADA;EACI,eAAA;EACA,gBAAA;EACA,cCpBY;EDqBZ,yBAAA;EACA,qBAAA;EACA,sBAAA;EACA,mBCtBY;AD0BhB;;AADA;EACI,WAAA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,QAAA;EACA,iBAAA;EACA,gBAAA;EACA,YAAA;EACA,kCAAA;EACA,eAAA;EACA,oBAAA;EACA,gBAAA;EACA,kEAAA;EACA,kBAAA;AAIJ;AAFI;EAAU,mBC/CQ;ADoDtB;AAHI;EACI,mBClDc;EDmDd,0BCtDc;AD2DtB;AAHQ;EAA2B,cCvDb;EDuDmC,gBAAA;AAOzD;;AAHA;EACI,eAAA;EACA,gBAAA;EACA,cCzDY;ED0DZ,gBAAA;AAMJ;;AAHA;EACI,eAAA;EACA,cC9DY;ADoEhB;;AAHA;EACI,kBAAA;EACA,WAAA;EACA,QAAA;EACA,2BAAA;EACA,UAAA;EACA,WAAA;EACA,kBAAA;EACA,mBChFkB;ADsFtB;;AAFA;EACI,mBC7EY;ED8EZ,yBAAA;EACA,mBC1DY;ED2DZ,kBAAA;EACA,aAAA;EACA,sBAAA;EACA,SAAA;AAKJ;;AAFA;EACI,aAAA;EACA,uBAAA;EACA,8BAAA;EACA,SAAA;EACA,oBAAA;EACA,gCAAA;AAKJ;;AAFA;EACI,eAAA;EACA,gBAAA;EACA,cCpGY;EDqGZ,eAAA;AAKJ;;AAFA;EACI,eAAA;EACA,cCzGY;ED0GZ,SAAA;EACA,kBAAA;AAKJ;;AADA;EACI,mBC9GY;ED+GZ,yBAAA;EACA,kBAAA;EACA,kBAAA;AAIJ;;AADA;EACI,eAAA;EACA,cCxHY;EDyHZ,kBAAA;EACA,gBAAA;AAIJ;;AADA;EACI,aAAA;EACA,eAAA;EACA,QAAA;AAIJ;;AADA;EACI,oBAAA;EACA,mBAAA;EACA,mBCrIY;EDsIZ,yBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,kDAAA;EACA,cC7IY;ED8IZ,eAAA;EACA,8BAAA;AAIJ;AAFI;EACI,mBCrJc;EDsJd,qBCzJc;ED0Jd,cCzJc;AD6JtB;AADI;EACI,mBC3Jc;ED4Jd,qBC/Jc;EDgKd,cC/Jc;EDgKd,gBAAA;AAGR;;AAEA;EACI,kDAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,gBAAA;AACJ;;AAGA;EACI,eAAA;EACA,cC1KY;ED2KZ,iBAAA;EACA,aAAA;EACA,yBAAA;EACA,mBAAA;EACA,SAAA;AAAJ;;AAGA;EACI,cCzKY;ED0KZ,gBAAA;AAAJ;;AAIA;EACI,aAAA;EACA,mBAAA;EACA,SAAA;EACA,gBAAA;EACA,6BAAA;AADJ;;AAKA;EACI,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,iBAAA;EACA,cCtMY;EDuMZ,eAAA;AAFJ","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n.capfw-templates-page {\n    display: flex;\n    flex-direction: column;\n    gap: 20px;\n    max-width: 1100px;\n}\n\n// ── Two-column layout ─────────────────────────────────────────────────────────\n.capfw-templates-layout {\n    display: grid;\n    grid-template-columns: 240px 1fr;\n    gap: 16px;\n    align-items: start;\n\n    @media (max-width: 780px) {\n        grid-template-columns: 1fr;\n    }\n}\n\n// ── Left sidebar ──────────────────────────────────────────────────────────────\n.capfw-tmpl-sidebar {\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: $card_radius;\n    overflow: hidden;\n    position: sticky;\n    top: 36px;\n    max-height: calc(100vh - 80px);\n    overflow-y: auto;\n}\n\n.capfw-tmpl-group { border-bottom: 1px solid $border_color; }\n.capfw-tmpl-group:last-child { border-bottom: none; }\n\n.capfw-tmpl-group-title {\n    font-size: 10px;\n    font-weight: 600;\n    color: $desc_color;\n    text-transform: uppercase;\n    letter-spacing: .5px;\n    padding: 10px 14px 6px;\n    background: $grey_bg;\n}\n\n.capfw-tmpl-trigger-btn {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 2px;\n    padding: 9px 14px;\n    background: none;\n    border: none;\n    border-left: 3px solid transparent;\n    cursor: pointer;\n    font-family: inherit;\n    text-align: left;\n    transition: background $transition, border-color $transition;\n    position: relative;\n\n    &:hover { background: $primary_light; }\n\n    &--active {\n        background: $primary_light;\n        border-left-color: $primary_color;\n\n        .capfw-tmpl-trigger-name { color: $primary_dark; font-weight: 600; }\n    }\n}\n\n.capfw-tmpl-trigger-name {\n    font-size: 12px;\n    font-weight: 500;\n    color: $black_color;\n    line-height: 1.3;\n}\n\n.capfw-tmpl-trigger-int {\n    font-size: 10px;\n    color: $desc_color;\n}\n\n.capfw-tmpl-saved-dot {\n    position: absolute;\n    right: 10px;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 7px;\n    height: 7px;\n    border-radius: 50%;\n    background: $primary_color;\n}\n\n// ── Right editor panel ────────────────────────────────────────────────────────\n.capfw-tmpl-editor-panel {\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: $card_radius;\n    padding: 22px 24px;\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n}\n\n.capfw-tmpl-editor-header {\n    display: flex;\n    align-items: flex-start;\n    justify-content: space-between;\n    gap: 12px;\n    padding-bottom: 14px;\n    border-bottom: 1px solid $border_color;\n}\n\n.capfw-tmpl-editor-title {\n    font-size: 15px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0 0 3px;\n}\n\n.capfw-tmpl-editor-desc {\n    font-size: 12px;\n    color: $desc_color;\n    margin: 0;\n    font-style: italic;\n}\n\n// ── Variables section ─────────────────────────────────────────────────────────\n.capfw-vars-section {\n    background: $grey_bg;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    padding: 12px 14px;\n}\n\n.capfw-vars-label {\n    font-size: 11px;\n    color: $desc_color;\n    margin-bottom: 8px;\n    font-weight: 500;\n}\n\n.capfw-vars-row {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 6px;\n}\n\n.capfw-var-chip {\n    display: inline-flex;\n    align-items: center;\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: 5px;\n    padding: 4px 8px;\n    font-size: 11px;\n    font-family: 'SFMono-Regular', Consolas, monospace;\n    color: $black_color;\n    cursor: pointer;\n    transition: all $transition;\n\n    &:hover {\n        background: $primary_light;\n        border-color: $primary_color;\n        color: $primary_dark;\n    }\n\n    &--active {\n        background: $primary_light;\n        border-color: $primary_color;\n        color: $primary_dark;\n        font-weight: 600;\n    }\n}\n\n// ── Textarea ──────────────────────────────────────────────────────────────────\n.capfw-tmpl-textarea {\n    font-family: 'SFMono-Regular', Consolas, monospace;\n    font-size: 13px;\n    line-height: 1.6;\n    min-height: 260px;\n    resize: vertical;\n}\n\n// ── Char count + saved indicator ──────────────────────────────────────────────\n.capfw-char-count {\n    font-size: 11px;\n    color: $desc_color;\n    text-align: right;\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    gap: 10px;\n}\n\n.capfw-tmpl-saved-label {\n    color: $color_active;\n    font-weight: 500;\n}\n\n// ── Save row ──────────────────────────────────────────────────────────────────\n.capfw-tmpl-save-row {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    padding-top: 8px;\n    border-top: 1px solid $border_color;\n}\n\n// ── Empty editor ──────────────────────────────────────────────────────────────\n.capfw-tmpl-empty-editor {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-height: 200px;\n    color: $desc_color;\n    font-size: 13px;\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/page/templates/templates.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -12488,7 +13846,106 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --capfw-bg: #f5f6fa;
+  --capfw-surface: #ffffff;
+  --capfw-surface-2: #f9fafb;
+  --capfw-sidebar-bg: #ffffff;
+  --capfw-text: #1a1f2e;
+  --capfw-text-muted: #6b7280;
+  --capfw-text-subtle: #9ca3af;
+  --capfw-border: #e5e7eb;
+  --capfw-border-hover: #d1d5db;
+  --capfw-primary: #25D366;
+  --capfw-primary-dark: #128C7E;
+  --capfw-primary-hover: #1ebe5a;
+  --capfw-primary-light: #e8faf0;
+  --capfw-input-bg: #f9fafb;
+  --capfw-row-hover: #fafafa;
+  --capfw-log-row-hover: #f0fdf4;
+  --capfw-notice-bg: #fffbeb;
+  --capfw-notice-border: #fcd34d;
+  --capfw-notice-text: #92400e;
+  --capfw-skeleton-from: #e5e7eb;
+  --capfw-skeleton-to: #f3f4f6;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.20);
+  --capfw-msg-bubble-bg: #e8faf0;
+  --capfw-msg-bubble-border: #a7f3d0;
+  --capfw-int-badge-bg: #f0f4ff;
+  --capfw-int-badge-text: #4f6aad;
+  --capfw-int-badge-border: #c7d4ff;
+  --capfw-trigger-bg: #f0f4ff;
+  --capfw-trigger-text: #2c5282;
+  --capfw-trigger-border: #bee3f8;
+  --capfw-quick-hover-bg: #fafffe;
+  --capfw-link-color: #2271b1;
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display: none;
+  --capfw-callout-info-bg: #eff6ff;
+  --capfw-callout-info-border: #bfdbfe;
+  --capfw-callout-info-text: #1e40af;
+  --capfw-callout-warn-bg: #fffbeb;
+  --capfw-callout-warn-border: #fcd34d;
+  --capfw-callout-warn-text: #92400e;
+  --capfw-callout-danger-bg: #fff5f5;
+  --capfw-callout-danger-border: #fca5a5;
+  --capfw-callout-danger-text: #991b1b;
+  --capfw-callout-success-bg: #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text: #166534;
+}
+
+[data-capfw-theme=dark] {
+  --capfw-bg: #0f1117;
+  --capfw-surface: #1a1f2e;
+  --capfw-surface-2: #242938;
+  --capfw-sidebar-bg: #141824;
+  --capfw-text: #e8ecf4;
+  --capfw-text-muted: #8892a4;
+  --capfw-text-subtle: #5a6478;
+  --capfw-border: #2d3348;
+  --capfw-border-hover: #3d4460;
+  --capfw-primary-light: #0d2e1e;
+  --capfw-input-bg: #242938;
+  --capfw-row-hover: #222736;
+  --capfw-log-row-hover: #162a1e;
+  --capfw-notice-bg: #292410;
+  --capfw-notice-border: #735e00;
+  --capfw-notice-text: #fcd34d;
+  --capfw-skeleton-from: #2d3348;
+  --capfw-skeleton-to: #353c55;
+  --capfw-shadow-sm: 0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md: 0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal: 0 20px 60px rgba(0,0,0,0.70);
+  --capfw-msg-bubble-bg: #0d2e1e;
+  --capfw-msg-bubble-border: #166534;
+  --capfw-int-badge-bg: #1a2044;
+  --capfw-int-badge-text: #7c9ef5;
+  --capfw-int-badge-border: #2a3a7a;
+  --capfw-trigger-bg: #1a2a44;
+  --capfw-trigger-text: #7eb8e8;
+  --capfw-trigger-border: #2a4a6a;
+  --capfw-quick-hover-bg: #162a1e;
+  --capfw-link-color: #60a5fa;
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display: block;
+  --capfw-callout-info-bg: #1a2a44;
+  --capfw-callout-info-border: #2a4a7a;
+  --capfw-callout-info-text: #7eb8f5;
+  --capfw-callout-warn-bg: #292410;
+  --capfw-callout-warn-border: #735e00;
+  --capfw-callout-warn-text: #fcd34d;
+  --capfw-callout-danger-bg: #2a1010;
+  --capfw-callout-danger-border: #7a2020;
+  --capfw-callout-danger-text: #f87171;
+  --capfw-callout-success-bg: #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text: #4ade80;
+}
+
+.csp-notice,
 .pa-notice-wrap,
 .pa-new-feature-notice,
 .pa-review-notice,
@@ -12512,34 +13969,37 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 .capfw-app {
   display: flex;
   min-height: calc(100vh - 32px);
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
-  color: #1a1f2e;
+  color: var(--capfw-text);
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .capfw-app-main-content {
   flex: 1;
   padding: 28px;
-  background: #f5f6fa;
+  background: var(--capfw-bg);
   overflow-x: hidden;
+  transition: background 0.25s ease;
 }
 
 .capfw-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  border: 1px solid var(--capfw-border);
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--capfw-shadow-sm);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .capfw-card-title {
   font-size: 14px;
   font-weight: 600;
-  color: #1a1f2e;
+  color: var(--capfw-text);
   margin: 0 0 18px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--capfw-border);
 }
 
 .capfw-btn-primary {
@@ -12569,20 +14029,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  color: #1a1f2e;
-  border: 1px solid #e5e7eb;
+  background: var(--capfw-surface);
+  color: var(--capfw-text);
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   padding: 9px 18px;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.25s all ease, background 0.25s all ease;
+  transition: border-color 0.25s all ease, background 0.25s all ease, color 0.25s all ease;
   font-family: inherit;
 }
 .capfw-btn-secondary:hover, .capfw-btn-danger:hover {
-  background: #f5f6fa;
-  border-color: #d1d5db;
+  background: var(--capfw-bg);
+  border-color: var(--capfw-border-hover);
 }
 
 .capfw-btn-danger {
@@ -12603,39 +14063,48 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 .capfw-form-group label {
   font-size: 13px;
   font-weight: 500;
-  color: #1a1f2e;
+  color: var(--capfw-text);
 }
 .capfw-form-group .capfw-desc {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--capfw-text-muted);
   margin-top: 2px;
 }
 
+input.capfw-input,
+select.capfw-select,
+textarea.capfw-textarea,
 .capfw-input,
 .capfw-select,
 .capfw-textarea {
   width: 100%;
   padding: 9px 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--capfw-border);
   border-radius: 8px;
   font-size: 13px;
   font-family: inherit;
-  background: #f9fafb;
-  color: #1a1f2e;
-  transition: border-color 0.25s all ease;
+  background: var(--capfw-input-bg);
+  color: var(--capfw-text);
+  transition: border-color 0.25s all ease, background 0.25s all ease, color 0.25s all ease;
   box-sizing: border-box;
 }
+input.capfw-input:focus,
+select.capfw-select:focus,
+textarea.capfw-textarea:focus,
 .capfw-input:focus,
 .capfw-select:focus,
 .capfw-textarea:focus {
   outline: none;
   border-color: #25D366;
-  background: #ffffff;
+  background: var(--capfw-surface);
 }
+input.capfw-input::placeholder,
+select.capfw-select::placeholder,
+textarea.capfw-textarea::placeholder,
 .capfw-input::placeholder,
 .capfw-select::placeholder,
 .capfw-textarea::placeholder {
-  color: #9ca3af;
+  color: var(--capfw-text-subtle);
 }
 
 .capfw-textarea {
@@ -12659,7 +14128,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 .capfw-toggle-slider {
   width: 40px;
   height: 22px;
-  background: #d1d5db;
+  background: var(--capfw-border);
   border-radius: 11px;
   transition: background 0.25s all ease;
   flex-shrink: 0;
@@ -12674,7 +14143,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
   background: #ffffff;
   border-radius: 50%;
   transition: transform 0.25s all ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--capfw-shadow-sm);
 }
 
 .capfw-toggle input:checked ~ .capfw-toggle-slider {
@@ -12685,12 +14154,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 }
 
 .capfw-notice-banner {
-  background: #fffbeb;
-  border: 1px solid #fcd34d;
+  background: var(--capfw-notice-bg);
+  border: 1px solid var(--capfw-notice-border);
   border-radius: 8px;
   padding: 10px 16px;
   font-size: 12px;
-  color: #92400e;
+  color: var(--capfw-notice-text);
   font-weight: 500;
 }
 
@@ -12706,13 +14175,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 
 @keyframes capfw-skeleton {
   0% {
-    background-color: #e5e7eb;
+    background-color: var(--capfw-skeleton-from);
   }
   50% {
-    background-color: #f3f4f6;
+    background-color: var(--capfw-skeleton-to);
   }
   100% {
-    background-color: #e5e7eb;
+    background-color: var(--capfw-skeleton-from);
   }
 }
 .capfw-skeleton-text {
@@ -12739,7 +14208,39 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.csp-notice,
 .capfw-msg.capfw-msg--error {
   background: #fee2e2;
   color: #dc2626;
-}`, "",{"version":3,"sources":["webpack://./src/style/global.scss","webpack://./../../../../../../c:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss"],"names":[],"mappings":"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","sourcesContent":["@use 'C:/wamp64/www/project-1/wp-content/plugins/captain-funnel-for-whatsApp/src/style/variables.scss' as *;\n@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');\n\n// ── WordPress admin overrides ─────────────────────────────────────────────────\n.csp-notice,\n.pa-notice-wrap,\n.pa-new-feature-notice,\n.pa-review-notice,\n.gt-admin-notice,\n.is-dismissible,\n.notice,\n.notice-errors,\n.notice-warning,\n#wpfooter {\n    display: none !important;\n}\n\n#wpbody-content { padding-bottom: 0 !important; }\n#wpcontent      { padding-left: 0; }\n\n// ── App shell ─────────────────────────────────────────────────────────────────\n.capfw-app {\n    display: flex;\n    min-height: calc(100vh - 32px);\n    background: $grey_bg;\n    font-family: 'Inter', Arial, sans-serif;\n    font-size: 13px;\n    color: $black_color;\n}\n\n.capfw-app-main-content {\n    flex: 1;\n    padding: 28px;\n    background: $grey_bg;\n    overflow-x: hidden;\n}\n\n// ── Shared card ───────────────────────────────────────────────────────────────\n.capfw-card {\n    background: $white_color;\n    border: 1px solid $border_color;\n    border-radius: $card_radius;\n    padding: 24px;\n    box-shadow: $shadow_sm;\n}\n\n.capfw-card-title {\n    font-size: 14px;\n    font-weight: 600;\n    color: $black_color;\n    margin: 0 0 18px;\n    padding-bottom: 12px;\n    border-bottom: 1px solid $border_color;\n}\n\n// ── Shared buttons ────────────────────────────────────────────────────────────\n.capfw-btn-primary {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    background: $primary_color;\n    color: $white_color;\n    border: none;\n    border-radius: 8px;\n    padding: 9px 18px;\n    font-size: 13px;\n    font-weight: 600;\n    cursor: pointer;\n    transition: background $transition;\n    font-family: inherit;\n\n    &:hover:not(:disabled) { background: $primary_hover; }\n    &:disabled { opacity: 0.6; cursor: not-allowed; }\n}\n\n.capfw-btn-secondary {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    background: $white_color;\n    color: $black_color;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    padding: 9px 18px;\n    font-size: 13px;\n    font-weight: 500;\n    cursor: pointer;\n    transition: border-color $transition, background $transition;\n    font-family: inherit;\n\n    &:hover { background: $grey_bg; border-color: #d1d5db; }\n}\n\n.capfw-btn-danger {\n    @extend .capfw-btn-secondary;\n    color: $color_failed;\n    border-color: #fca5a5;\n    &:hover { background: #fff5f5; border-color: $color_failed; }\n}\n\n// ── Shared form ───────────────────────────────────────────────────────────────\n.capfw-form-group {\n    display: flex;\n    flex-direction: column;\n    gap: 6px;\n    margin-bottom: 18px;\n\n    label {\n        font-size: 13px;\n        font-weight: 500;\n        color: $black_color;\n    }\n\n    .capfw-desc {\n        font-size: 11px;\n        color: $desc_color;\n        margin-top: 2px;\n    }\n}\n\n.capfw-input,\n.capfw-select,\n.capfw-textarea {\n    width: 100%;\n    padding: 9px 12px;\n    border: 1px solid $border_color;\n    border-radius: 8px;\n    font-size: 13px;\n    font-family: inherit;\n    background: $input_bg;\n    color: $black_color;\n    transition: border-color $transition;\n    box-sizing: border-box;\n\n    &:focus {\n        outline: none;\n        border-color: $primary_color;\n        background: $white_color;\n    }\n\n    &::placeholder { color: #9ca3af; }\n}\n\n.capfw-textarea { resize: vertical; min-height: 100px; }\n\n// ── Toggle ────────────────────────────────────────────────────────────────────\n.capfw-toggle {\n    position: relative;\n    display: inline-flex;\n    align-items: center;\n    cursor: pointer;\n\n    input { position: absolute; opacity: 0; width: 0; height: 0; }\n}\n\n.capfw-toggle-slider {\n    width: 40px;\n    height: 22px;\n    background: #d1d5db;\n    border-radius: 11px;\n    transition: background $transition;\n    flex-shrink: 0;\n\n    &::after {\n        content: '';\n        position: absolute;\n        top: 3px;\n        left: 3px;\n        width: 16px;\n        height: 16px;\n        background: $white_color;\n        border-radius: 50%;\n        transition: transform $transition;\n        box-shadow: $shadow_sm;\n    }\n}\n\n.capfw-toggle input:checked ~ .capfw-toggle-slider {\n    background: $primary_color;\n    &::after { transform: translateX(18px); }\n}\n\n// ── Notice banner (Templates default notice) ──────────────────────────────────\n.capfw-notice-banner {\n    background: #fffbeb;\n    border: 1px solid #fcd34d;\n    border-radius: 8px;\n    padding: 10px 16px;\n    font-size: 12px;\n    color: #92400e;\n    font-weight: 500;\n}\n\n// ── Error message ─────────────────────────────────────────────────────────────\n.capfw-error-msg {\n    color: #b91c1c;\n    font-size: 13px;\n    background: #fee2e2;\n    border: 1px solid #fca5a5;\n    border-radius: 6px;\n    padding: 10px 14px;\n    margin: 0;\n}\n@keyframes capfw-skeleton {\n    0%   { background-color: #e5e7eb; }\n    50%  { background-color: #f3f4f6; }\n    100% { background-color: #e5e7eb; }\n}\n\n.capfw-skeleton-text {\n    animation: capfw-skeleton 1.4s ease-in-out infinite;\n    color: transparent !important;\n    border-radius: 4px;\n    pointer-events: none;\n    user-select: none;\n}\n\n// ── Inline message ────────────────────────────────────────────────────────────\n.capfw-msg {\n    display: inline-flex;\n    align-items: center;\n    gap: 6px;\n    font-size: 12px;\n    font-weight: 500;\n    padding: 6px 10px;\n    border-radius: 6px;\n\n    &.capfw-msg--success { background: $bg_sent;    color: $color_sent;    }\n    &.capfw-msg--error   { background: $bg_failed;  color: $color_failed;  }\n}\n","// Captain Funnel for WhatsApp – SCSS Variables\n\n$font_family: 'Inter, Arial, sans-serif';\n\n// Spacing / radius\n$rs_small:  6px;\n$rs_medium: 8px;\n$rs_normal: 10px;\n$rs_large:  15px;\n\n// Brand colours — WhatsApp green palette\n$primary_color:       #25D366;\n$primary_dark:        #128C7E;\n$primary_hover:       #1ebe5a;\n$primary_light:       #e8faf0;\n\n// UI colours\n$black_color:   #1a1f2e;\n$desc_color:    #6b7280;\n$white_color:   #ffffff;\n$grey_bg:       #f5f6fa;\n$border_color:  #e5e7eb;\n$input_bg:      #f9fafb;\n\n// Status colours\n$color_sent:    #16a34a;\n$color_failed:  #dc2626;\n$color_pending: #d97706;\n$color_active:  #16a34a;\n$color_inactive:#dc2626;\n$bg_sent:       #dcfce7;\n$bg_failed:     #fee2e2;\n$bg_pending:    #fef3c7;\n$bg_active:     #dcfce7;\n$bg_inactive:   #fee2e2;\n\n// Misc\n$transition:    0.25s all ease;\n$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);\n$shadow_md:     0 4px 16px rgba(0,0,0,0.10);\n$card_radius:   12px;\n"],"sourceRoot":""}]);
+}
+
+.capfw-dm-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--capfw-border);
+  background: var(--capfw-surface);
+  cursor: pointer;
+  transition: background 0.25s all ease, border-color 0.25s all ease;
+  color: var(--capfw-text-muted);
+  flex-shrink: 0;
+}
+.capfw-dm-toggle svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+}
+.capfw-dm-toggle:hover {
+  background: var(--capfw-primary-light);
+  border-color: #25D366;
+  color: #128C7E;
+}
+.capfw-dm-toggle .capfw-dm-moon {
+  display: var(--capfw-dm-moon-display);
+}
+.capfw-dm-toggle .capfw-dm-sun {
+  display: var(--capfw-dm-sun-display);
+}`, "",{"version":3,"sources":["data:;charset=utf-8,/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A/%20%20Captain%20Funnel%20for%20WhatsApp%20%E2%80%93%20SCSS%20Variables%20+%20CSS%20Custom%20Properties%0A/%20%20ALL%20colours%20go%20through%20CSS%20vars%20%E2%86%92%20one-line%20theme%20switching.%0A/%20%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%E2%95%90%0A%0A/%20%E2%94%80%E2%94%80%201.%20SCSS%20design-tokens%20(brand%20/%20status%20/%20spacing%20%E2%80%94%20never%20change%20per%20theme)%0A$font_family:%20%20%20%20%20'Inter,%20Arial,%20sans-serif';%0A%0A$rs_small:%20%20%20%20%20%20%20%206px;%0A$rs_medium:%20%20%20%20%20%20%208px;%0A$rs_normal:%20%20%20%20%20%20%2010px;%0A$rs_large:%20%20%20%20%20%20%20%2015px;%0A%0A/%20Brand%20(WhatsApp%20green%20%E2%80%94%20same%20in%20both%20themes)%0A$primary_color:%20%20%20%2325D366;%0A$primary_dark:%20%20%20%20%23128C7E;%0A$primary_hover:%20%20%20%231ebe5a;%0A%0A/%20Status%20(same%20in%20both%20themes)%0A$color_sent:%20%20%20%20%20%20%2316a34a;%0A$color_failed:%20%20%20%20%23dc2626;%0A$color_pending:%20%20%20%23d97706;%0A$color_active:%20%20%20%20%2316a34a;%0A$color_inactive:%20%20%23dc2626;%0A$bg_sent:%20%20%20%20%20%20%20%20%20%23dcfce7;%0A$bg_failed:%20%20%20%20%20%20%20%23fee2e2;%0A$bg_pending:%20%20%20%20%20%20%23fef3c7;%0A$bg_active:%20%20%20%20%20%20%20%23dcfce7;%0A$bg_inactive:%20%20%20%20%20%23fee2e2;%0A%0A/%20Misc%0A$transition:%20%20%20%20%20%200.25s%20all%20ease;%0A$shadow_sm:%20%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A$shadow_md:%20%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A$card_radius:%20%20%20%20%2012px;%0A%0A/%20%E2%94%80%E2%94%80%202.%20CSS%20CUSTOM%20PROPERTIES%20%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Light%20=%20default%20%20%7C%20%20Dark%20=%20%5Bdata-capfw-theme=%22dark%22%5D%0A/%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A:root%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%23f5f6fa;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%23ffffff;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23f9fafb;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23ffffff;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-text-muted:%20%20%20%20%20%236b7280;%0A%20%20--capfw-text-subtle:%20%20%20%20%239ca3af;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%23e5e7eb;%0A%20%20--capfw-border-hover:%20%20%20%23d1d5db;%0A%0A%20%20/%20Primary%20(shared)%0A%20%20--capfw-primary:%20%20%20%20%20%20%20%20%23%7B$primary_color%7D;%0A%20%20--capfw-primary-dark:%20%20%20%23%7B$primary_dark%7D;%0A%20%20--capfw-primary-hover:%20%20%23%7B$primary_hover%7D;%0A%20%20--capfw-primary-light:%20%20%23e8faf0;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23f9fafb;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23fafafa;%0A%20%20--capfw-log-row-hover:%20%20%23f0fdf4;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-notice-border:%20%20%23fcd34d;%0A%20%20--capfw-notice-text:%20%20%20%20%2392400e;%0A%0A%20%20/%20Skeleton%20animation%0A%20%20--capfw-skeleton-from:%20%20%23e5e7eb;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23f3f4f6;%0A%0A%20%20/%20Shadow%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.07);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.10);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.20);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%23e8faf0;%0A%20%20--capfw-msg-bubble-border:%20%20%23a7f3d0;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%234f6aad;%0A%20%20--capfw-int-badge-border:%20%20%20%23c7d4ff;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%23f0f4ff;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%232c5282;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%23bee3f8;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23fafffe;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%232271b1;%0A%0A%20%20/%20Dark-mode%20toggle%20icon%20visibility%0A%20%20--capfw-dm-moon-display:%20block;%0A%20%20--capfw-dm-sun-display:%20%20none;%0A%0A%20%20/%20Callout%20colours%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%23eff6ff;%0A%20%20--capfw-callout-info-border:%20%20%20%20%23bfdbfe;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%231e40af;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23fffbeb;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%2392400e;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%23fff5f5;%0A%20%20--capfw-callout-danger-border:%20%20%23fca5a5;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23991b1b;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%23f0fdf4;%0A%20%20--capfw-callout-success-border:%20%2386efac;%0A%20%20--capfw-callout-success-text:%20%20%20%23166534;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%20DARK%20overrides%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A%5Bdata-capfw-theme=%22dark%22%5D%20%7B%0A%20%20/%20Surface%0A%20%20--capfw-bg:%20%20%20%20%20%20%20%20%20%20%20%20%20%230f1117;%0A%20%20--capfw-surface:%20%20%20%20%20%20%20%20%231a1f2e;%0A%20%20--capfw-surface-2:%20%20%20%20%20%20%23242938;%0A%20%20--capfw-sidebar-bg:%20%20%20%20%20%23141824;%0A%0A%20%20/%20Text%0A%20%20--capfw-text:%20%20%20%20%20%20%20%20%20%20%20%23e8ecf4;%0A%20%20--capfw-text-muted:%20%20%20%20%20%238892a4;%0A%20%20--capfw-text-subtle:%20%20%20%20%235a6478;%0A%0A%20%20/%20Border%0A%20%20--capfw-border:%20%20%20%20%20%20%20%20%20%232d3348;%0A%20%20--capfw-border-hover:%20%20%20%233d4460;%0A%0A%20%20/%20Primary%20light%20(muted%20in%20dark)%0A%20%20--capfw-primary-light:%20%20%230d2e1e;%0A%0A%20%20/%20Input%0A%20%20--capfw-input-bg:%20%20%20%20%20%20%20%23242938;%0A%0A%20%20/%20Table%20hover%0A%20%20--capfw-row-hover:%20%20%20%20%20%20%23222736;%0A%20%20--capfw-log-row-hover:%20%20%23162a1e;%0A%0A%20%20/%20Notice%0A%20%20--capfw-notice-bg:%20%20%20%20%20%20%23292410;%0A%20%20--capfw-notice-border:%20%20%23735e00;%0A%20%20--capfw-notice-text:%20%20%20%20%23fcd34d;%0A%0A%20%20/%20Skeleton%0A%20%20--capfw-skeleton-from:%20%20%232d3348;%0A%20%20--capfw-skeleton-to:%20%20%20%20%23353c55;%0A%0A%20%20/%20Shadow%20(stronger%20in%20dark)%0A%20%20--capfw-shadow-sm:%20%20%20%20%20%200%201px%203px%20rgba(0,0,0,0.30);%0A%20%20--capfw-shadow-md:%20%20%20%20%20%200%204px%2016px%20rgba(0,0,0,0.50);%0A%20%20--capfw-shadow-modal:%20%20%200%2020px%2060px%20rgba(0,0,0,0.70);%0A%0A%20%20/%20Misc%0A%20%20--capfw-msg-bubble-bg:%20%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-msg-bubble-border:%20%20%23166534;%0A%20%20--capfw-int-badge-bg:%20%20%20%20%20%20%20%231a2044;%0A%20%20--capfw-int-badge-text:%20%20%20%20%20%237c9ef5;%0A%20%20--capfw-int-badge-border:%20%20%20%232a3a7a;%0A%20%20--capfw-trigger-bg:%20%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-trigger-text:%20%20%20%20%20%20%20%237eb8e8;%0A%20%20--capfw-trigger-border:%20%20%20%20%20%232a4a6a;%0A%20%20--capfw-quick-hover-bg:%20%20%20%20%20%23162a1e;%0A%20%20--capfw-link-color:%20%20%20%20%20%20%20%20%20%2360a5fa;%0A%0A%20%20/%20Toggle%20icons%0A%20%20--capfw-dm-moon-display:%20none;%0A%20%20--capfw-dm-sun-display:%20%20block;%0A%0A%20%20/%20Callout%20colours%20(dark)%0A%20%20--capfw-callout-info-bg:%20%20%20%20%20%20%20%20%231a2a44;%0A%20%20--capfw-callout-info-border:%20%20%20%20%232a4a7a;%0A%20%20--capfw-callout-info-text:%20%20%20%20%20%20%237eb8f5;%0A%20%20--capfw-callout-warn-bg:%20%20%20%20%20%20%20%20%23292410;%0A%20%20--capfw-callout-warn-border:%20%20%20%20%23735e00;%0A%20%20--capfw-callout-warn-text:%20%20%20%20%20%20%23fcd34d;%0A%20%20--capfw-callout-danger-bg:%20%20%20%20%20%20%232a1010;%0A%20%20--capfw-callout-danger-border:%20%20%237a2020;%0A%20%20--capfw-callout-danger-text:%20%20%20%20%23f87171;%0A%20%20--capfw-callout-success-bg:%20%20%20%20%20%230d2e1e;%0A%20%20--capfw-callout-success-border:%20%23166534;%0A%20%20--capfw-callout-success-text:%20%20%20%234ade80;%0A%7D%0A%0A/%20%E2%94%80%E2%94%80%203.%20Convenience%20SCSS%20aliases%20(point%20to%20CSS%20vars)%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%0A/%20%20Use%20these%20in%20all%20.scss%20files%20instead%20of%20the%20old%20$variables.%0A$bg:%20%20%20%20%20%20%20%20%20%20%20%20var(--capfw-bg);%0A$surface:%20%20%20%20%20%20%20var(--capfw-surface);%0A$surface2:%20%20%20%20%20%20var(--capfw-surface-2);%0A$sidebar-bg:%20%20%20%20var(--capfw-sidebar-bg);%0A$text:%20%20%20%20%20%20%20%20%20%20var(--capfw-text);%0A$muted:%20%20%20%20%20%20%20%20%20var(--capfw-text-muted);%0A$subtle:%20%20%20%20%20%20%20%20var(--capfw-text-subtle);%0A$border:%20%20%20%20%20%20%20%20var(--capfw-border);%0A$border-hover:%20%20var(--capfw-border-hover);%0A$input-bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A%0A/%20Keep%20old%20names%20working%20%E2%86%92%20point%20to%20new%20vars%0A$black_color:%20%20%20var(--capfw-text);%0A$desc_color:%20%20%20%20var(--capfw-text-muted);%0A$white_color:%20%20%20var(--capfw-surface);%0A$grey_bg:%20%20%20%20%20%20%20var(--capfw-bg);%0A$border_color:%20%20var(--capfw-border);%0A$input_bg:%20%20%20%20%20%20var(--capfw-input-bg);%0A$primary_light:%20var(--capfw-primary-light);%0A","webpack://./src/style/global.scss"],"names":[],"mappings":"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","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -1,9 +1,8 @@
-
 .capfw-sidebar {
     width: 220px;
     min-height: calc(100vh - 32px);
-    background: $white_color;
-    border-right: 1px solid $border_color;
+    background: var(--capfw-sidebar-bg);
+    border-right: 1px solid var(--capfw-border);
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -12,6 +11,7 @@
     overflow-y: auto;
     z-index: 10;
     flex-shrink: 0;
+    transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 // ── Logo ──────────────────────────────────────────────────────────────────────
@@ -20,41 +20,38 @@
     align-items: center;
     gap: 10px;
     padding: 18px 16px;
-    border-bottom: 1px solid $border_color;
+    border-bottom: 1px solid var(--capfw-border);
 }
 
-.capfw-sidebar-logo-icon {
-    width: 34px;
-    height: 34px;
-    background: $primary_color;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+// Logo SVG — rendered directly, no wrapper div
+.capfw-sidebar-logo > svg {
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
+    color: $primary_color;
+    transition: color $transition;
+}
 
-    svg {
-        width: 20px;
-        height: 20px;
-        fill: $white_color;
-    }
+[data-capfw-theme="dark"] .capfw-sidebar-logo > svg {
+    color: #ffffff;
 }
 
 .capfw-sidebar-logo-text {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    flex: 1;
 }
 
 .capfw-sidebar-logo-name {
     font-size: 13px;
     font-weight: 700;
-    color: $black_color;
+    color: var(--capfw-text);
 }
 
 .capfw-sidebar-logo-sub {
     font-size: 10px;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     font-weight: 400;
 }
 
@@ -74,19 +71,19 @@
     padding: 9px 12px;
     border-radius: 8px;
     text-decoration: none;
-    color: #4b5563;
+    color: var(--capfw-text-muted);
     font-size: 13px;
     font-weight: 500;
     transition: background $transition, color $transition;
 
     &:hover {
-        background: $primary_light;
+        background: var(--capfw-primary-light);
         color: $primary_dark;
         text-decoration: none;
     }
 
     &--active {
-        background: $primary_light;
+        background: var(--capfw-primary-light);
         color: $primary_dark;
         font-weight: 700;
 
@@ -101,11 +98,7 @@
     display: flex;
     align-items: center;
 
-    svg {
-        width: 100%;
-        height: 100%;
-        stroke: currentColor;
-    }
+    svg { width: 100%; height: 100%; stroke: currentColor; }
 }
 
 .capfw-sidebar-label {
@@ -118,7 +111,7 @@
 .capfw-sidebar-divider {
     font-size: 9px;
     font-weight: 700;
-    color: $desc_color;
+    color: var(--capfw-text-muted);
     text-transform: uppercase;
     letter-spacing: .8px;
     padding: 12px 12px 4px;
@@ -127,11 +120,15 @@
 
 // ── Footer ────────────────────────────────────────────────────────────────────
 .capfw-sidebar-footer {
-    padding: 14px 18px;
-    border-top: 1px solid $border_color;
+    padding: 14px 16px;
+    border-top: 1px solid var(--capfw-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .capfw-sidebar-version {
     font-size: 11px;
-    color: #9ca3af;
+    color: var(--capfw-text-subtle);
 }

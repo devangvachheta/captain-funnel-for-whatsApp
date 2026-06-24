@@ -1,41 +1,206 @@
-// Captain Funnel for WhatsApp – SCSS Variables
+// ══════════════════════════════════════════════════════════════════════════════
+//  Captain Funnel for WhatsApp – SCSS Variables + CSS Custom Properties
+//  ALL colours go through CSS vars → one-line theme switching.
+// ══════════════════════════════════════════════════════════════════════════════
 
-$font_family: 'Inter, Arial, sans-serif';
+// ── 1. SCSS design-tokens (brand / status / spacing — never change per theme)
+$font_family:     'Inter, Arial, sans-serif';
 
-// Spacing / radius
-$rs_small:  6px;
-$rs_medium: 8px;
-$rs_normal: 10px;
-$rs_large:  15px;
+$rs_small:        6px;
+$rs_medium:       8px;
+$rs_normal:       10px;
+$rs_large:        15px;
 
-// Brand colours — WhatsApp green palette
-$primary_color:       #25D366;
-$primary_dark:        #128C7E;
-$primary_hover:       #1ebe5a;
-$primary_light:       #e8faf0;
+// Brand (WhatsApp green — same in both themes)
+$primary_color:   #25D366;
+$primary_dark:    #128C7E;
+$primary_hover:   #1ebe5a;
 
-// UI colours
-$black_color:   #1a1f2e;
-$desc_color:    #6b7280;
-$white_color:   #ffffff;
-$grey_bg:       #f5f6fa;
-$border_color:  #e5e7eb;
-$input_bg:      #f9fafb;
-
-// Status colours
-$color_sent:    #16a34a;
-$color_failed:  #dc2626;
-$color_pending: #d97706;
-$color_active:  #16a34a;
-$color_inactive:#dc2626;
-$bg_sent:       #dcfce7;
-$bg_failed:     #fee2e2;
-$bg_pending:    #fef3c7;
-$bg_active:     #dcfce7;
-$bg_inactive:   #fee2e2;
+// Status (same in both themes)
+$color_sent:      #16a34a;
+$color_failed:    #dc2626;
+$color_pending:   #d97706;
+$color_active:    #16a34a;
+$color_inactive:  #dc2626;
+$bg_sent:         #dcfce7;
+$bg_failed:       #fee2e2;
+$bg_pending:      #fef3c7;
+$bg_active:       #dcfce7;
+$bg_inactive:     #fee2e2;
 
 // Misc
-$transition:    0.25s all ease;
-$shadow_sm:     0 1px 3px rgba(0,0,0,0.07);
-$shadow_md:     0 4px 16px rgba(0,0,0,0.10);
-$card_radius:   12px;
+$transition:      0.25s all ease;
+$shadow_sm:       0 1px 3px rgba(0,0,0,0.07);
+$shadow_md:       0 4px 16px rgba(0,0,0,0.10);
+$card_radius:     12px;
+
+// ── 2. CSS CUSTOM PROPERTIES  ─────────────────────────────────────────────────
+//  Light = default  |  Dark = [data-capfw-theme="dark"]
+// ─────────────────────────────────────────────────────────────────────────────
+:root {
+  // Surface
+  --capfw-bg:             #f5f6fa;
+  --capfw-surface:        #ffffff;
+  --capfw-surface-2:      #f9fafb;
+  --capfw-sidebar-bg:     #ffffff;
+
+  // Text
+  --capfw-text:           #1a1f2e;
+  --capfw-text-muted:     #6b7280;
+  --capfw-text-subtle:    #9ca3af;
+
+  // Border
+  --capfw-border:         #e5e7eb;
+  --capfw-border-hover:   #d1d5db;
+
+  // Primary (shared)
+  --capfw-primary:        #{$primary_color};
+  --capfw-primary-dark:   #{$primary_dark};
+  --capfw-primary-hover:  #{$primary_hover};
+  --capfw-primary-light:  #e8faf0;
+
+  // Input
+  --capfw-input-bg:       #f9fafb;
+
+  // Table hover
+  --capfw-row-hover:      #fafafa;
+  --capfw-log-row-hover:  #f0fdf4;
+
+  // Notice
+  --capfw-notice-bg:      #fffbeb;
+  --capfw-notice-border:  #fcd34d;
+  --capfw-notice-text:    #92400e;
+
+  // Skeleton animation
+  --capfw-skeleton-from:  #e5e7eb;
+  --capfw-skeleton-to:    #f3f4f6;
+
+  // Shadow
+  --capfw-shadow-sm:      0 1px 3px rgba(0,0,0,0.07);
+  --capfw-shadow-md:      0 4px 16px rgba(0,0,0,0.10);
+  --capfw-shadow-modal:   0 20px 60px rgba(0,0,0,0.20);
+
+  // Misc
+  --capfw-msg-bubble-bg:      #e8faf0;
+  --capfw-msg-bubble-border:  #a7f3d0;
+  --capfw-int-badge-bg:       #f0f4ff;
+  --capfw-int-badge-text:     #4f6aad;
+  --capfw-int-badge-border:   #c7d4ff;
+  --capfw-trigger-bg:         #f0f4ff;
+  --capfw-trigger-text:       #2c5282;
+  --capfw-trigger-border:     #bee3f8;
+  --capfw-quick-hover-bg:     #fafffe;
+  --capfw-link-color:         #2271b1;
+
+  // Dark-mode toggle icon visibility
+  --capfw-dm-moon-display: block;
+  --capfw-dm-sun-display:  none;
+
+  // Callout colours
+  --capfw-callout-info-bg:        #eff6ff;
+  --capfw-callout-info-border:    #bfdbfe;
+  --capfw-callout-info-text:      #1e40af;
+  --capfw-callout-warn-bg:        #fffbeb;
+  --capfw-callout-warn-border:    #fcd34d;
+  --capfw-callout-warn-text:      #92400e;
+  --capfw-callout-danger-bg:      #fff5f5;
+  --capfw-callout-danger-border:  #fca5a5;
+  --capfw-callout-danger-text:    #991b1b;
+  --capfw-callout-success-bg:     #f0fdf4;
+  --capfw-callout-success-border: #86efac;
+  --capfw-callout-success-text:   #166534;
+}
+
+// ── DARK overrides ────────────────────────────────────────────────────────────
+[data-capfw-theme="dark"] {
+  // Surface
+  --capfw-bg:             #0f1117;
+  --capfw-surface:        #1a1f2e;
+  --capfw-surface-2:      #242938;
+  --capfw-sidebar-bg:     #141824;
+
+  // Text
+  --capfw-text:           #e8ecf4;
+  --capfw-text-muted:     #8892a4;
+  --capfw-text-subtle:    #5a6478;
+
+  // Border
+  --capfw-border:         #2d3348;
+  --capfw-border-hover:   #3d4460;
+
+  // Primary light (muted in dark)
+  --capfw-primary-light:  #0d2e1e;
+
+  // Input
+  --capfw-input-bg:       #242938;
+
+  // Table hover
+  --capfw-row-hover:      #222736;
+  --capfw-log-row-hover:  #162a1e;
+
+  // Notice
+  --capfw-notice-bg:      #292410;
+  --capfw-notice-border:  #735e00;
+  --capfw-notice-text:    #fcd34d;
+
+  // Skeleton
+  --capfw-skeleton-from:  #2d3348;
+  --capfw-skeleton-to:    #353c55;
+
+  // Shadow (stronger in dark)
+  --capfw-shadow-sm:      0 1px 3px rgba(0,0,0,0.30);
+  --capfw-shadow-md:      0 4px 16px rgba(0,0,0,0.50);
+  --capfw-shadow-modal:   0 20px 60px rgba(0,0,0,0.70);
+
+  // Misc
+  --capfw-msg-bubble-bg:      #0d2e1e;
+  --capfw-msg-bubble-border:  #166534;
+  --capfw-int-badge-bg:       #1a2044;
+  --capfw-int-badge-text:     #7c9ef5;
+  --capfw-int-badge-border:   #2a3a7a;
+  --capfw-trigger-bg:         #1a2a44;
+  --capfw-trigger-text:       #7eb8e8;
+  --capfw-trigger-border:     #2a4a6a;
+  --capfw-quick-hover-bg:     #162a1e;
+  --capfw-link-color:         #60a5fa;
+
+  // Toggle icons
+  --capfw-dm-moon-display: none;
+  --capfw-dm-sun-display:  block;
+
+  // Callout colours (dark)
+  --capfw-callout-info-bg:        #1a2a44;
+  --capfw-callout-info-border:    #2a4a7a;
+  --capfw-callout-info-text:      #7eb8f5;
+  --capfw-callout-warn-bg:        #292410;
+  --capfw-callout-warn-border:    #735e00;
+  --capfw-callout-warn-text:      #fcd34d;
+  --capfw-callout-danger-bg:      #2a1010;
+  --capfw-callout-danger-border:  #7a2020;
+  --capfw-callout-danger-text:    #f87171;
+  --capfw-callout-success-bg:     #0d2e1e;
+  --capfw-callout-success-border: #166534;
+  --capfw-callout-success-text:   #4ade80;
+}
+
+// ── 3. Convenience SCSS aliases (point to CSS vars) ──────────────────────────
+//  Use these in all .scss files instead of the old $variables.
+$bg:            var(--capfw-bg);
+$surface:       var(--capfw-surface);
+$surface2:      var(--capfw-surface-2);
+$sidebar-bg:    var(--capfw-sidebar-bg);
+$text:          var(--capfw-text);
+$muted:         var(--capfw-text-muted);
+$subtle:        var(--capfw-text-subtle);
+$border:        var(--capfw-border);
+$border-hover:  var(--capfw-border-hover);
+$input-bg:      var(--capfw-input-bg);
+
+// Keep old names working → point to new vars
+$black_color:   var(--capfw-text);
+$desc_color:    var(--capfw-text-muted);
+$white_color:   var(--capfw-surface);
+$grey_bg:       var(--capfw-bg);
+$border_color:  var(--capfw-border);
+$input_bg:      var(--capfw-input-bg);
+$primary_light: var(--capfw-primary-light);
