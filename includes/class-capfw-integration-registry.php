@@ -117,9 +117,12 @@ class CAPFW_Integration_Registry {
 		$enabled = $this->get_enabled_slugs();
 
 		foreach ( $this->integrations as $slug => $integration ) {
-			if ( $integration->is_available() && in_array( $slug, $enabled, true ) ) {
+			$available = $integration->is_available();
+			$is_enabled = in_array( $slug, $enabled, true );
+			if ( $available && $is_enabled ) {
 				$this->active_integrations[ $slug ] = $integration;
 				$integration->register_hooks();
+			} else {
 			}
 		}
 	}

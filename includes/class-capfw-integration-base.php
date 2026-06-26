@@ -111,6 +111,7 @@ abstract class CAPFW_Integration_Base {
 	 * @param int    $ref_id       Optional reference ID (order ID, form entry ID, etc.).
 	 */
 	protected function fire_trigger( string $trigger_key, string $phone, array $variables, int $ref_id = 0 ): void {
+
 		if ( empty( $phone ) ) {
 			return;
 		}

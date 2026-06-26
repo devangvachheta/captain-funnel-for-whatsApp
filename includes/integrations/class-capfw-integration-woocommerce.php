@@ -33,10 +33,97 @@ class CAPFW_Integration_WooCommerce extends CAPFW_Integration_Base {
 	}
 
 	public function register_hooks(): void {
+		// ── Hook 1: Classic hook — fires on any status change (legacy + HPOS)
 		add_action( 'woocommerce_order_status_changed', array( $this, 'on_status_changed' ), 10, 4 );
+
+		// ── Hook 2: Per-status hooks — more reliable in HPOS + block checkout
+		// woocommerce_order_status_{status} fires with ( order_id, order )
+		add_action( 'woocommerce_order_status_pending',    array( $this, 'on_to_pending' ),    10, 2 );
+		add_action( 'woocommerce_order_status_processing', array( $this, 'on_to_processing' ), 10, 2 );
+		add_action( 'woocommerce_order_status_on-hold',    array( $this, 'on_to_on_hold' ),    10, 2 );
+		add_action( 'woocommerce_order_status_completed',  array( $this, 'on_to_completed' ),  10, 2 );
+		add_action( 'woocommerce_order_status_cancelled',  array( $this, 'on_to_cancelled' ),  10, 2 );
+		add_action( 'woocommerce_order_status_refunded',   array( $this, 'on_to_refunded' ),   10, 2 );
+		add_action( 'woocommerce_order_status_failed',     array( $this, 'on_to_failed' ),     10, 2 );
+
+		// ── Hook 3: Block/Store API checkout — passes WC_Order object (not int)
+		add_action( 'woocommerce_store_api_checkout_order_processed', array( $this, 'on_store_api_order' ), 10, 1 );
+
+		// ── Hook 4: Classic checkout — passes order ID as int
+		add_action( 'woocommerce_checkout_order_processed', array( $this, 'on_classic_checkout_order' ), 10, 1 );
 	}
 
+	// ── Hook callbacks ────────────────────────────────────────────────────────
+
+	/**
+	 * Hook 1: woocommerce_order_status_changed
+	 * Passes ( order_id, old_status, new_status, order )
+	 */
 	public function on_status_changed( int $order_id, string $old_status, string $new_status, WC_Order $order ): void {
+		$this->handle_status( $order_id, $new_status, $order );
+	}
+
+	/**
+	 * Hook 2: per-status — woocommerce_order_status_{status}
+	 * Passes ( order_id, order ) — both are safe to use
+	 */
+	public function on_to_pending( int $order_id, $order = null ): void    { $this->safe_handle( $order_id, 'pending', $order ); }
+	public function on_to_processing( int $order_id, $order = null ): void { $this->safe_handle( $order_id, 'processing', $order ); }
+	public function on_to_on_hold( int $order_id, $order = null ): void    { $this->safe_handle( $order_id, 'on-hold', $order ); }
+	public function on_to_completed( int $order_id, $order = null ): void  { $this->safe_handle( $order_id, 'completed', $order ); }
+	public function on_to_cancelled( int $order_id, $order = null ): void  { $this->safe_handle( $order_id, 'cancelled', $order ); }
+	public function on_to_refunded( int $order_id, $order = null ): void   { $this->safe_handle( $order_id, 'refunded', $order ); }
+	public function on_to_failed( int $order_id, $order = null ): void     { $this->safe_handle( $order_id, 'failed', $order ); }
+
+	/**
+	 * Hook 3: woocommerce_store_api_checkout_order_processed
+	 * Block checkout — passes WC_Order object directly (NOT int)
+	 */
+	public function on_store_api_order( $order ): void {
+		if ( ! is_a( $order, 'WC_Abstract_Order' ) ) {
+			return;
+		}
+		$this->handle_status( $order->get_id(), $order->get_status(), $order );
+	}
+
+	/**
+	 * Hook 4: woocommerce_checkout_order_processed
+	 * Classic checkout — passes int order_id
+	 */
+	public function on_classic_checkout_order( int $order_id ): void {
+		$order = wc_get_order( $order_id );
+		if ( $order instanceof WC_Order ) {
+			$this->handle_status( $order_id, $order->get_status(), $order );
+		}
+	}
+
+	// ── Core logic ────────────────────────────────────────────────────────────
+
+	/**
+	 * Safe wrapper — fetches order object if not provided or wrong type.
+	 */
+	private function safe_handle( int $order_id, string $status, $order = null ): void {
+		if ( ! is_a( $order, 'WC_Abstract_Order' ) ) {
+			$order = wc_get_order( $order_id );
+		}
+		if ( is_a( $order, 'WC_Abstract_Order' ) ) {
+			$this->handle_status( $order_id, $status, $order );
+		} else {
+		}
+	}
+
+	/**
+	 * Central handler — deduplicates and fires the trigger.
+	 */
+	private function handle_status( int $order_id, string $new_status, $order ): void {
+		// Deduplicate: both hooks may fire for same order+status in one request
+		static $fired = array();
+		$key = $order_id . '_' . $new_status;
+		if ( isset( $fired[ $key ] ) ) {
+			return;
+		}
+		$fired[ $key ] = true;
+
 		$trigger_map = array(
 			'pending'    => 'wc_order_pending',
 			'processing' => 'wc_order_processing',
@@ -53,17 +140,13 @@ class CAPFW_Integration_WooCommerce extends CAPFW_Integration_Base {
 		}
 
 		$phone = preg_replace( '/[^0-9]/', '', $order->get_billing_phone() );
-		$this->fire_trigger( $trigger_key, $phone, $this->build_variables( $order ), $order_id );
 
-		// Fire funnel runner.
+		$this->fire_trigger( $trigger_key, $phone, $this->build_variables( $order ), $order_id );
 		do_action( 'capfw_order_completed_trigger', $order_id, $order );
 	}
 
 	/**
 	 * Build WooCommerce variable map.
-	 *
-	 * @param WC_Order $order Order object.
-	 * @return array
 	 */
 	public function build_variables( WC_Order $order ): array {
 		return array(
@@ -82,8 +165,6 @@ class CAPFW_Integration_WooCommerce extends CAPFW_Integration_Base {
 
 	/**
 	 * WooCommerce variable definitions for UI.
-	 *
-	 * @return array
 	 */
 	private function get_wc_variables(): array {
 		return array(

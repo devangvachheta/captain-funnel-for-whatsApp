@@ -503,9 +503,13 @@ class CAPFW_Admin {
 		$body        = sanitize_textarea_field( wp_unslash( $_POST['template_body'] ?? '' ) );
 		$status      = sanitize_key( $_POST['status'] ?? 'active' );
 
+
 		if ( empty( $slug ) || empty( $trigger_key ) ) {
 			wp_send_json_error( array( 'message' => esc_html__( 'Integration slug and trigger key are required.', 'captain-funnel-for-whatsapp' ) ) );
 			return;
+		}
+
+		if ( empty( $body ) ) {
 		}
 
 		$table = $wpdb->prefix . 'capfw_templates';
